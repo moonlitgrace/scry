@@ -1,15 +1,26 @@
 {
   "name": "@scry/sdk",
   "version": "1.0.0",
-  "description": "Client-side SDK for logging JavaScript errors to Scry.",
-  "main": "index.js",
+  "description": "Official SDK for Scry - Track JavaScript errors.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "error-tracking",
+    "javascript",
+    "debugging",
+    "logs",
+    "scry"
+  ],
+  "author": "Moonlit Grace <moonlitgrace.gaia@gmail.com>",
+  "license": "GPL-3.0-only",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
     "@types/node": "^22.15.3",
