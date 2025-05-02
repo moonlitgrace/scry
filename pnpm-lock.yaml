@@ -36,9 +36,9 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@repo/typescript-config':
+      '@repo/tsconfig':
         specifier: workspace:*
-        version: link:../../packages/typescript-config
+        version: link:../../packages/tsconfig
       '@types/node':
         specifier: ^22.15.3
         version: 22.15.3
@@ -93,9 +93,9 @@ importers:
 
   packages/sdk:
     devDependencies:
-      '@repo/typescript-config':
+      '@repo/tsconfig':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../tsconfig
       '@types/node':
         specifier: ^22.15.3
         version: 22.15.3
@@ -106,7 +106,7 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
 
-  packages/typescript-config: {}
+  packages/tsconfig: {}
 
   packages/ui:
     dependencies:
@@ -120,9 +120,9 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@repo/typescript-config':
+      '@repo/tsconfig':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../tsconfig
       '@turbo/gen':
         specifier: ^2.5.0
         version: 2.5.0(@types/node@22.15.3)(typescript@5.8.2)
