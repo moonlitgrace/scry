@@ -1,0 +1,19 @@
+{
+  "name": "@scry/sdk",
+  "version": "1.0.0",
+  "description": "Client-side SDK for logging JavaScript errors to Scry.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.15.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  }
+}
