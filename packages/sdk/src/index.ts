@@ -6,7 +6,7 @@ class ScrySDK {
 
   constructor(config: ScryConfig) {
     this.config = {
-      endpoint: 'api',
+      endpoint: 'https://scry.moonlitgrace.space/api/logs',
       ...config
     };
     this.originalConsoleError = console.error
