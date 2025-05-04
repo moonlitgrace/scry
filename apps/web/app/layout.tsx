@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dashboard – scry",
+  title: "scry – Track the unseen",
   description: "Track and reveal hidden errors and logs in your JavaScript apps.",
 };
 
