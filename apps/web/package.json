@@ -29,6 +29,6 @@
     "lucide-react": "^0.507.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.5",
-    "typescript": "5.8.2"
+    "typescript": "5.8.3"
   }
 }
