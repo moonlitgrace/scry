@@ -8,6 +8,7 @@
     ]
   },
   "include": [
+    "types/svgr.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "next-env.d.ts",
