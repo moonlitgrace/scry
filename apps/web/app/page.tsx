@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <header>
       <Link href='/'>
-        <LogoText />
+        <LogoText className="w-10" />
       </Link>
     </header>
   );
