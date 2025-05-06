@@ -1,5 +1,12 @@
 import "@repo/ui/globals.css";
+import { cn } from "@repo/ui/lib/utils";
 import type { Metadata } from "next";
+import { Fira_Code } from 'next/font/google'
+
+const firaCode = Fira_Code({
+  subsets: ['latin'],
+  display: 'swap'
+})
 
 export const metadata: Metadata = {
   title: "scry – Track the unseen",
@@ -13,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="dark">
+      <body className={cn(firaCode.className, "dark")}>
         {children}
       </body>
     </html>
