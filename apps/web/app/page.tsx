@@ -1,4 +1,5 @@
 import CTASection from "@/pages/home/CTASection";
+import FAQSection from "@/pages/home/FAQSection";
 import HeroSection from "@/pages/home/HeroSection";
 import HowItWorksSection from "@/pages/home/HowItWorksSection";
 import PricingSection from "@/pages/home/PricingSection";
@@ -10,6 +11,7 @@ export default function Home() {
       <HowItWorksSection />
       <PricingSection />
       <CTASection />
+      <FAQSection />
     </main>
   )
 }
