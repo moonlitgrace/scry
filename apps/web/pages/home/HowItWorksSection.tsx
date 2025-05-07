@@ -21,7 +21,7 @@ export default function HowItWorksSection() {
           </div>
         ))}
       </div>
-      <Button variant='outline' className="mt-5 md:mt-0">Get started</Button>
+      <Button className="mt-5 md:mt-0">Get started</Button>
     </HomeSectionLayout>
   )
 }
