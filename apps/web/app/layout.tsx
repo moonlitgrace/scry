@@ -1,3 +1,5 @@
+import Footer from "@/components/shared/Footer";
+import Header from "@/components/shared/Header";
 import "@repo/ui/globals.css";
 import { cn } from "@repo/ui/lib/utils";
 import type { Metadata } from "next";
@@ -21,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(firaCode.className, "dark")}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

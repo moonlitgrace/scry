@@ -1,17 +1,15 @@
-import Link from "next/link";
-import LogoText from '@/assets/svg/logo-text.svg'
-import { Button } from "@repo/ui/components/ui/button";
+import CTASection from "@/pages/home/CTASection";
+import HeroSection from "@/pages/home/HeroSection";
+import HowItWorksSection from "@/pages/home/HowItWorksSection";
+import PricingSection from "@/pages/home/PricingSection";
 
 export default function Home() {
   return (
-    <header className="px-5 py-4 w-full inline-flex items-center justify-between">
-      <Link href='/'>
-        <LogoText className="w-20" />
-      </Link>
-      <nav className="inline-flex gap-2">
-        <Button variant='ghost' size='sm'>Sign in</Button>
-        <Button variant='secondary' size='sm'>Dashboard</Button>
-      </nav>
-    </header>
-  );
+    <main className="flex flex-col gap-20 max-w-3xl mx-auto my-10">
+      <HeroSection />
+      <HowItWorksSection />
+      <PricingSection />
+      <CTASection />
+    </main>
+  )
 }

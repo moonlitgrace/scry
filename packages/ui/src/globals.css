@@ -1,14 +1,13 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 /* https://stackoverflow.com/questions/79416157/how-to-enable-tailwind-css-v4-0-for-the-packages-ui-components-in-turborepo */
 @source "./";
 
-@import "tw-animate-css";
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --radius: 0.5rem;
+  --radius: 0rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
