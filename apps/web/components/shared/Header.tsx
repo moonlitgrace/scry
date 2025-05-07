@@ -7,7 +7,7 @@ export default function Header() {
     <header className="px-5 py-3 w-full inline-flex items-center justify-between border-b sticky top-0 bg-background/95 z-1">
       <div className='inline-flex items-center gap-5'>
         <a href='#'><LogoText className="w-20" /></a>
-        <nav className='inline-flex items-center gap-2 text-sm text-muted-foreground font-medium'>
+        <nav className='hidden md:inline-flex items-center gap-2 text-sm text-muted-foreground font-medium'>
           <a href='#how-it-works' className='hover:text-foreground transition-all'>{withAngleBrackets('how it works')}</a>
           <a href='#pricing' className='hover:text-foreground transition-all'>{withAngleBrackets('pricing')}</a>
         </nav>
