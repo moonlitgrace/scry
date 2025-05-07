@@ -14,9 +14,9 @@ export default function Footer() {
         <div className="flex flex-col gap-2">
           <h5 className='font-bold'>Stay updated</h5>
           <p className="text-muted-foreground text-xs">Get product tips and updates:</p>
-          <div className='inline-flex items-center gap-2'>
+          <div className='flex flex-col md:flex-row items-center gap-2'>
             <Input type='email' placeholder='your@email.com' disabled />
-            <Button variant='outline' disabled>Subscribe</Button>
+            <Button variant='outline' className='w-full md:w-auto' disabled>Subscribe</Button>
           </div>
         </div>
       </div>

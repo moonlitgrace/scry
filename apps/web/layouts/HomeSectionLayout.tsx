@@ -6,7 +6,7 @@ interface Props {
 
 export default function HomeSectionLayout({ children }: Props) {
   return (
-    <section className="flex flex-col items-center gap-5">
+    <section className="flex flex-col items-center gap-2 md:gap-5">
       {children}
     </section>
   )

@@ -8,20 +8,20 @@ import { BundledLanguage } from "shiki";
 export default function HowItWorksSection() {
   return (
     <HomeSectionLayout>
-      <h3 className="font-bold text-4xl">How it works</h3>
-      <h2 className="text-muted-foreground">{withAngleBrackets('in 3 simple steps')}</h2>
-      <div className="grid grid-cols-2 gap-2 w-full">
+      <h3 className="font-bold text-2xl md:text-4xl">How it works</h3>
+      <h2 className="text-muted-foreground text-sm md:text-base">{withAngleBrackets('in 3 simple steps')}</h2>
+      <div className="grid md:grid-cols-2 gap-5 md:gap-2 w-full mt-5 md:mt-0">
         {steps.map((step, idx) => (
           <div key={idx} className={cn(idx === 1 && 'row-span-2', "flex flex-col gap-2")}>
-            <h5 className="font-bold">{idx + 1}. {step.label}</h5>
-            <div className="text-sm">
+            <h5 className="text-sm md:text-base font-bold"><span className="text-destructive">{idx + 1}.</span> {step.label}</h5>
+            <div className="text-xs md:text-sm">
               {step.code && <CodeBlock lang={step.lang ?? 'shell'}>{step.code}</CodeBlock>}
               {step.text && <span className="text-muted-foreground">{step.text}</span>}
             </div>
           </div>
         ))}
       </div>
-      <Button variant='outline'>Get started</Button>
+      <Button variant='outline' className="mt-5 md:mt-0">Get started</Button>
     </HomeSectionLayout>
   )
 }

@@ -5,7 +5,7 @@ import PricingSection from "@/pages/home/PricingSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-20 max-w-3xl mx-auto my-10">
+    <main className="p-5 flex flex-col gap-10 md:gap-20 md:max-w-3xl md:mx-auto my-5 md:my-10">
       <HeroSection />
       <HowItWorksSection />
       <PricingSection />
