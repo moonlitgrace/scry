@@ -7,7 +7,7 @@ import { BundledLanguage } from "shiki";
 
 export default function HowItWorksSection() {
   return (
-    <HomeSectionLayout>
+    <HomeSectionLayout id="how-it-works">
       <h3 className="font-bold text-2xl md:text-4xl">How it works</h3>
       <h2 className="text-muted-foreground text-sm md:text-base">{withAngleBrackets('in 3 simple steps')}</h2>
       <div className="grid md:grid-cols-2 gap-5 md:gap-2 w-full mt-5 md:mt-0">

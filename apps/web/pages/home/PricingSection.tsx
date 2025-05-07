@@ -7,7 +7,7 @@ import { Check } from 'lucide-react';
 
 export default function PricingSection() {
   return (
-    <HomeSectionLayout>
+    <HomeSectionLayout id="pricing">
       <h3 className="font-bold text-2xl md:text-4xl">Pricing</h3>
       <h2 className="text-muted-foreground text-sm md:text-base text-center">{withAngleBrackets('start free. upgrade when you need more')}</h2>
       <div className="grid md:grid-cols-2 gap-2 w-full">
