@@ -19,7 +19,7 @@ export default function PricingSection() {
             </CardHeader>
             <CardContent className="flex flex-col gap-2 text-sm">
               {plan.features.map((feat, idx) => (
-                <span key={idx} className="inline-flex items-center gap-2"><Check className="size-5 text-muted-foreground" /> {feat}</span>
+                <span key={idx} className="inline-flex items-center gap-2"><Check className="size-4 text-muted-foreground" /> {feat}</span>
               ))}
             </CardContent>
             <CardFooter>
