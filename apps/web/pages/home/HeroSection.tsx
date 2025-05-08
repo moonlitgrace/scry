@@ -12,12 +12,12 @@ export default function HeroSection() {
         style={{ backgroundImage: 'url(/svg/grids.svg)' }}
       ></div>
       <HomeSectionLayout>
-        <h1 className="text-2xl md:text-6xl font-bold text-center leading-tight">
+        <h1 className="font-sans text-5xl md:text-7xl font-bold text-center leading-tight">
           Track <span className="text-muted">Hidden</span>{' '}
           <span className="text-destructive underline decoration-wavy">Errors</span>{' '}
           <br /> in your JS Apps.
         </h1>
-        <h2 className="text-muted-foreground text-sm md:text-base">
+        <h2 className="text-muted-foreground text-sm">
           {withAngleBrackets('scry reveals what your console hides')}
         </h2>
         <div className="inline-flex gap-2">
