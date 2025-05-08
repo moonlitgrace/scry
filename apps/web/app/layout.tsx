@@ -8,14 +8,14 @@ import { Fira_Code, Fira_Sans } from 'next/font/google';
 const firacode = Fira_Code({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-firacode'
+  variable: '--font-firacode',
 });
 
 const firasans = Fira_Sans({
   subsets: ['latin'],
   display: 'swap',
   weight: ['900'],
-  variable: '--font-firasans'
+  variable: '--font-firasans',
 });
 
 export const metadata: Metadata = {
