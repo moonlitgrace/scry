@@ -4,7 +4,7 @@ const nextConfig = {
   webpack(config) {
     // get existing rule that handles svg imports
     const svgLoaderRule = config.module.rules.find((rule) => {
-      return rule.test.test('.svg');
+      return rule?.test?.test('.svg');
     });
 
     config.module.rules.push(
