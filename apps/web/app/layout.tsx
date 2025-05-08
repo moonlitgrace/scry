@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={cn(firacode.variable, firasans.variable, 'dark font-mono antialiased')}>
+      <body
+        className={cn(firacode.variable, firasans.variable, 'dark font-mono antialiased')}
+      >
         <Header />
         {children}
         <Footer />

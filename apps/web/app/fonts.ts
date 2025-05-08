@@ -1,4 +1,4 @@
-import { Fira_Code, Fira_Sans } from "next/font/google";
+import { Fira_Code, Fira_Sans } from 'next/font/google';
 
 export const firacode = Fira_Code({
   subsets: ['latin'],
@@ -12,4 +12,3 @@ export const firasans = Fira_Sans({
   weight: ['900'],
   variable: '--font-firasans',
 });
-
