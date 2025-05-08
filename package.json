@@ -5,10 +5,12 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
+    "format:fix": "pnpm format --write",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
+    "@repo/prettier-config": "workspace:*",
     "prettier": "^3.5.3",
     "turbo": "^2.5.2",
     "typescript": "5.8.3"

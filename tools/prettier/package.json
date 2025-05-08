@@ -9,9 +9,9 @@
   },
   "scripts": {
     "format": "prettier --check . --ignore-path ../../.gitignore"
-  }.
+  },
+  "prettier": "@repo/prettier-config",
   "dependencies": {
     "prettier": "^3.5.3"
-  },
-  "prettier": "@repo/prettier-config"
+  }
 }
