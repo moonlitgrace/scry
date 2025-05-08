@@ -4,13 +4,14 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack --port 3000",
+    "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "next lint --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "format": "prettier --check . --ignore-path ../../.gitignore"
   },
+  "prettier": "@repo/prettier-config",
   "dependencies": {
     "@repo/ui": "workspace:*",
     "next": "^15.3.0",
@@ -18,7 +19,6 @@
     "react-dom": "^19.1.0",
     "shiki": "^3.4.0"
   },
-  "prettier": "@repo/prettier-config",
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
