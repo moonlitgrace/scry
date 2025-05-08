@@ -40,6 +40,7 @@ const sections = [
     Component: CTASection
   },
   {
+    id: 'faq',
     title: 'FAQ',
     subText: 'frequently asked questions',
     Component: FAQSection
