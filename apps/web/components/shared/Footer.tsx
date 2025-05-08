@@ -4,8 +4,8 @@ import { Input } from '@repo/ui/components/ui/input';
 
 export default function Footer() {
   return (
-    <footer className="border-t px-5 py-10">
-      <div className="max-w-3xl mx-auto grid grid-cols-2 gap-2">
+    <footer className="border-t py-10">
+      <div className="max-w-3xl px-5 mx-auto grid grid-cols-2 gap-2">
         <div className="flex flex-col gap-2">
           <Logo className="w-10" />
           <p className="text-muted-foreground text-xs">Track and reveal hidden errors and logs in your JavaScript apps.</p>
