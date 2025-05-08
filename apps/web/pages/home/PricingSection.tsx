@@ -1,20 +1,37 @@
-import { Button } from "@repo/ui/components/ui/button";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@repo/ui/components/ui/card';
-import { cn } from "@repo/ui/lib/utils";
+import { Button } from '@repo/ui/components/ui/button';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@repo/ui/components/ui/card';
+import { cn } from '@repo/ui/lib/utils';
 import { Check } from 'lucide-react';
 
 export default function PricingSection() {
   return (
     <div className="grid md:grid-cols-2 gap-5 w-full">
       {Object.entries(plans).map(([key, plan]) => (
-        <Card key={key} className={cn(!plan.isActive && 'opacity-50 pointer-events-none select-none', "rounded-none")}>
+        <Card
+          key={key}
+          className={cn(
+            !plan.isActive && 'opacity-50 pointer-events-none select-none',
+            'rounded-none',
+          )}
+        >
           <CardHeader>
             <CardTitle>{plan.label}</CardTitle>
-            <CardDescription>({plan.isActive ? 'active' : 'coming soon'})</CardDescription>
+            <CardDescription>
+              ({plan.isActive ? 'active' : 'coming soon'})
+            </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-2 text-sm">
             {plan.features.map((feat, idx) => (
-              <span key={idx} className="inline-flex items-center gap-2"><Check className="size-4 text-muted-foreground" /> {feat}</span>
+              <span key={idx} className="inline-flex items-center gap-2">
+                <Check className="size-4 text-muted-foreground" /> {feat}
+              </span>
             ))}
           </CardContent>
           <CardFooter>
@@ -23,26 +40,18 @@ export default function PricingSection() {
         </Card>
       ))}
     </div>
-  )
+  );
 }
 
 const plans = {
   free: {
     label: 'Free',
     isActive: true,
-    features: [
-      '1 Project',
-      'Basic Error Tracking',
-      'Email alerts'
-    ]
+    features: ['1 Project', 'Basic Error Tracking', 'Email alerts'],
   },
   pro: {
     label: 'Pro',
     isActive: false,
-    features: [
-      '10 Project',
-      'Advanced Filters',
-      'Slack/Discord alerts'
-    ]
+    features: ['10 Project', 'Advanced Filters', 'Slack/Discord alerts'],
   },
-}
+};

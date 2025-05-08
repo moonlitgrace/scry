@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 /* https://stackoverflow.com/questions/79416157/how-to-enable-tailwind-css-v4-0-for-the-packages-ui-components-in-turborepo */
 @source "./";
@@ -124,7 +124,7 @@
   }
 
   button:not([disabled]),
-  [role="button"]:not([disabled]) {
+  [role='button']:not([disabled]) {
     cursor: pointer;
   }
 }

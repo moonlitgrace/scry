@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --check . --ignore-path ../../.gitignore"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
@@ -17,8 +18,10 @@
     "react-dom": "^19.1.0",
     "shiki": "^3.4.0"
   },
+  "prettier": "@repo/prettier-config",
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.5",
