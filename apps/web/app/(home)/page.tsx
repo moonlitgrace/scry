@@ -1,10 +1,10 @@
 import HomeSectionLayout from '@/layouts/HomeSectionLayout';
-import CTASection from '@/pages/home/CTASection';
-import FAQSection from '@/pages/home/FAQSection';
-import HeroSection from '@/pages/home/HeroSection';
-import HowItWorksSection from '@/pages/home/HowItWorksSection';
-import PricingSection from '@/pages/home/PricingSection';
-import { withAngleBrackets } from '@/utils/with-angle-brackets';
+import HeroSection from './components/HeroSection';
+import HowItWorksSection from './components/HowItWorksSection';
+import PricingSection from './components/PricingSection';
+import CTASection from './components/CTASection';
+import FAQSection from './components/FAQSection';
+import { withAngleBrackets } from '@/lib/with-angle-brackets';
 
 export default function Home() {
   return (

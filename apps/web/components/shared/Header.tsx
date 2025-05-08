@@ -1,5 +1,5 @@
 import LogoText from '@/assets/svg/logo-text.svg';
-import { withAngleBrackets } from '@/utils/with-angle-brackets';
+import { withAngleBrackets } from '@/lib/with-angle-brackets';
 import { Button } from '@repo/ui/components/ui/button';
 
 export default function Header() {
