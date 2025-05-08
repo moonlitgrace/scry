@@ -8,7 +8,7 @@ export default function Header() {
       <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:inline-flex items-center gap-5 text-sm text-muted-foreground font-medium">
         {['how-it-works', 'pricing', 'faq'].map((key) => (
           <a key={key} href={`#${key}`} className="hover:text-foreground transition-all">
-            {withAngleBrackets(key.replace('-', ' '))}
+            {withAngleBrackets(key.replaceAll('-', ' '))}
           </a>
         ))}
       </nav>
