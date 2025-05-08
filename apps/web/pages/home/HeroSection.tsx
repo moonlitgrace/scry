@@ -8,11 +8,11 @@ export default function HeroSection() {
   return (
     <>
       <div
-        className="absolute top-20 md:top-10 inset-x-0 h-96 md:h-[50rem] bg-size-[auto_100rem] -z-1 mask-y-from-20% mask-y-to-90%"
+        className="absolute inset-x-0 top-20 -z-1 h-96 mask-y-from-20% mask-y-to-90% bg-size-[auto_100rem] md:top-10 md:h-[50rem]"
         style={{ backgroundImage: 'url(/svg/grids.svg)' }}
       ></div>
       <HomeSectionLayout>
-        <h1 className="font-sans text-5xl md:text-7xl font-bold text-center leading-tight">
+        <h1 className="text-center font-sans text-5xl leading-tight font-bold md:text-7xl">
           Track <span className="text-muted">Hidden</span>{' '}
           <span className="text-destructive underline decoration-wavy">Errors</span>{' '}
           <br /> in your JS Apps.
@@ -29,8 +29,8 @@ export default function HeroSection() {
           </Link>
           <Button variant="outline">Start your project</Button>
         </div>
-        <div className="border w-full aspect-video mt-5 md:mt-10 bg-background">
-          <div className="border-b w-full h-5 px-2 inline-flex items-center gap-1"></div>
+        <div className="bg-background mt-5 aspect-video w-full border md:mt-10">
+          <div className="inline-flex h-5 w-full items-center gap-1 border-b px-2"></div>
         </div>
       </HomeSectionLayout>
     </>

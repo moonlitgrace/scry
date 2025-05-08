@@ -13,7 +13,7 @@ async function CodeBlock(props: Props) {
 
   return (
     <div
-      className="border p-2 [&_pre]:bg-transparent! bg-card"
+      className="bg-card border p-2 [&_pre]:bg-transparent!"
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
