@@ -1,5 +1,3 @@
-import HomeSectionLayout from "@/layouts/HomeSectionLayout";
-import { withAngleBrackets } from "@/utils/with-angle-brackets";
 import {
   Accordion,
   AccordionContent,
@@ -8,20 +6,16 @@ import {
 } from "@repo/ui/components/ui/accordion"
 
 export default function FAQSection() {
-  return <>
-    <HomeSectionLayout id="faq">
-      <h3 className="font-bold text-2xl md:text-4xl text-center">FAQ</h3>
-      <h2 className="text-muted-foreground text-sm md:text-base text-center">{withAngleBrackets('frequently asked questions')}</h2>
-      <Accordion type="single" collapsible className="w-full bg-card border" defaultValue="qs-0">
-        {questions.map((qs, idx) => (
-          <AccordionItem key={idx} value={`qs-${idx}`} className="px-5">
-            <AccordionTrigger>{qs.label}</AccordionTrigger>
-            <AccordionContent className="text-muted-foreground">{qs.content}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </HomeSectionLayout>
-  </>
+  return (
+    <Accordion type="single" collapsible className="w-full bg-card border" defaultValue="qs-0">
+      {questions.map((qs, idx) => (
+        <AccordionItem key={idx} value={`qs-${idx}`} className="px-5">
+          <AccordionTrigger>{qs.label}</AccordionTrigger>
+          <AccordionContent className="text-muted-foreground">{qs.content}</AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  )
 }
 
 const questions = [
