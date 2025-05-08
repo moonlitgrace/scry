@@ -1,55 +1,41 @@
 import { Button } from '@repo/ui/components/ui/button';
-import { CodeBlock } from '@repo/ui/components/ui/code-block';
-import { cn } from '@repo/ui/lib/utils';
-import { BundledLanguage } from 'shiki';
+import { PackagePlus, Cog, BugPlay, ExternalLink } from 'lucide-react';
 
 export default function HowItWorksSection() {
   return (
     <>
-      <div className="mt-5 grid w-full gap-5 md:mt-0 md:grid-cols-2">
-        {steps.map((step, idx) => (
-          <div key={idx} className={cn(idx === 1 && 'row-span-2', 'flex flex-col gap-2')}>
-            <h5 className="text-sm font-bold md:text-base">
-              <span className="text-destructive">{idx + 1}.</span> {step.label}
-            </h5>
-            <div className="text-xs md:text-sm">
-              {step.code && (
-                <CodeBlock lang={step.lang ?? 'shell'}>{step.code}</CodeBlock>
-              )}
-              {step.text && <span className="text-muted-foreground">{step.text}</span>}
+      <div className="mt-5 grid w-full gap-5 md:mt-0 md:grid-cols-3">
+        {steps.map(({ Icon, text, subText }, idx) => (
+          <div key={idx} className='bg-card border flex flex-col md:items-center gap-2 md:aspect-square p-5 justify-center md:text-center'>
+            <div className='flex md:flex-col items-center gap-2'>
+              <Icon className='md:size-10 text-muted-foreground' />
+              <h5 className='font-bold'>{text}</h5>
             </div>
+            <p className='text-sm text-muted-foreground'>{subText}</p>
           </div>
         ))}
       </div>
-      <Button className="mt-5 md:mt-0">Get started</Button>
+      <Button className="mt-5 md:mt-0">
+        Learn more <ExternalLink />
+      </Button>
     </>
   );
 }
 
-const steps: Array<{
-  label: string;
-  text?: string;
-  lang?: BundledLanguage;
-  code?: string;
-}> = [
+const steps = [
   {
-    label: 'Install the SDK',
-    lang: 'shell',
-    code: `npm i @scry/sdk`,
+    Icon: PackagePlus,
+    text: 'Install',
+    subText: 'Add the SDK in seconds with a simple npm install.'
   },
   {
-    label: 'Initialize in your app',
-    lang: 'js',
-    code: `import { initScry } from '@scry/sdk';
-
-initScry({
-  apiKey: 'YOUR_API_KEY',
-  debug: true
-});
-`,
+    Icon: Cog,
+    text: 'Initialize',
+    subText: 'Configure Scry with your API key to start capturing insights.'
   },
   {
-    label: 'See errors in your dashboard',
-    text: 'Errors appear automatically in your Scry dashboard',
+    Icon: BugPlay,
+    text: 'Inspect',
+    subText: 'View detailed error logs and data in your dashboard.'
   },
-];
+]

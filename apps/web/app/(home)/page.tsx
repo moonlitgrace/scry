@@ -27,7 +27,7 @@ const sections = [
   {
     id: 'how-it-works',
     title: 'How It Works',
-    subText: 'in 3 simple steps',
+    subText: `in 3 I's`,
     Component: HowItWorksSection,
   },
   {

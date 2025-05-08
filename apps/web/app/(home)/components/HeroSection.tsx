@@ -27,7 +27,7 @@ export default function HeroSection() {
               Github
             </Button>
           </Link>
-          <Button variant="outline">Start your project</Button>
+          <Button>Start your project</Button>
         </div>
         <div className="bg-background mt-5 aspect-video w-full border md:mt-10">
           <div className="inline-flex h-5 w-full items-center gap-1 border-b px-2"></div>
