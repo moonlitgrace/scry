@@ -1,5 +1,9 @@
 import HomeSectionLayout from "@/layouts/HomeSectionLayout";
-import { CTASection, FAQSection, HeroSection, HowItWorksSection, PricingSection } from "@/pages/home";
+import CTASection from "@/pages/home/CTASection";
+import FAQSection from "@/pages/home/FAQSection";
+import HeroSection from "@/pages/home/HeroSection";
+import HowItWorksSection from "@/pages/home/HowItWorksSection";
+import PricingSection from "@/pages/home/PricingSection";
 import { withAngleBrackets } from "@/utils/with-angle-brackets";
 
 export default function Home() {
