@@ -6,10 +6,10 @@ import { BundledLanguage } from 'shiki';
 export default function HowItWorksSection() {
   return (
     <>
-      <div className="grid md:grid-cols-2 gap-5 w-full mt-5 md:mt-0">
+      <div className="mt-5 grid w-full gap-5 md:mt-0 md:grid-cols-2">
         {steps.map((step, idx) => (
           <div key={idx} className={cn(idx === 1 && 'row-span-2', 'flex flex-col gap-2')}>
-            <h5 className="text-sm md:text-base font-bold">
+            <h5 className="text-sm font-bold md:text-base">
               <span className="text-destructive">{idx + 1}.</span> {step.label}
             </h5>
             <div className="text-xs md:text-sm">

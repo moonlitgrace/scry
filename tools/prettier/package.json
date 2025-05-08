@@ -12,6 +12,7 @@
   },
   "prettier": "@repo/prettier-config",
   "dependencies": {
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11"
   }
 }

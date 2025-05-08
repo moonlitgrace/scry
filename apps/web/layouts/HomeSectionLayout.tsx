@@ -11,7 +11,7 @@ export default function HomeSectionLayout({ children, id, className }: Props) {
   return (
     <section
       id={id}
-      className={cn(className, 'flex flex-col items-center gap-2 md:gap-5 scroll-mt-20')}
+      className={cn(className, 'flex scroll-mt-20 flex-col items-center gap-2 md:gap-5')}
     >
       {children}
     </section>

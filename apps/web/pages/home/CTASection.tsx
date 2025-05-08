@@ -2,7 +2,7 @@ import { Button } from '@repo/ui/components/ui/button';
 
 export default function CTASection() {
   return (
-    <div className="flex flex-col items-center gap-2 mt-5 md:mt-0">
+    <div className="mt-5 flex flex-col items-center gap-2 md:mt-0">
       <Button size="lg" variant="outline">
         Sign up Free
       </Button>
