@@ -32,24 +32,24 @@ const steps: Array<{
   lang?: BundledLanguage;
   code?: string;
 }> = [
-  {
-    label: 'Install the SDK',
-    lang: 'shell',
-    code: `npm i @scry/sdk`,
-  },
-  {
-    label: 'Initialize in your app',
-    lang: 'js',
-    code: `import { initScry } from '@scry/sdk';
+    {
+      label: 'Install the SDK',
+      lang: 'shell',
+      code: `npm i @scry/sdk`,
+    },
+    {
+      label: 'Initialize in your app',
+      lang: 'js',
+      code: `import { initScry } from '@scry/sdk';
 
 initScry({
   apiKey: 'YOUR_API_KEY',
   debug: true
 });
 `,
-  },
-  {
-    label: 'See errors in your dashboard',
-    text: 'Errors appear automatically in your Scry dashboard',
-  },
-];
+    },
+    {
+      label: 'See errors in your dashboard',
+      text: 'Errors appear automatically in your Scry dashboard',
+    },
+  ];

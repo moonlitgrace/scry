@@ -12,8 +12,8 @@ export default function Home() {
       <HeroSection />
       {sections.map(({ id, title, subText, Component }, idx) => (
         <HomeSectionLayout key={idx} id={id}>
-          <h3 className="font-bold text-2xl md:text-4xl">{title}</h3>
-          <h2 className="text-muted-foreground text-sm md:text-base">
+          <h3 className="font-sans font-bold text-2xl md:text-4xl">{title}</h3>
+          <h2 className="text-muted-foreground text-sm text-center">
             {withAngleBrackets(subText)}
           </h2>
           <Component />
