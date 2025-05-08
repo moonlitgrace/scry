@@ -1,0 +1,17 @@
+{
+  "name": "@repo/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "format": "prettier --check . --ignore-path ../../.gitignore"
+  }.
+  "dependencies": {
+    "prettier": "^3.5.3"
+  },
+  "prettier": "@repo/prettier-config"
+}
