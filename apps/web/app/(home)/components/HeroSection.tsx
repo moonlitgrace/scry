@@ -1,6 +1,6 @@
 import GithubIcon from '@/components/icons/Github';
 import HomeSectionLayout from '@/layouts/HomeSectionLayout';
-import { withAngleBrackets } from '@/utils/with-angle-brackets';
+import { withAngleBrackets } from '@/lib/with-angle-brackets';
 import { Button } from '@repo/ui/components/ui/button';
 import Link from 'next/link';
 

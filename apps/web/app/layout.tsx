@@ -3,20 +3,7 @@ import Header from '@/components/shared/Header';
 import './globals.css';
 import { cn } from '@repo/ui/lib/utils';
 import type { Metadata } from 'next';
-import { Fira_Code, Fira_Sans } from 'next/font/google';
-
-const firacode = Fira_Code({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-firacode',
-});
-
-const firasans = Fira_Sans({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['900'],
-  variable: '--font-firasans',
-});
+import { firacode, firasans } from './fonts';
 
 export const metadata: Metadata = {
   title: 'scry – Track the unseen',
@@ -30,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={cn(firacode.variable, firasans.variable, 'dark font-mono')}>
+      <body className={cn(firacode.variable, firasans.variable, 'dark font-mono antialiased')}>
         <Header />
         {children}
         <Footer />
