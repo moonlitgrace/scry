@@ -6,12 +6,14 @@ interface Props {
 }
 
 async function CodeBlock(props: Props) {
-  const out = await codeToHtml(props.children, {
+  const html = await codeToHtml(props.children, {
     lang: props.lang,
     theme: 'github-dark-default'
   })
 
-  return <div className="border p-2 [&_pre]:bg-transparent!" dangerouslySetInnerHTML={{ __html: out }} />
+  return (
+    <div className="border p-2 [&_pre]:bg-transparent! bg-card" dangerouslySetInnerHTML={{ __html: html }} />
+  )
 }
 
 export { CodeBlock }
