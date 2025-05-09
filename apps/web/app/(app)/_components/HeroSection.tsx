@@ -1,7 +1,7 @@
 import GithubIcon from '@/components/icons/Github';
 import HomeSectionLayout from '@/layouts/HomeSectionLayout';
 import { withAngleBrackets } from '@/lib/with-angle-brackets';
-import { Button } from '@repo/ui/components/ui/button';
+import { Button, buttonVariants } from '@repo/ui/components/ui/button';
 import Link from 'next/link';
 
 export default function HeroSection() {
@@ -27,7 +27,7 @@ export default function HeroSection() {
               Github
             </Button>
           </Link>
-          <Button>Start your project</Button>
+          <Link href='/' className={buttonVariants()}>Start your project</Link>
         </div>
         <div className="bg-background mt-5 aspect-video w-full border md:mt-10">
           <div className="inline-flex h-5 w-full items-center gap-1 border-b px-2"></div>
