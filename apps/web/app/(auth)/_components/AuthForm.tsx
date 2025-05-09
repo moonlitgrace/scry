@@ -18,8 +18,8 @@ export default function AuthForm({ children, type, className }: Props) {
 
   return (
     <form className={cn(className, "flex flex-col gap-2")}>
-      <h4 className="font-sans text-5xl">{text}</h4>
-      <p className="text-sm text-muted-foreground">Scry helps you track and reveal hidden errors and logs in your JavaScript apps.</p>
+      <h4 className="font-sans text-4xl md:text-5xl">{text}</h4>
+      <p className="text-xs md:text-sm text-muted-foreground">Scry helps you track and reveal hidden errors and logs in your JavaScript apps.</p>
       {children}
       <Button type="button" variant='outline'>
         <GoogleIcon className="fill-muted-foreground" />
