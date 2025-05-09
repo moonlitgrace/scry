@@ -19,7 +19,10 @@ export default function Header() {
       </a>
       <nav className="inline-flex gap-2">
         <ModeToggle />
-        <Link href='/sign-in' className={buttonVariants({ variant: 'outline', size: 'sm' })}>
+        <Link
+          href="/sign-in"
+          className={buttonVariants({ variant: 'outline', size: 'sm' })}
+        >
           Sign in
         </Link>
       </nav>
