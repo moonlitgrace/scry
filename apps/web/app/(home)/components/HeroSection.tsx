@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <>
       <div
-        className="absolute inset-x-0 top-20 -z-1 h-96 mask-y-from-20% mask-y-to-90% bg-size-[auto_100rem] md:top-10 md:h-[50rem]"
+        className="absolute opacity-25 dark:opacity-100 inset-x-0 top-20 -z-1 h-96 mask-y-from-20% mask-y-to-90% bg-size-[auto_100rem] md:top-10 md:h-[50rem]"
         style={{ backgroundImage: 'url(/svg/grids.svg)' }}
       ></div>
       <HomeSectionLayout>

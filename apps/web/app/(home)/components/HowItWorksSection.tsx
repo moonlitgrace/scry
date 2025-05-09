@@ -6,7 +6,7 @@ export default function HowItWorksSection() {
     <>
       <div className="mt-5 grid w-full gap-5 md:mt-0 md:grid-cols-3">
         {steps.map(({ Icon, text, subText }, idx) => (
-          <div key={idx} className='bg-card border flex flex-col md:items-center gap-2 md:aspect-square p-5 justify-center md:text-center'>
+          <div key={idx} className='bg-card text-card-foreground shadow-sm border flex flex-col md:items-center gap-2 md:aspect-square p-5 justify-center md:text-center'>
             <div className='flex md:flex-col items-center gap-2'>
               <Icon className='md:size-10 text-muted-foreground' />
               <h5 className='font-bold'>{text}</h5>
