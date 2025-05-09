@@ -4,6 +4,7 @@ import './globals.css';
 import { cn } from '@repo/ui/lib/utils';
 import type { Metadata } from 'next';
 import { firacode, firasans } from './fonts';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
 export const metadata: Metadata = {
   title: 'scry – Track the unseen',
@@ -16,13 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={cn(firacode.variable, firasans.variable, 'dark font-mono antialiased')}
+        className={cn(firacode.variable, firasans.variable, 'font-mono antialiased')}
       >
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

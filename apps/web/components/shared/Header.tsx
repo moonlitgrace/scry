@@ -1,6 +1,7 @@
 import LogoText from '@/assets/svg/logo-text.svg';
 import { withAngleBrackets } from '@/lib/with-angle-brackets';
 import { Button } from '@repo/ui/components/ui/button';
+import { ModeToggle } from '@repo/ui/components/ui/mode-toggle';
 
 export default function Header() {
   return (
@@ -16,9 +17,7 @@ export default function Header() {
         <LogoText className="w-20" />
       </a>
       <nav className="inline-flex gap-2">
-        <Button variant="ghost" size="sm">
-          Sign in
-        </Button>
+        <ModeToggle />
         <Button variant="outline" size="sm">
           Dashboard
         </Button>
