@@ -4,8 +4,8 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { AuthFormData, AuthSchema } from "../../_schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import AuthForm from "../../_components/AuthForm";
-import { Input } from "@repo/ui/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@repo/ui/components/ui/form";
+import { Form } from "@repo/ui/components/ui/form";
+import AuthFormFields, { AuthFormField } from "../../_components/AuthFormFields";
 
 export default function SignInForm() {
   const form = useForm<AuthFormData>({
@@ -23,36 +23,21 @@ export default function SignInForm() {
   return (
     <Form {...form}>
       <AuthForm type="sign-in" onSubmit={form.handleSubmit(onSubmit)}>
-        {formFields.map((field, idx) => (
-          <FormField
-            key={idx}
-            control={form.control}
-            name={field.name}
-            render={({ field: renderField }) => (
-              <FormItem>
-                <FormLabel>{field.label}</FormLabel>
-                <FormControl>
-                  <Input type={field.type} placeholder={field.placeholder} {...renderField} />
-                </FormControl>
-                <FormMessage className="text-xs" />
-              </FormItem>
-            )}
-          />
-        ))}
+        <AuthFormFields fields={formFields} control={form.control} />
       </AuthForm>
     </Form>
   )
 }
 
-const formFields = [
+const formFields: AuthFormField[] = [
   {
-    name: 'email' as const,
+    name: 'email',
     type: 'email',
     label: 'Email*',
     placeholder: 'Enter your email'
   },
   {
-    name: 'password' as const,
+    name: 'password',
     type: 'password',
     label: 'Password*',
     placeholder: 'Enter your password'
