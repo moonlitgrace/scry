@@ -18,10 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body
-        className={cn(firacode.variable, firasans.variable, 'font-mono antialiased')}
-      >
-        <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
+      <body className={cn(firacode.variable, firasans.variable, 'font-mono antialiased')}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Header />
           {children}
           <Footer />
