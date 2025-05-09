@@ -23,13 +23,13 @@ export default function SignInForm() {
   return (
     <Form {...form}>
       <AuthForm type="sign-in" onSubmit={form.handleSubmit(onSubmit)}>
-        <AuthFormFields fields={formFields} control={form.control} />
+        <AuthFormFields<AuthFormData> fields={formFields} control={form.control} />
       </AuthForm>
     </Form>
   )
 }
 
-const formFields: AuthFormField[] = [
+const formFields: AuthFormField<AuthFormData>[] = [
   {
     name: 'email',
     type: 'email',

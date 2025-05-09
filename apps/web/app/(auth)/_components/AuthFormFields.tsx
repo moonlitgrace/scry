@@ -1,21 +1,20 @@
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@repo/ui/components/ui/form";
-import { Control } from "react-hook-form";
-import { AuthFormData } from "../_schemas/auth";
+import { Control, FieldValues, Path } from "react-hook-form";
 import { Input } from "@repo/ui/components/ui/input";
 
-export interface AuthFormField {
-  name: 'email' | 'password';
+export interface AuthFormField<T extends FieldValues> {
+  name: Path<T>;
   type: string;
   label: string;
   placeholder: string;
 }
 
-interface Props {
-  fields: AuthFormField[];
-  control: Control<AuthFormData>
+interface Props<T extends FieldValues> {
+  fields: AuthFormField<T>[];
+  control: Control<T>
 }
 
-export default function AuthFormFields({ fields, control }: Props) {
+export default function AuthFormFields<T extends FieldValues>({ fields, control }: Props<T>) {
   return fields.map((field, idx) => (
     <FormField
       key={idx}
