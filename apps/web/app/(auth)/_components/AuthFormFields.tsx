@@ -1,6 +1,12 @@
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@repo/ui/components/ui/form";
-import { Control, FieldValues, Path } from "react-hook-form";
-import { Input } from "@repo/ui/components/ui/input";
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@repo/ui/components/ui/form';
+import { Control, FieldValues, Path } from 'react-hook-form';
+import { Input } from '@repo/ui/components/ui/input';
 
 export interface AuthFormField<T extends FieldValues> {
   name: Path<T>;
@@ -11,10 +17,13 @@ export interface AuthFormField<T extends FieldValues> {
 
 interface Props<T extends FieldValues> {
   fields: AuthFormField<T>[];
-  control: Control<T>
+  control: Control<T>;
 }
 
-export default function AuthFormFields<T extends FieldValues>({ fields, control }: Props<T>) {
+export default function AuthFormFields<T extends FieldValues>({
+  fields,
+  control,
+}: Props<T>) {
   return fields.map((field, idx) => (
     <FormField
       key={idx}
@@ -30,6 +39,5 @@ export default function AuthFormFields<T extends FieldValues>({ fields, control 
         </FormItem>
       )}
     />
-  ))
+  ));
 }
-

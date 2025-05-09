@@ -5,7 +5,7 @@ import { cn } from '@repo/ui/lib/utils';
 
 export const firacode = Fira_Code({
   subsets: ['latin'],
-  display: 'swap'
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(firacode.className, "antialiased dark")}>{children}</body>
+      <body className={cn(firacode.className, 'dark antialiased')}>{children}</body>
     </html>
   );
 }
