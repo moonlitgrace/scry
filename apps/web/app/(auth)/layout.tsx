@@ -10,7 +10,7 @@ export default function AuthLayout({ children }: Readonly<{ children: React.Reac
         </Link>
         {children}
       </div>
-      <div className="h-full bg-[url(/image/auth-bg-4.jpg)] bg-cover bg-center bg-no-repeat"></div>
+      <div className="h-full bg-[url(/image/auth-bg.jpg)] bg-cover bg-center bg-no-repeat"></div>
     </main>
   )
 }
