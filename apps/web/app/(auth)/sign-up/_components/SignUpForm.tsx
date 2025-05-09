@@ -7,7 +7,7 @@ import AuthForm from "../../_components/AuthForm";
 import { Form } from "@repo/ui/components/ui/form";
 import AuthFormFields, { type AuthFormField } from "../../_components/AuthFormFields";
 
-export default function SignInForm() {
+export default function SignUpForm() {
   const form = useForm<AuthFormData>({
     resolver: zodResolver(AuthSchema),
     defaultValues: {
@@ -22,7 +22,7 @@ export default function SignInForm() {
 
   return (
     <Form {...form}>
-      <AuthForm type="sign-in" onSubmit={form.handleSubmit(onSubmit)}>
+      <AuthForm type="sign-up" onSubmit={form.handleSubmit(onSubmit)}>
         <AuthFormFields fields={formFields} control={form.control} />
       </AuthForm>
     </Form>
@@ -43,3 +43,4 @@ const formFields: AuthFormField[] = [
     placeholder: 'Enter your password'
   },
 ]
+
