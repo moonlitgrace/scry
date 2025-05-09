@@ -2,7 +2,12 @@ import GoogleIcon from "@/components/icons/Google";
 import { Button } from "@repo/ui/components/ui/button";
 import { Input } from "@repo/ui/components/ui/input";
 import { Label } from "@repo/ui/components/ui/label";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: 'Sign in – scry'
+};
 
 export default function SignIn() {
   return (
