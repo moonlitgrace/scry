@@ -4,14 +4,14 @@ import Link from "next/link"
 
 export default function OrgHeader({ id }: { id: string }) {
   return (
-    <Header>
-      <Button variant={'ghost'} size={'sm'} className="bg-muted border-b border-muted-foreground" asChild>
+    <Header id={id}>
+      <Button variant={'ghost'} size={'sm'} className="bg-muted border-b border-muted-foreground">
         <Link href={`/org/${id}`}>Overview</Link>
       </Button>
-      <Button variant={'ghost'} size={'sm'} asChild className="pointer-events-none opacity-50">
+      <Button variant={'ghost'} size={'sm'} disabled>
         <Link href={`/org/${id}/activity`}>Activity</Link>
       </Button>
-      <Button variant={'ghost'} size={'sm'} asChild>
+      <Button variant={'ghost'} size={'sm'}>
         <Link href={`/org/${id}/settings`}>Settings</Link>
       </Button>
     </Header>

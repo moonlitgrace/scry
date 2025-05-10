@@ -11,7 +11,7 @@ export default async function OrgLayout({ children, params }: Props) {
   return (
     <>
       <OrgHeader id={id} />
-      <main className="p-5">
+      <main className="p-5 flex flex-col gap-5 max-w-350 mx-auto">
         {children}
       </main>
     </>
