@@ -61,7 +61,7 @@ export default function Header({ children }: { children?: React.ReactNode }) {
               <DropdownMenuItem>
                 <Link href={'/account'} className='flex-1'>Account</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className='cursor-pointer items-center justify-between'>
+              <DropdownMenuItem className='cursor-pointer items-center justify-between' disabled>
                 <span>Create Org</span>
                 <CirclePlus />
               </DropdownMenuItem>
