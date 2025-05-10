@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function OrgHeader({ id }: { id: string }) {
   return (
     <Header id={id}>
-      <Button variant={'ghost'} size={'sm'} className="bg-muted border-b border-muted-foreground">
+      <Button variant={'ghost'} size={'sm'} className="bg-muted border">
         <Link href={`/org/${id}`}>Overview</Link>
       </Button>
       <Button variant={'ghost'} size={'sm'} disabled>
