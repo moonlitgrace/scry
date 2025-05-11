@@ -18,7 +18,7 @@ export default function OrgRecentErrors() {
                 <span className="text-xs text-muted-foreground line-clamp-1 break-all">{error.errorMsg}</span>
               </div>
               <div className="inline-flex items-center gap-2">
-                <Badge variant={'default'}>{error.env}</Badge>
+                <Badge variant={error.env === 'PROD' ? 'destructive' : 'default'}>{error.env}</Badge>
                 <Badge variant={'outline'}>{error.status}</Badge>
                 <span className="text-xs text-muted-foreground">{error.timestamp}</span>
               </div>

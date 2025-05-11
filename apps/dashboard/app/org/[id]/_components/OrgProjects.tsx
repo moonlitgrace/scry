@@ -1,3 +1,4 @@
+import { Badge } from "@repo/ui/components/ui/badge";
 import { Button } from "@repo/ui/components/ui/button";
 import { Ellipsis } from "lucide-react";
 import Link from "next/link";
@@ -15,9 +16,12 @@ export default function OrgProjects() {
                 <span className="font-bold">{project.name}</span>
                 <span className="text-xs text-muted-foreground">{new URL(project.domain).host}</span>
               </div>
-              <Button variant={'ghost'} size={'icon-sm'} className="relative z-2">
-                <Ellipsis />
-              </Button>
+              <div className="inline-flex items-center gap-2">
+                <Badge variant={project.status === 'Active' ? 'default' : 'destructive'}>{project.status}</Badge>
+                <Button variant={'ghost'} size={'icon-sm'} className="relative z-2">
+                  <Ellipsis />
+                </Button>
+              </div>
             </div>
             <div className="grid grid-cols-4 gap-2 text-sm">
               <div className="flex flex-col gap-1">
@@ -49,6 +53,7 @@ const projects = [
     id: 'bhwvpfgs',
     name: 'Quibble',
     domain: 'https://quibble.moonlitgrace.space',
+    status: 'Active',
     stats: {
       errors: 23,
       lastError: '15m ago',
@@ -60,6 +65,7 @@ const projects = [
     id: 'djpwqztx',
     name: 'Scry-web',
     domain: 'http://localhost:3000',
+    status: 'Paused',
     stats: {
       errors: 18,
       lastError: '1h ago',
