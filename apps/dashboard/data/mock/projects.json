@@ -1,0 +1,34 @@
+[
+  {
+    "id": "bhwvpfgs",
+    "name": "Quibble",
+    "domain": "https://quibble.moonlitgrace.space",
+    "status": "Active",
+    "stats": {
+      "errors": 23,
+      "lastError": "15m ago",
+      "errorTrend": "STABLE"
+    },
+    "latestError": {
+      "errorMsg": "TypeError: undefined is not a function",
+      "env": "PROD",
+      "timestamp": "15m ago"
+    }
+  },
+  {
+    "id": "djpwqztx",
+    "name": "scry-web",
+    "domain": "http://localhost:3000",
+    "status": "Paused",
+    "stats": {
+      "errors": 18,
+      "lastError": "1h ago",
+      "errorTrend": "DOWN"
+    },
+    "latestError": {
+      "errorMsg": "NetworkError: Failed fetch",
+      "env": "DEV",
+      "timestamp": "1h ago"
+    }
+  }
+]

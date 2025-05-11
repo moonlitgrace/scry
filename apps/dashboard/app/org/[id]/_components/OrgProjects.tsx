@@ -2,13 +2,14 @@ import { Badge } from '@repo/ui/components/ui/badge';
 import { Button } from '@repo/ui/components/ui/button';
 import { Ellipsis, GitBranch } from 'lucide-react';
 import Link from 'next/link';
+import projectsData from '@/data/mock/projects.json';
 
 export default function OrgProjects() {
   return (
     <div className="col-span-2 flex flex-col gap-2">
       <h5 className="text-sm font-medium">Projects</h5>
       <div className="grid grid-cols-2 gap-5">
-        {projects.map((project) => (
+        {projectsData.map((project) => (
           <div
             key={project.id}
             className="bg-card/50 hover:bg-card relative flex flex-col gap-4 border p-4 transition-[background]"
@@ -70,38 +71,3 @@ export default function OrgProjects() {
     </div>
   );
 }
-
-const projects = [
-  {
-    id: 'bhwvpfgs',
-    name: 'Quibble',
-    domain: 'https://quibble.moonlitgrace.space',
-    status: 'Active',
-    stats: {
-      errors: 23,
-      lastError: '15m ago',
-      errorTrend: 'STABLE',
-    },
-    latestError: {
-      errorMsg: 'TypeError: undefined is not a function',
-      env: 'PROD',
-      timestamp: '15m ago',
-    },
-  },
-  {
-    id: 'djpwqztx',
-    name: 'scry-web',
-    domain: 'http://localhost:3000',
-    status: 'Paused',
-    stats: {
-      errors: 18,
-      lastError: '1h ago',
-      errorTrend: 'DOWN',
-    },
-    latestError: {
-      errorMsg: 'NetworkError: Failed fetch',
-      env: 'DEV',
-      timestamp: '1h ago',
-    },
-  },
-];
