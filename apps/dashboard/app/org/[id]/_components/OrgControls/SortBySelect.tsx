@@ -6,11 +6,11 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@repo/ui/components/ui/select"
-import { useState } from "react";
+} from '@repo/ui/components/ui/select';
+import { useState } from 'react';
 
 export default function SortBySelect() {
-  const [value, setValue] = useState('recent')
+  const [value, setValue] = useState('recent');
 
   return (
     <Select value={value} onValueChange={(val) => setValue(val)}>
@@ -22,6 +22,5 @@ export default function SortBySelect() {
         <SelectItem value="name">Sort by name</SelectItem>
       </SelectContent>
     </Select>
-  )
+  );
 }
-

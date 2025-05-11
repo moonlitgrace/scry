@@ -2,13 +2,13 @@ import { Input } from '@repo/ui/components/ui/input';
 import { ChevronDown, Search } from 'lucide-react';
 import { Button } from '@repo/ui/components/ui/button';
 import SortBySelect from './SortBySelect';
+import LayoutToggle from './LayoutToggle';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@repo/ui/components/ui/dropdown-menu"
-import LayoutToggle from './LayoutToggle';
+} from '@repo/ui/components/ui/dropdown-menu';
 
 export default function OrgControls() {
   return (
@@ -26,7 +26,7 @@ export default function OrgControls() {
             <ChevronDown className="size-5" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align='end' className='w-max'>
+        <DropdownMenuContent align="end" className="w-max">
           <DropdownMenuItem>Project</DropdownMenuItem>
           <DropdownMenuItem disabled>Team Member</DropdownMenuItem>
         </DropdownMenuContent>
@@ -34,4 +34,3 @@ export default function OrgControls() {
     </div>
   );
 }
-

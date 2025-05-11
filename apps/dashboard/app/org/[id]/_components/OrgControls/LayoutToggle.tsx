@@ -1,21 +1,23 @@
-'use client'
+'use client';
 
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@repo/ui/components/ui/toggle-group"
+import { ToggleGroup, ToggleGroupItem } from '@repo/ui/components/ui/toggle-group';
 import { LayoutGrid, List } from 'lucide-react';
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function LayoutToggle() {
-  const [value, setValue] = useState('grid')
+  const [value, setValue] = useState('grid');
 
   function handleValueChange(val: string) {
-    if (val) setValue(val)
+    if (val) setValue(val);
   }
 
   return (
-    <ToggleGroup variant={'outline'} type="single" value={value} onValueChange={handleValueChange}>
+    <ToggleGroup
+      variant={'outline'}
+      type="single"
+      value={value}
+      onValueChange={handleValueChange}
+    >
       <ToggleGroupItem value="grid" aria-label="Toggle grid">
         <LayoutGrid className="size-4" />
       </ToggleGroupItem>
@@ -23,6 +25,5 @@ export default function LayoutToggle() {
         <List className="size-4" />
       </ToggleGroupItem>
     </ToggleGroup>
-  )
+  );
 }
-
