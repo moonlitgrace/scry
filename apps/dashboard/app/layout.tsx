@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Fira_Code } from 'next/font/google';
 import { cn } from '@repo/ui/lib/utils';
+import { ThemeProvider } from 'next-themes';
 
 export const firacode = Fira_Code({
   subsets: ['latin'],
@@ -18,8 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(firacode.className, 'dark antialiased')}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(firacode.className, 'antialiased')}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
