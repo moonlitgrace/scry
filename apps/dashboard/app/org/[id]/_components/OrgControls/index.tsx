@@ -1,7 +1,6 @@
 import { Input } from '@repo/ui/components/ui/input';
-import { ChevronDown, LayoutGrid, List, Search } from 'lucide-react';
+import { ChevronDown, Search } from 'lucide-react';
 import { Button } from '@repo/ui/components/ui/button';
-import { Tabs, TabsList, TabsTrigger } from '@repo/ui/components/ui/tabs';
 import SortBySelect from './SortBySelect';
 import {
   DropdownMenu,
@@ -9,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@repo/ui/components/ui/dropdown-menu"
+import LayoutToggle from './LayoutToggle';
 
 export default function OrgControls() {
   return (
@@ -18,16 +18,7 @@ export default function OrgControls() {
         <Input placeholder="Search projects..." className="pl-10" />
       </div>
       <SortBySelect />
-      <Tabs>
-        <TabsList>
-          <TabsTrigger value="grid">
-            <LayoutGrid />
-          </TabsTrigger>
-          <TabsTrigger value="list">
-            <List />
-          </TabsTrigger>
-        </TabsList>
-      </Tabs>
+      <LayoutToggle />
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button>
