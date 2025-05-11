@@ -1,6 +1,6 @@
 import { Badge } from "@repo/ui/components/ui/badge";
 import { Button } from "@repo/ui/components/ui/button";
-import { Ellipsis } from "lucide-react";
+import { Ellipsis, GitBranch } from "lucide-react";
 import Link from "next/link";
 
 export default function OrgProjects() {
@@ -23,21 +23,26 @@ export default function OrgProjects() {
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-4 gap-2 text-sm">
-              <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 text-xs font-medium text-muted-foreground">
+              <span className="line-clamp-1">{project.latestError.errorMsg}</span>
+              <div className="inline-flex items-center gap-2">
+                <span>{project.latestError.timestamp}</span>
+                <span>on</span>
+                <GitBranch className="size-4" />
+                <span className="text-foreground">{project.latestError.env}</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-2 text-sm">
+              <div className="flex flex-col gap-1 items-start">
                 <div className="font-medium">{project.stats.errors}</div>
                 <div className="text-xs text-muted-foreground">Errors</div>
               </div>
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 items-center">
                 <div className="font-medium">{project.stats.lastError}</div>
                 <div className="text-xs text-muted-foreground">Last Error</div>
               </div>
-              <div className="flex flex-col gap-1">
-                <div className="font-medium">{project.stats.env}</div>
-                <div className="text-xs text-muted-foreground">Env</div>
-              </div>
-              <div className="flex flex-col gap-1">
-                <div className="font-medium">{project.stats.trend === "UP" ? "↑ More" : project.stats.trend === "DOWN" ? "↓ Less" : "→ Stable"}</div>
+              <div className="flex flex-col gap-1 items-end">
+                <div className="font-medium">{project.stats.errorTrend === "UP" ? "↑ More" : project.stats.errorTrend === "DOWN" ? "↓ Less" : "→ Stable"}</div>
                 <div className="text-xs text-muted-foreground">vs yesterday</div>
               </div>
             </div>
@@ -57,8 +62,12 @@ const projects = [
     stats: {
       errors: 23,
       lastError: '15m ago',
+      errorTrend: 'STABLE',
+    },
+    latestError: {
+      errorMsg: 'TypeError: undefined is not a function',
       env: 'PROD',
-      trend: 'STABLE'
+      timestamp: '15m ago'
     }
   },
   {
@@ -69,8 +78,12 @@ const projects = [
     stats: {
       errors: 18,
       lastError: '1h ago',
+      errorTrend: 'DOWN',
+    },
+    latestError: {
+      errorMsg: 'NetworkError: Failed fetch',
       env: 'DEV',
-      trend: 'DOWN'
+      timestamp: '1h ago'
     }
   },
 ]
