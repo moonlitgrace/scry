@@ -2,6 +2,13 @@ import { Input } from '@repo/ui/components/ui/input';
 import { ChevronDown, LayoutGrid, List, Search } from 'lucide-react';
 import { Button } from '@repo/ui/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@repo/ui/components/ui/tabs';
+import SortBySelect from './SortBySelect';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@repo/ui/components/ui/dropdown-menu"
 
 export default function OrgControls() {
   return (
@@ -10,11 +17,8 @@ export default function OrgControls() {
         <Search className="text-muted-foreground pointer-events-none absolute left-2.5 size-5" />
         <Input placeholder="Search projects..." className="pl-10" />
       </div>
-      <Button variant={'outline'}>
-        Sort by
-        <ChevronDown className="size-5" />
-      </Button>
-      <Tabs defaultValue="grid">
+      <SortBySelect />
+      <Tabs>
         <TabsList>
           <TabsTrigger value="grid">
             <LayoutGrid />
@@ -24,10 +28,19 @@ export default function OrgControls() {
           </TabsTrigger>
         </TabsList>
       </Tabs>
-      <Button>
-        Add new...
-        <ChevronDown className="size-5" />
-      </Button>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button>
+            Add new...
+            <ChevronDown className="size-5" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align='end' className='w-max'>
+          <DropdownMenuItem>Project</DropdownMenuItem>
+          <DropdownMenuItem disabled>Team Member</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }
+
