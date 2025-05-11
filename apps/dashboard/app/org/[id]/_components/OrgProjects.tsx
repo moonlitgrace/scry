@@ -18,7 +18,7 @@ export default function OrgProjects() {
               </div>
               <div className="inline-flex items-center gap-2">
                 <Badge variant={project.status === 'Active' ? 'default' : 'destructive'}>{project.status}</Badge>
-                <Button variant={'ghost'} size={'icon-sm'} className="relative z-2">
+                <Button variant={'ghost'} size={'icon-sm'} className="relative z-2" disabled>
                   <Ellipsis />
                 </Button>
               </div>

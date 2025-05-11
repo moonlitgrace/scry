@@ -23,7 +23,7 @@ export default function OrgRecentErrors() {
                 <span className="text-xs text-muted-foreground">{error.timestamp}</span>
               </div>
             </div>
-            <Button variant={'ghost'} size={'icon-sm'} className="relative z-2">
+            <Button variant={'ghost'} size={'icon-sm'} className="relative z-2" disabled>
               <Ellipsis />
             </Button>
           </div>
