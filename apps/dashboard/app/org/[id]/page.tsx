@@ -1,6 +1,6 @@
-import OrgControls from "./_components/OrgControls"
-import OrgProjects from "./_components/OrgProjects"
-import OrgRecentErrors from "./_components/OrgRecentErrors"
+import OrgControls from './_components/OrgControls';
+import OrgProjects from './_components/OrgProjects';
+import OrgRecentErrors from './_components/OrgRecentErrors';
 
 export default function Page() {
   return (
@@ -11,6 +11,5 @@ export default function Page() {
         <OrgProjects />
       </section>
     </>
-  )
+  );
 }
-

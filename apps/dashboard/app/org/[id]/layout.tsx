@@ -1,4 +1,4 @@
-import OrgHeader from "./_components/OrgHeader";
+import OrgHeader from './_components/OrgHeader';
 
 interface Props {
   children: React.ReactNode;
@@ -11,10 +11,7 @@ export default async function OrgLayout({ children, params }: Props) {
   return (
     <>
       <OrgHeader id={id} />
-      <main className="p-5 flex flex-col gap-5 max-w-350 mx-auto">
-        {children}
-      </main>
+      <main className="mx-auto flex max-w-350 flex-col gap-5 p-5">{children}</main>
     </>
-  )
+  );
 }
-

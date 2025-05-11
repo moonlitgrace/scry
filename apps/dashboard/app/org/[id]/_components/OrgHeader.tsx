@@ -1,6 +1,6 @@
-import Header from "@/components/shared/Header"
-import { Button } from "@repo/ui/components/ui/button"
-import Link from "next/link"
+import Header from '@/components/shared/Header';
+import { Button } from '@repo/ui/components/ui/button';
+import Link from 'next/link';
 
 export default function OrgHeader({ id }: { id: string }) {
   return (
@@ -15,6 +15,5 @@ export default function OrgHeader({ id }: { id: string }) {
         <Link href={`/org/${id}/settings`}>Settings</Link>
       </Button>
     </Header>
-  )
+  );
 }
-

@@ -1,19 +1,26 @@
-import { Badge } from "@repo/ui/components/ui/badge";
-import { Button } from "@repo/ui/components/ui/button";
-import { ChevronDown } from "lucide-react";
-import Link from "next/link";
+import { Badge } from '@repo/ui/components/ui/badge';
+import { Button } from '@repo/ui/components/ui/button';
+import { ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 export default function OrgSelector({ id }: { id: string }) {
   return (
-    <div className='inline-flex items-center gap-2'>
-      <Link href={`/org/${id}`} className='text-sm font-medium inline-flex items-center gap-2'>
+    <div className="inline-flex items-center gap-2">
+      <Link
+        href={`/org/${id}`}
+        className="inline-flex items-center gap-2 text-sm font-medium"
+      >
         moonlitgrace's Org
         <Badge variant="secondary">Free</Badge>
       </Link>
-      <Button size='icon-sm' variant='ghost' className='size-[calc(var(--spacing)*5.5)]' disabled>
+      <Button
+        size="icon-sm"
+        variant="ghost"
+        className="size-[calc(var(--spacing)*5.5)]"
+        disabled
+      >
         <ChevronDown />
       </Button>
     </div>
-  )
+  );
 }
-
