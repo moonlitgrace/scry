@@ -1,4 +1,4 @@
-import { buttonVariants } from '@repo/ui/components/ui/button';
+import { buttonVariants } from '@repo/design-system/components/ui/button';
 import Link from 'next/link';
 
 export default function CTASection() {

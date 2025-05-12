@@ -1,7 +1,7 @@
 import LogoText from '@/assets/svg/logo-text.svg';
 import { withAngleBrackets } from '@/lib/with-angle-brackets';
-import { buttonVariants } from '@repo/ui/components/ui/button';
-import { ModeToggle } from '@repo/ui/components/ui/mode-toggle';
+import { buttonVariants } from '@repo/design-system/components/ui/button';
+import { ModeToggle } from '@repo/design-system/components/ui/mode-toggle';
 import Link from 'next/link';
 
 export default function Header() {

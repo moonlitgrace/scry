@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Fira_Code } from 'next/font/google';
-import { cn } from '@repo/ui/lib/utils';
+import { cn } from '@repo/design-system/lib/utils';
 import { ThemeProvider } from 'next-themes';
 
 export const firacode = Fira_Code({

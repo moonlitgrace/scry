@@ -4,9 +4,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@repo/ui/components/ui/form';
+} from '@repo/design-system/components/ui/form';
 import { Control, FieldValues, Path } from 'react-hook-form';
-import { Input } from '@repo/ui/components/ui/input';
+import { Input } from '@repo/design-system/components/ui/input';
 
 export interface AuthFormField<T extends FieldValues> {
   name: Path<T>;

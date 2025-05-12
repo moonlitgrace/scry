@@ -1,6 +1,6 @@
-import { Badge } from '@repo/ui/components/ui/badge';
-import { Button } from '@repo/ui/components/ui/button';
-import { ScrollArea } from '@repo/ui/components/ui/scroll-area';
+import { Badge } from '@repo/design-system/components/ui/badge';
+import { Button } from '@repo/design-system/components/ui/button';
+import { ScrollArea } from '@repo/design-system/components/ui/scroll-area';
 import { Ellipsis } from 'lucide-react';
 import Link from 'next/link';
 import recentErrorsData from '@/data/mock/recent_errors.json';

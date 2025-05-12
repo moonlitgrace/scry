@@ -1,7 +1,7 @@
 import GithubIcon from '@/components/icons/Github';
 import HomeSectionLayout from '@/layouts/HomeSectionLayout';
 import { withAngleBrackets } from '@/lib/with-angle-brackets';
-import { Button, buttonVariants } from '@repo/ui/components/ui/button';
+import { Button, buttonVariants } from '@repo/design-system/components/ui/button';
 import Link from 'next/link';
 
 export default function HeroSection() {

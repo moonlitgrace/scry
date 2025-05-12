@@ -1,6 +1,6 @@
 import GoogleIcon from '@/components/icons/Google';
-import { Button } from '@repo/ui/components/ui/button';
-import { cn } from '@repo/ui/lib/utils';
+import { Button } from '@repo/design-system/components/ui/button';
+import { cn } from '@repo/design-system/lib/utils';
 import Link from 'next/link';
 
 interface Props {

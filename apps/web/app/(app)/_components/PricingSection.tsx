@@ -1,4 +1,4 @@
-import { Button } from '@repo/ui/components/ui/button';
+import { Button } from '@repo/design-system/components/ui/button';
 import {
   Card,
   CardHeader,
@@ -6,8 +6,8 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from '@repo/ui/components/ui/card';
-import { cn } from '@repo/ui/lib/utils';
+} from '@repo/design-system/components/ui/card';
+import { cn } from '@repo/design-system/lib/utils';
 import { Check } from 'lucide-react';
 
 export default function PricingSection() {

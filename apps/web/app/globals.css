@@ -1,4 +1,4 @@
-@import '@repo/ui/globals.css';
+@import '@repo/design-system/globals.css';
 
 @theme inline {
   --font-mono: var(--font-firacode);
