@@ -3,6 +3,7 @@ import { IOrgProject } from '../../_types/org-project';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
 import { Ellipsis, GitBranch } from 'lucide-react';
+import { formatTimeSince } from '@/lib/utils/datetime';
 
 export default function ProjectCard(project: IOrgProject) {
   return (
@@ -27,7 +28,7 @@ export default function ProjectCard(project: IOrgProject) {
       <div className="text-muted-foreground flex flex-col gap-1 text-xs font-medium">
         <span className="line-clamp-1">{project.latestError.errorMsg}</span>
         <div className="inline-flex items-center gap-2">
-          <span>{project.latestError.timestamp}</span>
+          <span>{formatTimeSince(project.latestError.timestamp)}</span>
           <span>on</span>
           <GitBranch className="size-4" />
           <span className="text-foreground">{project.latestError.env}</span>
@@ -39,7 +40,7 @@ export default function ProjectCard(project: IOrgProject) {
           <div className="text-muted-foreground text-xs">Errors</div>
         </div>
         <div className="flex flex-col items-center gap-1">
-          <div className="font-medium">{project.stats.lastError}</div>
+          <div className="font-medium">{formatTimeSince(project.stats.lastError)}</div>
           <div className="text-muted-foreground text-xs">Last Error</div>
         </div>
         <div className="flex flex-col items-end gap-1">

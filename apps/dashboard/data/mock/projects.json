@@ -6,13 +6,13 @@
     "status": "Active",
     "stats": {
       "errors": 23,
-      "lastError": "15m ago",
+      "lastError": "2025-05-12T13:45:00.000Z",
       "errorTrend": "STABLE"
     },
     "latestError": {
       "errorMsg": "TypeError: undefined is not a function",
       "env": "PROD",
-      "timestamp": "15m ago"
+      "timestamp": "2025-05-12T13:45:00.000Z"
     }
   },
   {
@@ -22,13 +22,13 @@
     "status": "Paused",
     "stats": {
       "errors": 18,
-      "lastError": "1h ago",
+      "lastError": "2025-05-12T10:45:00.000Z",
       "errorTrend": "DOWN"
     },
     "latestError": {
       "errorMsg": "NetworkError: Failed fetch",
       "env": "DEV",
-      "timestamp": "1h ago"
+      "timestamp": "2025-05-12T10:45:00.000Z"
     }
   }
 ]
