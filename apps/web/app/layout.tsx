@@ -1,5 +1,5 @@
 import './globals.css';
-import { cn } from '@repo/ui/lib/utils';
+import { cn } from '@repo/design-system/lib/utils';
 import { firacode, firasans } from './fonts';
 import { ThemeProvider } from '@/components/ThemeProvider';
 

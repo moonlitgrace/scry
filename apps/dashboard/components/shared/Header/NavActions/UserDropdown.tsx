@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback } from '@repo/ui/components/ui/avatar';
-import { Button } from '@repo/ui/components/ui/button';
+import { Avatar, AvatarFallback } from '@repo/design-system/components/ui/avatar';
+import { Button } from '@repo/design-system/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@repo/ui/components/ui/dropdown-menu';
+} from '@repo/design-system/components/ui/dropdown-menu';
 import { CirclePlus, LogOut } from 'lucide-react';
 import Link from 'next/link';
 import ThemeSelector from './ThemeSelector';

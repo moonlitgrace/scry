@@ -1,7 +1,7 @@
 'use client';
 
 import Header from '@/components/shared/Header';
-import { Button } from '@repo/ui/components/ui/button';
+import { Button } from '@repo/design-system/components/ui/button';
 import Link from 'next/link';
 import Logo from '@/assets/svg/logo.svg';
 import { useEffect, useState } from 'react';

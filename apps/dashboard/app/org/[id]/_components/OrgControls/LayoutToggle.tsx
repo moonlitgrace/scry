@@ -1,6 +1,9 @@
 'use client';
 
-import { ToggleGroup, ToggleGroupItem } from '@repo/ui/components/ui/toggle-group';
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from '@repo/design-system/components/ui/toggle-group';
 import { LayoutGrid, List } from 'lucide-react';
 import { useState } from 'react';
 

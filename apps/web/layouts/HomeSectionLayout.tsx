@@ -1,4 +1,4 @@
-import { cn } from '@repo/ui/lib/utils';
+import { cn } from '@repo/design-system/lib/utils';
 import React from 'react';
 
 interface Props {

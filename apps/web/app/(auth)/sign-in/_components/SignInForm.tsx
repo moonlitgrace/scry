@@ -4,7 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { AuthFormData, AuthSchema } from '../../_schemas/auth';
 import { zodResolver } from '@hookform/resolvers/zod';
 import AuthForm from '../../_components/AuthForm';
-import { Form } from '@repo/ui/components/ui/form';
+import { Form } from '@repo/design-system/components/ui/form';
 import AuthFormFields, { type AuthFormField } from '../../_components/AuthFormFields';
 
 export default function SignInForm() {

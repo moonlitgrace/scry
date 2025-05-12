@@ -1,6 +1,6 @@
-import { Input } from '@repo/ui/components/ui/input';
+import { Input } from '@repo/design-system/components/ui/input';
 import { ChevronDown, Search } from 'lucide-react';
-import { Button } from '@repo/ui/components/ui/button';
+import { Button } from '@repo/design-system/components/ui/button';
 import SortBySelect from './SortBySelect';
 import LayoutToggle from './LayoutToggle';
 import {
@@ -8,7 +8,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@repo/ui/components/ui/dropdown-menu';
+} from '@repo/design-system/components/ui/dropdown-menu';
 
 export default function OrgControls() {
   return (

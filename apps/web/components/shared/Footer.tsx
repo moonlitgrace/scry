@@ -1,6 +1,6 @@
 import Logo from '@/assets/svg/logo.svg';
-import { Button } from '@repo/ui/components/ui/button';
-import { Input } from '@repo/ui/components/ui/input';
+import { Button } from '@repo/design-system/components/ui/button';
+import { Input } from '@repo/design-system/components/ui/input';
 
 export default function Footer() {
   return (

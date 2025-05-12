@@ -6,7 +6,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@repo/ui/components/ui/select';
+} from '@repo/design-system/components/ui/select';
 import { useState } from 'react';
 
 export default function SortBySelect() {

@@ -1,5 +1,5 @@
-import { Badge } from '@repo/ui/components/ui/badge';
-import { Button } from '@repo/ui/components/ui/button';
+import { Badge } from '@repo/design-system/components/ui/badge';
+import { Button } from '@repo/design-system/components/ui/button';
 import { Ellipsis, GitBranch } from 'lucide-react';
 import Link from 'next/link';
 import projectsData from '@/data/mock/projects.json';
