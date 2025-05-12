@@ -1,33 +1,5 @@
-import rawProjectsData from '@/data/mock/projects.json';
+import { getProjects } from '@/dal/projects';
 import ProjectCard from './ProjectCard';
-import { IOrgProject } from '../../_types/org-project';
-
-async function getProjects(
-  query: string,
-  sort: 'recent' | 'name',
-): Promise<IOrgProject[]> {
-  return new Promise((resolve) =>
-    setTimeout(() => {
-      let resData: IOrgProject[] = [];
-      const normalizedQuery = query.toLowerCase();
-      const filteredData = rawProjectsData.filter((project) =>
-        project.name.toLowerCase().includes(normalizedQuery),
-      );
-
-      if (sort === 'recent') {
-        resData = filteredData.sort(
-          (a, b) =>
-            new Date(b.latestError.timestamp).getTime() -
-            new Date(a.latestError.timestamp).getTime(),
-        );
-      } else if (sort === 'name') {
-        resData = filteredData.sort((a, b) => a.name.localeCompare(b.name));
-      }
-
-      resolve(resData);
-    }, 1000),
-  );
-}
 
 interface Props {
   query: string;
