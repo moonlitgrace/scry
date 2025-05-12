@@ -2,20 +2,37 @@ import rawProjectsData from '@/data/mock/projects.json';
 import ProjectCard from './ProjectCard';
 import { IOrgProject } from '../../_types/org-project';
 
-async function getProjects(query: string): Promise<IOrgProject[]> {
+async function getProjects(query: string, sort: string): Promise<IOrgProject[]> {
   return new Promise((resolve) =>
     setTimeout(() => {
-      resolve(
-        rawProjectsData.filter((project) =>
-          project.name.toLowerCase().includes(query.toLowerCase()),
-        ),
+      let resData: IOrgProject[] = [];
+      const normalizedQuery = query.toLowerCase();
+      const filteredData = rawProjectsData.filter((project) =>
+        project.name.toLowerCase().includes(normalizedQuery),
       );
+
+      if (sort === 'recent') {
+        resData = filteredData.sort(
+          (a, b) =>
+            new Date(b.latestError.timestamp).getTime() -
+            new Date(a.latestError.timestamp).getTime(),
+        );
+      } else if (sort === 'name') {
+        resData = filteredData.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      resolve(resData);
     }, 1000),
   );
 }
 
-export default async function OrgProjects({ query }: { query: string }) {
-  const projectsData = await getProjects(query);
+interface Props {
+  query: string;
+  sort: string;
+}
+
+export default async function OrgProjects({ query, sort }: Props) {
+  const projectsData = await getProjects(query, sort);
 
   return (
     <div className="col-span-2 flex flex-col gap-2">
