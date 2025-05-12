@@ -4,6 +4,7 @@ import { ScrollArea } from '@repo/design-system/components/ui/scroll-area';
 import { Ellipsis } from 'lucide-react';
 import Link from 'next/link';
 import recentErrorsData from '@/data/mock/recent_errors.json';
+import { formatTimeSince } from '@/lib/utils/datetime';
 
 export default function OrgRecentErrors() {
   return (
@@ -33,7 +34,9 @@ export default function OrgRecentErrors() {
                   {error.env}
                 </Badge>
                 <Badge variant={'outline'}>{error.status}</Badge>
-                <span className="text-muted-foreground text-xs">{error.timestamp}</span>
+                <span className="text-muted-foreground text-xs">
+                  {formatTimeSince(error.timestamp)}
+                </span>
               </div>
             </div>
             <Button variant={'ghost'} size={'icon-sm'} className="relative z-2" disabled>
