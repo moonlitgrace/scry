@@ -7,7 +7,7 @@ import OrgProjectsSkeleton from './_components/OrgProjects/OrgProjectsSkeleton';
 interface Props {
   searchParams: Promise<{
     q?: string;
-    sort?: string;
+    sort?: 'recent' | 'name';
   }>;
 }
 

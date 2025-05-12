@@ -2,7 +2,10 @@ import rawProjectsData from '@/data/mock/projects.json';
 import ProjectCard from './ProjectCard';
 import { IOrgProject } from '../../_types/org-project';
 
-async function getProjects(query: string, sort: string): Promise<IOrgProject[]> {
+async function getProjects(
+  query: string,
+  sort: 'recent' | 'name',
+): Promise<IOrgProject[]> {
   return new Promise((resolve) =>
     setTimeout(() => {
       let resData: IOrgProject[] = [];
@@ -28,7 +31,7 @@ async function getProjects(query: string, sort: string): Promise<IOrgProject[]> 
 
 interface Props {
   query: string;
-  sort: string;
+  sort: 'recent' | 'name';
 }
 
 export default async function OrgProjects({ query, sort }: Props) {
