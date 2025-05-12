@@ -30,6 +30,7 @@
     "eslint": "^9",
     "lucide-react": "^0.509.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "use-debounce": "^10.0.4"
   }
 }

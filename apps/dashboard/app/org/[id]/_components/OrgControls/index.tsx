@@ -1,5 +1,4 @@
-import { Input } from '@repo/design-system/components/ui/input';
-import { ChevronDown, Search } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { Button } from '@repo/design-system/components/ui/button';
 import SortBySelect from './SortBySelect';
 import LayoutToggle from './LayoutToggle';
@@ -9,14 +8,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@repo/design-system/components/ui/dropdown-menu';
+import ProjectsSearch from './ProjectsSearch';
 
 export default function OrgControls() {
   return (
     <div className="inline-flex w-full items-center gap-2">
-      <div className="relative flex w-full items-center">
-        <Search className="text-muted-foreground pointer-events-none absolute left-2.5 size-5" />
-        <Input placeholder="Search projects..." className="pl-10" />
-      </div>
+      <ProjectsSearch />
       <SortBySelect />
       <LayoutToggle />
       <DropdownMenu>
