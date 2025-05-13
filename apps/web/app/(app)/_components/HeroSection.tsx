@@ -3,6 +3,7 @@ import HomeSectionLayout from '@/layouts/HomeSectionLayout';
 import { withAngleBrackets } from '@/lib/with-angle-brackets';
 import { Button, buttonVariants } from '@repo/design-system/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HeroSection() {
   return (
@@ -31,8 +32,17 @@ export default function HeroSection() {
             Start your project
           </Link>
         </div>
-        <div className="bg-background mt-5 aspect-video w-full border md:mt-10">
-          <div className="inline-flex h-5 w-full items-center gap-1 border-b px-2"></div>
+        <div className="flex w-full items-end">
+          <Image
+            src="/image/dashboard-preview.png"
+            alt="Dashboard preview"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            className="bg-accent mt-5 p-1 pt-2 pb-0"
+          />
+          <div className="absolute inset-x-0 border-b"></div>
         </div>
       </HomeSectionLayout>
     </>
