@@ -1,34 +1,98 @@
 [
   {
-    "id": "bhwvpfgs",
-    "name": "Quibble",
-    "domain": "https://quibble.moonlitgrace.space",
+    "id": "twzbncvo",
+    "name": "Scry Studio",
+    "domain": "https://studio.scry.dev",
     "status": "Active",
     "stats": {
-      "errors": 23,
-      "lastError": "2025-05-12T13:45:00.000Z",
-      "errorTrend": "STABLE"
+      "errors": 41,
+      "lastError": "2025-05-12T17:25:00.000Z",
+      "errorTrend": "UP"
     },
     "latestError": {
-      "errorMsg": "TypeError: undefined is not a function",
+      "errorMsg": "AuthError: Invalid token signature",
       "env": "PROD",
-      "timestamp": "2025-05-12T13:45:00.000Z"
+      "timestamp": "2025-05-12T17:25:00.000Z"
     }
   },
   {
-    "id": "djpwqztx",
-    "name": "scry-web",
-    "domain": "http://localhost:3000",
-    "status": "Paused",
+    "id": "nxlrwdke",
+    "name": "CoreIcons",
+    "domain": "https://icons.coreproject.dev",
+    "status": "Active",
     "stats": {
-      "errors": 18,
-      "lastError": "2025-05-12T10:45:00.000Z",
+      "errors": 5,
+      "lastError": "2025-05-11T22:10:00.000Z",
+      "errorTrend": "UP"
+    },
+    "latestError": {
+      "errorMsg": "SyntaxError: Unexpected token '<'",
+      "env": "PROD",
+      "timestamp": "2025-05-11T22:10:00.000Z"
+    }
+  },
+  {
+    "id": "zkqfjrla",
+    "name": "AnimeCore",
+    "domain": "https://anime.coreproject.moe",
+    "status": "Active",
+    "stats": {
+      "errors": 2,
+      "lastError": "2025-05-10T16:55:00.000Z",
       "errorTrend": "DOWN"
     },
     "latestError": {
-      "errorMsg": "NetworkError: Failed fetch",
+      "errorMsg": "Error: Missing episode data",
+      "env": "PROD",
+      "timestamp": "2025-05-10T16:55:00.000Z"
+    }
+  },
+  {
+    "id": "ubmeqlsz",
+    "name": "mangacore-cms",
+    "domain": "https://cms.mangacore.moe",
+    "status": "Maintenance",
+    "stats": {
+      "errors": 32,
+      "lastError": "2025-05-12T05:32:00.000Z",
+      "errorTrend": "UP"
+    },
+    "latestError": {
+      "errorMsg": "ReferenceError: window is not defined",
+      "env": "STAGING",
+      "timestamp": "2025-05-12T05:32:00.000Z"
+    }
+  },
+  {
+    "id": "gctnxlqy",
+    "name": "Quibble API",
+    "domain": "https://api.quibble.moonlitgrace.space",
+    "status": "Active",
+    "stats": {
+      "errors": 12,
+      "lastError": "2025-05-12T14:05:00.000Z",
+      "errorTrend": "STABLE"
+    },
+    "latestError": {
+      "errorMsg": "ValidationError: Invalid post data",
+      "env": "PROD",
+      "timestamp": "2025-05-12T14:05:00.000Z"
+    }
+  },
+  {
+    "id": "vxklptre",
+    "name": "SoundCore",
+    "domain": "https://sound.coreproject.moe",
+    "status": "Paused",
+    "stats": {
+      "errors": 7,
+      "lastError": "2025-05-12T09:20:00.000Z",
+      "errorTrend": "UP"
+    },
+    "latestError": {
+      "errorMsg": "AudioLoadError: Failed to decode stream",
       "env": "DEV",
-      "timestamp": "2025-05-12T10:45:00.000Z"
+      "timestamp": "2025-05-12T09:20:00.000Z"
     }
   }
 ]

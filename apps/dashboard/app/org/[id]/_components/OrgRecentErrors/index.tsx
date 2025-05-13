@@ -18,7 +18,7 @@ export default async function OrgRecentErrors() {
         <h5 className="text-sm font-medium">Recent Errors</h5>
       </CollapsibleTrigger>
       <CollapsibleContent className="w-full">
-        <ScrollArea className="max-h-125 border">
+        <ScrollArea className="h-full max-h-125 border">
           <Suspense fallback={<RecentErrorListSkeleton />}>
             <RecentErrorList />
           </Suspense>
