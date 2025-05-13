@@ -1,4 +1,4 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Plus } from 'lucide-react';
 import { Button } from '@repo/design-system/components/ui/button';
 import SortBySelect from './SortBySelect';
 import LayoutToggle from './LayoutToggle';
@@ -18,9 +18,10 @@ export default function OrgControls() {
       <LayoutToggle />
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button>
-            Add new...
-            <ChevronDown className="size-5" />
+          <Button className="w-9 sm:w-auto">
+            <span className="hidden sm:inline-block">Add new...</span>
+            <ChevronDown className="hidden size-5 sm:flex" />
+            <Plus className="size-5 sm:hidden" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-max">
