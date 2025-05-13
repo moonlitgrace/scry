@@ -24,7 +24,7 @@ export default function OrgControls() {
             <Plus className="size-5 sm:hidden" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-max">
+        <DropdownMenuContent align="end" className="min-w-34">
           <DropdownMenuItem>Project</DropdownMenuItem>
           <DropdownMenuItem disabled>Team Member</DropdownMenuItem>
         </DropdownMenuContent>
