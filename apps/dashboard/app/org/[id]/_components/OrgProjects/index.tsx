@@ -9,9 +9,9 @@ export interface Props {
 
 export default async function OrgProjects({ query, sort }: Props) {
   return (
-    <div className="col-span-2 flex flex-col gap-2">
+    <div className="flex flex-col gap-2 lg:col-span-2">
       <h5 className="text-sm font-medium">Projects</h5>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid gap-5 sm:grid-cols-2">
         <Suspense key={query + sort} fallback={<ProjectCardListSkeleton />}>
           <ProjectCardList query={query} sort={sort} />
         </Suspense>

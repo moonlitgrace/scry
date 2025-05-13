@@ -43,7 +43,7 @@ export default function ProjectsSearch() {
       />
       <Input
         placeholder="Search projects..."
-        className="pl-10"
+        className="pl-10 text-sm"
         onInput={handleSearch}
         defaultValue={searchParams.get('q')?.toString()}
       />
