@@ -17,7 +17,7 @@ export default async function Page(props: Props) {
   return (
     <>
       <OrgControls />
-      <section className="grid grid-cols-3 gap-5">
+      <section className="grid gap-5 lg:grid-cols-3">
         <OrgRecentErrors />
         <OrgProjects query={query} sort={sort} />
       </section>

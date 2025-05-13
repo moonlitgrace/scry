@@ -2,6 +2,7 @@ import { getOrgRecentErrors } from '@/dal/org-recent-errors';
 import { formatTimeSince } from '@/lib/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
+import { cn } from '@repo/design-system/lib/utils';
 import { Ellipsis } from 'lucide-react';
 import Link from 'next/link';
 
@@ -10,10 +11,13 @@ export default async function RecentErrorList() {
 
   return (
     <>
-      {orgRecentErrors.map((error) => (
+      {orgRecentErrors.map((error, idx) => (
         <div
           key={error.id}
-          className="bg-card/50 hover:bg-card relative flex h-20 items-center justify-between gap-2 border-b p-4 transition-[background]"
+          className={cn(
+            idx !== orgRecentErrors.length - 1 && 'border-b',
+            'bg-card/50 hover:bg-card relative flex h-20 items-center justify-between gap-2 p-4 transition-[background]',
+          )}
         >
           <Link
             href={`/project/${error.project.id}/err/${error.id}`}

@@ -20,7 +20,7 @@ export default async function ProjectCardList({ query, sort }: Props) {
           <div className="flex items-center justify-between gap-2">
             <div className="flex flex-col">
               <span className="font-bold">{project.name}</span>
-              <span className="text-muted-foreground text-xs">
+              <span className="text-muted-foreground line-clamp-1 text-xs break-all">
                 {new URL(project.domain).host}
               </span>
             </div>

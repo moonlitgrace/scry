@@ -7,7 +7,7 @@ export default async function OrgRecentErrors() {
   return (
     <div className="flex flex-col gap-2">
       <h5 className="text-sm font-medium">Recent Errors</h5>
-      <ScrollArea className="h-125 border">
+      <ScrollArea className="max-h-125 border">
         <Suspense fallback={<RecentErrorListSkeleton />}>
           <RecentErrorList />
         </Suspense>
