@@ -16,7 +16,9 @@ export default function OrgDropdown() {
         className="inline-flex items-center gap-2 text-sm font-medium"
       >
         moonlitgrace&apos;s Org
-        <Badge variant="secondary">Free</Badge>
+        <Badge variant="secondary" className="hidden sm:flex">
+          Free
+        </Badge>
       </Link>
       <Button
         size="icon-sm"
