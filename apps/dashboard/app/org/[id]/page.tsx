@@ -20,7 +20,9 @@ export default async function Page(props: Props) {
     <>
       <OrgControls />
       <section className="grid grid-cols-3 gap-5">
-        <OrgRecentErrors />
+        <Suspense fallback={'loading...'}>
+          <OrgRecentErrors />
+        </Suspense>
         <Suspense key={query + sort} fallback={<OrgProjectsSkeleton />}>
           <OrgProjects query={query} sort={sort} />
         </Suspense>

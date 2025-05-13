@@ -3,15 +3,17 @@ import { Button } from '@repo/design-system/components/ui/button';
 import { ScrollArea } from '@repo/design-system/components/ui/scroll-area';
 import { Ellipsis } from 'lucide-react';
 import Link from 'next/link';
-import recentErrorsData from '@/data/mock/recent_errors.json';
 import { formatTimeSince } from '@/lib/utils/datetime';
+import { getOrgRecentErrors } from '@/dal/org-recent-errors';
 
-export default function OrgRecentErrors() {
+export default async function OrgRecentErrors() {
+  const orgRecentErrors = await getOrgRecentErrors();
+
   return (
     <div className="flex flex-col gap-2">
       <h5 className="text-sm font-medium">Recent Errors</h5>
       <ScrollArea className="h-125 border">
-        {recentErrorsData.map((error) => (
+        {orgRecentErrors.map((error) => (
           <div
             key={error.id}
             className="bg-card/50 hover:bg-card relative flex items-center justify-between gap-2 border-b p-4 transition-[background]"
