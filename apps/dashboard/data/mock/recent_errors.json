@@ -5,7 +5,7 @@
     "errorMsg": "TypeError: undefined is not a function",
     "env": "PROD",
     "status": "Resolved",
-    "timestamp": "15m ago"
+    "timestamp": "2025-05-12T13:45:00.000Z"
   },
   {
     "id": "kymvrdqn",
@@ -13,7 +13,7 @@
     "errorMsg": "NetworkError: Failed fetch",
     "env": "DEV",
     "status": "Pending",
-    "timestamp": "1h ago"
+    "timestamp": "2025-05-12T10:45:00.000Z"
   },
   {
     "id": "mzjlfbqv",
@@ -21,7 +21,7 @@
     "errorMsg": "ReferenceError: profileId is not defined",
     "env": "DEV",
     "status": "Resolved",
-    "timestamp": "3h ago"
+    "timestamp": "2025-05-01T08:45:00.000Z"
   },
   {
     "id": "zcvplnrt",
@@ -29,7 +29,7 @@
     "errorMsg": "SyntaxError: Unexpected token < in JSON at position 0",
     "env": "PROD",
     "status": "Resolved",
-    "timestamp": "3d ago"
+    "timestamp": "2025-03-12T05:45:00.000Z"
   },
   {
     "id": "xrhqgkew",
@@ -37,6 +37,6 @@
     "errorMsg": "Error: Cannot read properties of null (reading \"username\")",
     "env": "DEV",
     "status": "Resolved",
-    "timestamp": "6h ago"
+    "timestamp": "2024-05-12T08:45:00.000Z"
   }
 ]
