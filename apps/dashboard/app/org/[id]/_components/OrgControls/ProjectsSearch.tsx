@@ -1,7 +1,7 @@
 'use client';
 
-import { Input } from '@repo/design-system/components/ui/input';
-import { cn } from '@repo/design-system/lib/utils';
+import InputWithIcon from '@/components/ui-variants/InputWithIcon';
+import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/input';
 import { Loader, Search } from 'lucide-react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -31,22 +31,18 @@ export default function ProjectsSearch() {
     setLoading(false);
   }, [searchParams]);
 
-  const InputIcon = loading ? Loader : Search;
-
   return (
-    <div className="relative flex w-full items-center">
-      <InputIcon
-        className={cn(
-          loading && 'animate-spin',
-          'text-muted-foreground pointer-events-none absolute left-2.5 size-5',
-        )}
-      />
-      <Input
-        placeholder="Search projects..."
-        className="pl-10 text-sm"
-        onInput={handleSearch}
-        defaultValue={searchParams.get('q')?.toString()}
-      />
-    </div>
+    <>
+      <InputRoot>
+        <InputIcon>
+          {loading ? <Loader className="animate-spin" /> : <Search />}
+        </InputIcon>
+        <Input
+          placeholder="Search projects..."
+          onInput={handleSearch}
+          defaultValue={searchParams.get('q')?.toString()}
+        />
+      </InputRoot>
+    </>
   );
 }
