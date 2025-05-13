@@ -5,10 +5,10 @@ import UserDropdown from './UserDropdown';
 export default function NavActions() {
   return (
     <nav className="inline-flex gap-2">
-      <Button size="sm" variant="outline" disabled>
+      <Button size="sm" variant="outline" className="hidden sm:flex" disabled>
         Feedback
       </Button>
-      <Button size="sm" variant="ghost" disabled>
+      <Button size="sm" variant="ghost" className="hidden sm:flex" disabled>
         Docs
       </Button>
       <Button size="icon-sm" variant="outline" disabled>
