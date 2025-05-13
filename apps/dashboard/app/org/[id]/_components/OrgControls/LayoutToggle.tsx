@@ -21,6 +21,7 @@ export default function LayoutToggle() {
       value={value}
       onValueChange={handleValueChange}
       className="hidden md:flex"
+      disabled
     >
       <ToggleGroupItem value="grid" aria-label="Toggle grid">
         <LayoutGrid className="size-4" />
