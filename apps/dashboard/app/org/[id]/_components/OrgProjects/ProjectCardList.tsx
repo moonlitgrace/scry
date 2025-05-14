@@ -1,13 +1,13 @@
-import { getProjects } from '@/dal/projects';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
 import { Ellipsis, GitBranch } from 'lucide-react';
 import Link from 'next/link';
 import { Props } from '.';
 import { formatTimeSince } from '@/utils/datetime';
+import { getOrgProjects } from '@/services/org.service';
 
 export default async function ProjectCardList({ query, sort }: Props) {
-  const projects = await getProjects(query, sort);
+  const projects = await getOrgProjects(query, sort);
 
   return (
     <>

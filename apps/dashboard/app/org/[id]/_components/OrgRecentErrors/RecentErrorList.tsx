@@ -1,4 +1,4 @@
-import { getOrgRecentErrors } from '@/dal/org-recent-errors';
+import { getOrgRecentErrors } from '@/services/org.service';
 import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';

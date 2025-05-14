@@ -1,7 +1,17 @@
+import { IOrgRecentError } from '@/app/org/[id]/_types/org-recent-errors';
 import { IOrgProject } from '@/app/org/[id]/_types/org-project';
 import rawProjectsData from '@/data/mock/projects.json';
+import recentErrorsData from '@/data/mock/recent_errors.json';
 
-export async function getProjects(
+export function getOrgRecentErrors(): Promise<IOrgRecentError[]> {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(recentErrorsData);
+    }, 1000);
+  });
+}
+
+export async function getOrgProjects(
   query: string,
   sort: 'recent' | 'name',
 ): Promise<IOrgProject[]> {
