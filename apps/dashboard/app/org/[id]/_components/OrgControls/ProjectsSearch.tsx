@@ -1,6 +1,5 @@
 'use client';
 
-import InputWithIcon from '@/components/ui-variants/InputWithIcon';
 import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/input';
 import { Loader, Search } from 'lucide-react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
