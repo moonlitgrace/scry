@@ -1,10 +1,10 @@
 import { getProjects } from '@/dal/projects';
-import { formatTimeSince } from '@/lib/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
 import { Ellipsis, GitBranch } from 'lucide-react';
 import Link from 'next/link';
 import { Props } from '.';
+import { formatTimeSince } from '@/utils/datetime';
 
 export default async function ProjectCardList({ query, sort }: Props) {
   const projects = await getProjects(query, sort);

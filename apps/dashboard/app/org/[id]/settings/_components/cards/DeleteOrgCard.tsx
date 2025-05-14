@@ -31,7 +31,9 @@ export default function DeleteOrgCard() {
         <Alert>
           <Info className="size-5" />
           <AlertTitle>Heads up!</AlertTitle>
-          <AlertDescription>You cannot delete your last Org.</AlertDescription>
+          <AlertDescription className="text-xs">
+            You cannot delete your last Org.
+          </AlertDescription>
         </Alert>
       </CardContent>
       <CardFooter className="justify-between border-t">

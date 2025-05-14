@@ -1,5 +1,5 @@
 import { getOrgRecentErrors } from '@/dal/org-recent-errors';
-import { formatTimeSince } from '@/lib/utils/datetime';
+import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
 import { cn } from '@repo/design-system/lib/utils';
