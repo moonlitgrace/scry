@@ -20,47 +20,15 @@
     "project": { "id": "twzbncvo", "name": "Scry Studio" },
     "errorMsg": "AuthError: Invalid token signature",
     "env": "PROD",
-    "status": "Pending",
+    "status": "Resolved",
     "timestamp": "2025-05-12T17:25:00.000Z"
-  },
-  {
-    "id": "ajskwmdq",
-    "project": { "id": "nxlrwdke", "name": "CoreIcons" },
-    "errorMsg": "TypeError: Cannot read properties of undefined (reading 'tagName')",
-    "env": "PROD",
-    "status": "Pending",
-    "timestamp": "2025-05-12T14:30:00.000Z"
   },
   {
     "id": "mjwyqazp",
     "project": { "id": "vmqfkdsl", "name": "Quibble API" },
     "errorMsg": "Error: Request failed with status code 500",
     "env": "PROD",
-    "status": "Pending",
+    "status": "Resolved",
     "timestamp": "2025-05-12T12:55:00.000Z"
-  },
-  {
-    "id": "uvxzleqt",
-    "project": { "id": "htbskmdq", "name": "AnimeCore" },
-    "errorMsg": "ReferenceError: animeId is not defined",
-    "env": "DEV",
-    "status": "Resolved",
-    "timestamp": "2025-05-10T09:15:00.000Z"
-  },
-  {
-    "id": "ckldntge",
-    "project": { "id": "kwvhpajz", "name": "mangacore-cms" },
-    "errorMsg": "SyntaxError: Unexpected token 'export'",
-    "env": "PROD",
-    "status": "Resolved",
-    "timestamp": "2025-05-08T11:00:00.000Z"
-  },
-  {
-    "id": "rwbydhvu",
-    "project": { "id": "gtrszkwf", "name": "SoundCore" },
-    "errorMsg": "RangeError: Maximum call stack size exceeded",
-    "env": "DEV",
-    "status": "Resolved",
-    "timestamp": "2025-05-07T07:25:00.000Z"
   }
 ]

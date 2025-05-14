@@ -5,11 +5,13 @@ import { Button } from '@repo/design-system/components/ui/button';
 import Link from 'next/link';
 import Logo from '@/assets/svg/logo.svg';
 import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
+import { cn } from '@repo/design-system/lib/utils';
 
 export default function OrgHeader() {
   const [offsetX, setOffsetX] = useState(0);
   const { id } = useParams<{ id: string }>();
+  const pathname = usePathname();
 
   useEffect(() => {
     function handleScroll() {
@@ -31,17 +33,44 @@ export default function OrgHeader() {
           className="inline-flex items-center gap-2"
           style={{ transform: `translateX(${offsetX}px)` }}
         >
-          <Button variant={'ghost'} size={'sm'} className="bg-muted border">
-            <Link href={`/org/${id}`}>Overview</Link>
-          </Button>
-          <Button variant={'ghost'} size={'sm'} disabled>
-            <Link href={`/org/${id}/activity`}>Activity</Link>
-          </Button>
-          <Button variant={'ghost'} size={'sm'}>
-            <Link href={`/org/${id}/settings`}>Settings</Link>
-          </Button>
+          {Object.entries(links).map(([href, { label, disabled }], idx) => {
+            const newHref = `/org/${id + href}`;
+            const isActive =
+              href === '/' ? pathname + '/' === newHref : pathname === newHref;
+            return (
+              <Button
+                key={idx}
+                variant={'ghost'}
+                size={'sm'}
+                className={cn(
+                  isActive
+                    ? 'bg-muted border'
+                    : 'text-muted-foreground border border-transparent',
+                  disabled && 'hidden sm:flex',
+                )}
+                disabled={disabled}
+              >
+                <Link href={newHref}>{label}</Link>
+              </Button>
+            );
+          })}
         </div>
       </nav>
     </>
   );
 }
+
+const links = {
+  '/': {
+    label: 'Overview',
+    disabled: false,
+  },
+  '/activity': {
+    label: 'Activity',
+    disabled: true,
+  },
+  '/settings': {
+    label: 'Settings',
+    disabled: false,
+  },
+};
