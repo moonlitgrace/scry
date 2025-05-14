@@ -1,13 +1,20 @@
 import {
   Card,
+  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from '@repo/design-system/components/ui/card';
 import { Button } from '@repo/design-system/components/ui/button';
+import {
+  Alert,
+  AlertTitle,
+  AlertDescription,
+} from '@repo/design-system/components/ui/alert';
 import { cn } from '@repo/design-system/lib/utils';
 import Link from 'next/link';
+import { Info } from 'lucide-react';
 
 export default function DeleteOrgCard() {
   const disabled = true;
@@ -20,6 +27,13 @@ export default function DeleteOrgCard() {
           Permanently remove your org and all of its contents from the Scry platform.
         </CardDescription>
       </CardHeader>
+      <CardContent>
+        <Alert>
+          <Info className="size-5" />
+          <AlertTitle>Heads up!</AlertTitle>
+          <AlertDescription>You cannot delete your last Org.</AlertDescription>
+        </Alert>
+      </CardContent>
       <CardFooter className="justify-between border-t">
         <div className="flex flex-col gap-1">
           <span className="text-muted-foreground text-xs">

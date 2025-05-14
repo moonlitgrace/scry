@@ -22,7 +22,7 @@ export default function LeaveOrgCard() {
       </CardHeader>
       <CardFooter className="justify-between border-t">
         <div className="flex flex-col gap-1">
-          <span className="text-muted-foreground text-xs">Owners count: 1</span>
+          <span className="text-muted-foreground text-xs">Owners: 1, Members: 1</span>
           <span className="text-muted-foreground text-xs">
             To leave this Org, ensure at least one more Member has the Owner role.
           </span>
