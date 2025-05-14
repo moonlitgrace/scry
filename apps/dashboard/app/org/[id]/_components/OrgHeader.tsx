@@ -41,7 +41,11 @@ export default function OrgHeader() {
                 key={idx}
                 variant={'ghost'}
                 size={'sm'}
-                className={isActive ? 'bg-muted border' : ''}
+                className={
+                  isActive
+                    ? 'bg-muted border'
+                    : 'text-muted-foreground border border-transparent'
+                }
                 disabled={disabled}
               >
                 <Link href={newHref}>{label}</Link>
