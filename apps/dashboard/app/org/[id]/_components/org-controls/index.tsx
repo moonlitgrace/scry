@@ -1,14 +1,14 @@
-import { ChevronDown, Plus } from 'lucide-react';
 import { Button } from '@repo/design-system/components/ui/button';
-import SortBySelect from './SortBySelect';
-import LayoutToggle from './LayoutToggle';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@repo/design-system/components/ui/dropdown-menu';
-import ProjectsSearch from './ProjectsSearch';
+import { ChevronDown, Plus } from 'lucide-react';
+import LayoutToggle from './layout-toggle';
+import ProjectsSearch from './project-search';
+import SortBySelect from './sort-by-select';
 
 export default function OrgControls() {
   return (

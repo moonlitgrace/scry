@@ -1,3 +1,4 @@
+import { Button } from '@repo/design-system/components/ui/button';
 import {
   Card,
   CardDescription,
@@ -5,7 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@repo/design-system/components/ui/card';
-import { Button } from '@repo/design-system/components/ui/button';
 import { cn } from '@repo/design-system/lib/utils';
 
 export default function LeaveOrgCard() {

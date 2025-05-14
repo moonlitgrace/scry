@@ -1,12 +1,12 @@
 'use client';
 
-import Header from '@/components/shared/Header';
-import { Button } from '@repo/design-system/components/ui/button';
-import Link from 'next/link';
 import Logo from '@/assets/svg/logo.svg';
-import { useEffect, useState } from 'react';
-import { useParams, usePathname } from 'next/navigation';
+import Header from '@/components/shared/header';
+import { Button } from '@repo/design-system/components/ui/button';
 import { cn } from '@repo/design-system/lib/utils';
+import Link from 'next/link';
+import { useParams, usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function OrgHeader() {
   const [offsetX, setOffsetX] = useState(0);

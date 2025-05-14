@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { Fira_Code } from 'next/font/google';
 import { cn } from '@repo/design-system/lib/utils';
+import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
+import { Fira_Code } from 'next/font/google';
+import './globals.css';
 
-export const firacode = Fira_Code({
+const firacode = Fira_Code({
   subsets: ['latin'],
   display: 'swap',
 });

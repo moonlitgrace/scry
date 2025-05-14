@@ -1,4 +1,4 @@
-import OrgHeader from './_components/OrgHeader';
+import OrgHeader from './_components/org-header';
 
 interface Props {
   children: React.ReactNode;

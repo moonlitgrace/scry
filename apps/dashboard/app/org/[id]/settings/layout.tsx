@@ -1,4 +1,4 @@
-import SettingsBar from './_components/SettingsBar';
+import SettingsBar from './_components/settings-bar';
 
 interface Props {
   children: React.ReactNode;

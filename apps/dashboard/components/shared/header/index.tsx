@@ -1,5 +1,5 @@
-import NavActions from './NavActions';
-import OrgDropdown from './OrgDropdown';
+import NavActions from './nav-actions';
+import OrgDropdown from './org-dropdown';
 
 export default function Header() {
   return (

@@ -11,7 +11,7 @@ import {
 } from '@repo/design-system/components/ui/dropdown-menu';
 import { CirclePlus, LogOut } from 'lucide-react';
 import Link from 'next/link';
-import ThemeSelector from './ThemeSelector';
+import ThemeSelector from './theme-selector';
 
 export default function UserDropdown() {
   return (

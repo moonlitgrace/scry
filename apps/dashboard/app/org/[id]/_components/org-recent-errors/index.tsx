@@ -1,13 +1,13 @@
-import { ScrollArea } from '@repo/design-system/components/ui/scroll-area';
-import { Suspense } from 'react';
-import RecentErrorList from './RecentErrorList';
-import RecentErrorListSkeleton from './RecentErrorListSkeleton';
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@repo/design-system/components/ui/collapsible';
+import { ScrollArea } from '@repo/design-system/components/ui/scroll-area';
 import { ChevronRight } from 'lucide-react';
+import { Suspense } from 'react';
+import RecentErrorList from './recent-error-list';
+import RecentErrorListSkeleton from './recent-error-list-skeleton';
 
 export default async function OrgRecentErrors() {
   return (

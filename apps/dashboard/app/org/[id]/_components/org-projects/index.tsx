@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import ProjectCardList from './ProjectCardList';
-import ProjectCardListSkeleton from './ProjectCardListSkeleton';
+import ProjectCardList from './project-card-list';
+import ProjectCardListSkeleton from './project-card-list-skeleton';
 
 export interface Props {
   query: string;

@@ -6,7 +6,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 
-export default function ProjectsSearch() {
+export default function ProjectSearch() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const pathname = usePathname();

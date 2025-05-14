@@ -1,6 +1,6 @@
 import { Button } from '@repo/design-system/components/ui/button';
 import { Bell } from 'lucide-react';
-import UserDropdown from './UserDropdown';
+import UserDropdown from './user-dropdown';
 
 export default function NavActions() {
   return (

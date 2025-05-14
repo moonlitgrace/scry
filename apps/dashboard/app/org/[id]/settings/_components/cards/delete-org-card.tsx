@@ -1,4 +1,10 @@
 import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from '@repo/design-system/components/ui/alert';
+import { Button } from '@repo/design-system/components/ui/button';
+import {
   Card,
   CardContent,
   CardDescription,
@@ -6,15 +12,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@repo/design-system/components/ui/card';
-import { Button } from '@repo/design-system/components/ui/button';
-import {
-  Alert,
-  AlertTitle,
-  AlertDescription,
-} from '@repo/design-system/components/ui/alert';
 import { cn } from '@repo/design-system/lib/utils';
-import Link from 'next/link';
 import { Info } from 'lucide-react';
+import Link from 'next/link';
 
 export default function DeleteOrgCard() {
   const disabled = true;
