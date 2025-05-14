@@ -1,7 +1,7 @@
 'use client';
 
 import Logo from '@/assets/svg/logo.svg';
-import Header from '@/components/shared/header';
+import Header from '@/components/organisms/header';
 import { Button } from '@repo/design-system/components/ui/button';
 import { cn } from '@repo/design-system/lib/utils';
 import Link from 'next/link';

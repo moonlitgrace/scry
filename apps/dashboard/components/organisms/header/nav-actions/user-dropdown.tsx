@@ -1,3 +1,4 @@
+import ThemeSelector from '@/components/molecules/theme-selector';
 import { Avatar, AvatarFallback } from '@repo/design-system/components/ui/avatar';
 import { Button } from '@repo/design-system/components/ui/button';
 import {
@@ -11,7 +12,6 @@ import {
 } from '@repo/design-system/components/ui/dropdown-menu';
 import { CirclePlus, LogOut } from 'lucide-react';
 import Link from 'next/link';
-import ThemeSelector from './theme-selector';
 
 export default function UserDropdown() {
   return (
