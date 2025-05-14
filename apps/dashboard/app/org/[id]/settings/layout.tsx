@@ -6,9 +6,9 @@ interface Props {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="grid grid-cols-4 gap-10">
+    <div className="grid gap-5 md:grid-cols-4 md:gap-10">
       <SettingsBar />
-      <div className="col-span-3 flex flex-col gap-5">{children}</div>
+      <div className="flex flex-col gap-5 md:col-span-3">{children}</div>
     </div>
   );
 }

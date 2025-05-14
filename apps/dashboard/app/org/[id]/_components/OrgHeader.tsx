@@ -63,10 +63,6 @@ const links = {
     label: 'Overview',
     disabled: false,
   },
-  '/activity': {
-    label: 'Activity',
-    disabled: true,
-  },
   '/settings': {
     label: 'Settings',
     disabled: false,

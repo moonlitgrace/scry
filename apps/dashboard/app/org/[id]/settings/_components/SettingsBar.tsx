@@ -37,7 +37,7 @@ export default function SettingsBar() {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
       </InputRoot>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-wrap gap-2 md:flex-col">
         {Object.keys(newLinks).length ? (
           <>
             {Object.entries(newLinks).map(([href, { label, disabled }], idx) => {
@@ -51,7 +51,7 @@ export default function SettingsBar() {
                   className={cn('justify-start', !isActive && 'text-muted-foreground')}
                   disabled={disabled}
                 >
-                  <Link href={newHref} className="text-start">
+                  <Link href={newHref} className="flex-1 text-start">
                     {label}
                   </Link>
                 </Button>
