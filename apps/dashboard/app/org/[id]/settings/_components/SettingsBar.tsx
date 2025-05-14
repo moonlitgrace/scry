@@ -48,7 +48,11 @@ export default function SettingsBar() {
                 <Button
                   key={idx}
                   variant={'ghost'}
-                  className={cn('justify-start', !isActive && 'text-muted-foreground')}
+                  className={cn(
+                    'justify-start px-2 sm:px-4',
+                    !isActive && 'text-muted-foreground',
+                    disabled && 'hidden sm:flex',
+                  )}
                   disabled={disabled}
                 >
                   <Link href={newHref} className="flex-1 text-start">

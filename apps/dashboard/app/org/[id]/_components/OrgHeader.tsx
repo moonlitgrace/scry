@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Logo from '@/assets/svg/logo.svg';
 import { useEffect, useState } from 'react';
 import { useParams, usePathname } from 'next/navigation';
+import { cn } from '@repo/design-system/lib/utils';
 
 export default function OrgHeader() {
   const [offsetX, setOffsetX] = useState(0);
@@ -41,11 +42,12 @@ export default function OrgHeader() {
                 key={idx}
                 variant={'ghost'}
                 size={'sm'}
-                className={
+                className={cn(
                   isActive
                     ? 'bg-muted border'
-                    : 'text-muted-foreground border border-transparent'
-                }
+                    : 'text-muted-foreground border border-transparent',
+                  disabled && 'hidden sm:flex',
+                )}
                 disabled={disabled}
               >
                 <Link href={newHref}>{label}</Link>
@@ -62,6 +64,10 @@ const links = {
   '/': {
     label: 'Overview',
     disabled: false,
+  },
+  '/activity': {
+    label: 'Activity',
+    disabled: true,
   },
   '/settings': {
     label: 'Settings',
