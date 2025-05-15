@@ -3,11 +3,28 @@ import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
 import { cn } from '@repo/design-system/lib/utils';
-import { Ellipsis } from 'lucide-react';
+import { Ellipsis, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 export default async function RecentErrorList() {
   const orgRecentErrors = await getOrgRecentErrors();
+
+  if (orgRecentErrors.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center gap-2 py-5">
+        <span className="text-sm font-medium">No Recent Errors!</span>
+        <span className="text-muted-foreground text-sm">
+          Configure Scry SDK to start capturing.
+        </span>
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+          <Button variant={'link'}>
+            View setup guide
+            <ExternalLink />
+          </Button>
+        </a>
+      </div>
+    );
+  }
 
   return (
     <>
