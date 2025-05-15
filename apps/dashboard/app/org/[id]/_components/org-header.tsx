@@ -28,7 +28,7 @@ export default function OrgHeader() {
       <Link href={`/org/${id}`} className="fixed top-5 left-5 z-3">
         <Logo className="w-5" />
       </Link>
-      <nav className="bg-background/95 sticky top-0 z-2 border-b px-5 pt-3">
+      <nav className="bg-background/95 sticky top-0 z-2 border-b px-5 py-3">
         <div
           className="inline-flex items-center gap-2"
           style={{ transform: `translateX(${offsetX}px)` }}
@@ -38,20 +38,24 @@ export default function OrgHeader() {
             const isActive =
               href === '/' ? pathname + '/' === newHref : pathname === newHref;
             return (
-              <Button
-                key={idx}
-                variant={'ghost'}
-                size={'sm'}
-                className={cn(
-                  isActive
-                    ? 'bg-muted border'
-                    : 'text-muted-foreground border border-transparent',
-                  disabled && 'hidden sm:flex',
+              <div key={idx} className="relative">
+                <Button
+                  variant={'ghost'}
+                  size={'sm'}
+                  className={cn(
+                    isActive
+                      ? 'bg-muted border'
+                      : 'text-muted-foreground border border-transparent',
+                    disabled && 'hidden sm:flex',
+                  )}
+                  disabled={disabled}
+                >
+                  <Link href={newHref}>{label}</Link>
+                </Button>
+                {isActive && (
+                  <span className="bg-primary absolute inset-x-0 -bottom-3 h-0.5"></span>
                 )}
-                disabled={disabled}
-              >
-                <Link href={newHref}>{label}</Link>
-              </Button>
+              </div>
             );
           })}
         </div>
