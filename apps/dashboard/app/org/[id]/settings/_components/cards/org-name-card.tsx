@@ -23,12 +23,12 @@ export default function OrgNameCard() {
         <Input
           defaultValue={"moonlitgrace's Org"}
           placeholder="Org name..."
-          className="max-w-100"
+          className="md:max-w-100"
           maxLength={32}
         />
       </CardContent>
-      <CardFooter className="justify-between border-t">
-        <div className="text-muted-foreground flex flex-col text-sm">
+      <CardFooter className="flex-col justify-between gap-2 border-t md:flex-row">
+        <div className="text-muted-foreground flex flex-col items-center text-sm md:items-start">
           <span>Please use 32 characters at maximum.</span>
           <span>Avoid using special characters, symbols or emojis.</span>
         </div>

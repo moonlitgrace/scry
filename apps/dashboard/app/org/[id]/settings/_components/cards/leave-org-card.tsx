@@ -20,8 +20,8 @@ export default function LeaveOrgCard() {
           organization will remain.
         </CardDescription>
       </CardHeader>
-      <CardFooter className="justify-between border-t">
-        <div className="text-muted-foreground flex flex-col text-sm">
+      <CardFooter className="flex-col justify-between gap-2 border-t md:flex-row">
+        <div className="text-muted-foreground flex flex-col items-center text-sm md:items-start">
           <span>
             To leave this organization, ensure at least one more Member has the Owner
             role.

@@ -35,12 +35,10 @@ export default function DeleteOrgCard() {
           <AlertDescription>You cannot delete your last Organization.</AlertDescription>
         </Alert>
       </CardContent>
-      <CardFooter className="justify-between border-t">
-        <div className="flex flex-col gap-1">
-          <span className="text-muted-foreground text-xs">
-            This actions is not reversible – please continue with caution.
-          </span>
-          <span className="text-muted-foreground text-xs">
+      <CardFooter className="flex-col justify-between gap-2 border-t md:flex-row">
+        <div className="text-muted-foreground flex flex-col items-center gap-1 text-sm md:items-start">
+          <span>This actions is not reversible – please continue with caution.</span>
+          <span>
             To delete your account, visit{' '}
             <Link href={'/account'} className="text-primary font-medium hover:underline">
               Account Settings.
