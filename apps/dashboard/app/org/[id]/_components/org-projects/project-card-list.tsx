@@ -48,7 +48,7 @@ export default async function ProjectCardList({ query, sort }: Props) {
             </div>
           </div>
           <div className="text-muted-foreground flex flex-col text-sm">
-            <span className="line-clamp-1 font-medium">
+            <span className="line-clamp-1 font-mono text-xs font-medium">
               {project.latestError.errorMsg}
             </span>
             <div className="inline-flex items-center gap-2">

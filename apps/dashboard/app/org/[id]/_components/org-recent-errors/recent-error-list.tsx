@@ -28,7 +28,7 @@ export default async function RecentErrorList() {
               <span className="text-sm font-medium whitespace-nowrap">
                 {error.project.name}
               </span>
-              <span className="text-muted-foreground line-clamp-1 text-sm break-all">
+              <span className="text-muted-foreground line-clamp-1 font-mono text-xs break-all">
                 {error.errorMsg}
               </span>
             </div>
