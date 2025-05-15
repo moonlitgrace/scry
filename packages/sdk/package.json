@@ -1,5 +1,5 @@
 {
-  "name": "@scry/sdk",
+  "name": "@scryjs/sdk",
   "version": "0.0.1",
   "description": "Official SDK for Scry - Track JavaScript errors.",
   "main": "./dist/index.js",
