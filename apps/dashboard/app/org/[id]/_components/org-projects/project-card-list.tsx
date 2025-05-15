@@ -1,15 +1,32 @@
+import { getOrgProjects } from '@/services/org.service';
+import { formatTimeSince } from '@/utils/datetime';
+import { getInitials } from '@/utils/string';
 import { Avatar, AvatarFallback } from '@repo/design-system/components/ui/avatar';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
-import { Ellipsis, GitBranch } from 'lucide-react';
+import { ArrowRight, Ellipsis, GitBranch } from 'lucide-react';
 import Link from 'next/link';
 import { Props } from '.';
-import { formatTimeSince } from '@/utils/datetime';
-import { getInitials } from '@/utils/string';
-import { getOrgProjects } from '@/services/org.service';
 
 export default async function ProjectCardList({ query, sort }: Props) {
   const projects = await getOrgProjects(query, sort);
+
+  if (projects.length === 0 && query.length) {
+    return (
+      <div className="col-span-2 flex h-full flex-col items-center justify-center gap-2">
+        <span className="text-sm font-medium">No Results Found!</span>
+        <span className="text-muted-foreground text-sm">
+          Your search for {`"${query}"`} did not return any results.
+        </span>
+        <Link href={`/project/new${query && `?name=${query}`}`}>
+          <Button variant={'link'}>
+            New Project
+            <ArrowRight />
+          </Button>
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <>
