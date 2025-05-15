@@ -1,5 +1,5 @@
 {
-  "name": "scry",
+  "name": "scryjs",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -9,9 +9,9 @@
     "format:fix": "pnpm format --write",
     "typecheck": "turbo run typecheck",
     "changeset": "changeset",
-    "release": "npm run release:version && npm run release:publish",
+    "release": "pnpm release:version && pnpm release:publish",
     "release:version": "changeset version",
-    "release:publish": "npm run build && changeset publish"
+    "release:publish": "pnpm build --filter=./packages/** && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.4",
