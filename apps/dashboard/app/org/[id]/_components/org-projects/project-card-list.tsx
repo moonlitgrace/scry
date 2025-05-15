@@ -4,20 +4,25 @@ import { getInitials } from '@/utils/string';
 import { Avatar, AvatarFallback } from '@repo/design-system/components/ui/avatar';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
-import { ArrowRight, Ellipsis, GitBranch } from 'lucide-react';
+import { ArrowRight, Ellipsis, FolderOpen, GitBranch, SearchX } from 'lucide-react';
 import Link from 'next/link';
 import { Props } from '.';
 
 export default async function ProjectCardList({ query, sort }: Props) {
   const projects = await getOrgProjects(query, sort);
 
-  if (projects.length === 0 && query.length) {
+  if (projects.length === 0) {
+    const title = query ? 'No Results Found!' : 'No Project Yet!';
+    const description = query
+      ? `Your search for ${`"${query}"`} did not return any results.`
+      : 'Get started by creating your first project.';
+    const Icon = query ? SearchX : FolderOpen;
+
     return (
       <div className="col-span-2 flex h-full flex-col items-center justify-center gap-2">
-        <span className="text-sm font-medium">No Results Found!</span>
-        <span className="text-muted-foreground text-sm">
-          Your search for {`"${query}"`} did not return any results.
-        </span>
+        <Icon className="text-muted-foreground size-10 stroke-1" />
+        <span className="text-sm font-medium">{title}</span>
+        <span className="text-muted-foreground text-sm">{description}</span>
         <Link href={`/project/new${query && `?name=${query}`}`}>
           <Button variant={'link'}>
             New Project
