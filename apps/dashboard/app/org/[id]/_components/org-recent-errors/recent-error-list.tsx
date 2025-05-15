@@ -16,14 +16,15 @@ export default async function RecentErrorList() {
           key={error.id}
           className={cn(
             idx !== orgRecentErrors.length - 1 && 'border-b',
-            'bg-card hover:bg-accent/40 relative flex h-20 items-center justify-between gap-2 p-4 transition-[background]',
+            'bg-card group relative flex h-20 items-center justify-between gap-2 p-4 transition-[background]',
           )}
         >
           <Link
             href={`/project/${error.project.id}/err/${error.id}`}
             className="absolute inset-0 z-1"
           />
-          <div className="flex h-full flex-col justify-between">
+          <div className="bg-primary absolute left-0 h-11 w-2 -translate-x-2 transform rounded-r-md transition-transform group-hover:translate-x-0"></div>
+          <div className="flex h-full transform flex-col justify-between transition-transform group-hover:translate-x-2">
             <div className="inline-flex items-center gap-2">
               <span className="text-sm font-medium whitespace-nowrap">
                 {error.project.name}
