@@ -2,7 +2,7 @@
 
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
-import { ChevronDown } from 'lucide-react';
+import { ChevronsUpDown } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
@@ -20,13 +20,8 @@ export default function OrgDropdown() {
           Free
         </Badge>
       </Link>
-      <Button
-        size="icon-sm"
-        variant="ghost"
-        className="size-[calc(var(--spacing)*5.5)]"
-        disabled
-      >
-        <ChevronDown />
+      <Button size="icon-sm" variant="ghost" className="size-5.5" disabled>
+        <ChevronsUpDown />
       </Button>
     </div>
   );
