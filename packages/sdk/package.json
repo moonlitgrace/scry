@@ -1,6 +1,6 @@
 {
   "name": "@scry/sdk",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Official SDK for Scry - Track JavaScript errors.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -19,7 +19,8 @@
   "author": "Moonlit Grace <moonlitgrace.gaia@gmail.com>",
   "license": "GPL-3.0-only",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

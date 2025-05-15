@@ -7,9 +7,14 @@
     "lint": "turbo run lint",
     "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
     "format:fix": "pnpm format --write",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "changeset": "changeset",
+    "release": "npm run release:version && npm run release:publish",
+    "release:version": "changeset version",
+    "release:publish": "npm run build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.4",
     "@repo/prettier-config": "workspace:*",
     "prettier": "^3.5.3",
     "turbo": "^2.5.3",
