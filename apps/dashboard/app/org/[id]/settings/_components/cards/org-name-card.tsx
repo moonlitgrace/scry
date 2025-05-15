@@ -13,28 +13,24 @@ export default function OrgNameCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Org Name</CardTitle>
+        <CardTitle>Organization Name</CardTitle>
         <CardDescription>
-          This is your org&apos;s visible name within Scry. For example, the name of your
-          company or department.
+          This is your organization&apos;s visible name within Scry. For example, the name
+          of your company or department.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <Input
           defaultValue={"moonlitgrace's Org"}
           placeholder="Org name..."
-          className="max-w-100"
+          className="md:max-w-100"
           maxLength={32}
         />
       </CardContent>
-      <CardFooter className="justify-between border-t">
-        <div className="flex flex-col gap-1">
-          <span className="text-muted-foreground text-xs">
-            Please use 32 characters at maximum.
-          </span>
-          <span className="text-muted-foreground text-xs">
-            Avoid using special characters or emojis.
-          </span>
+      <CardFooter className="flex-col justify-between gap-2 border-t md:flex-row">
+        <div className="text-muted-foreground flex flex-col items-center text-sm md:items-start">
+          <span>Please use 32 characters at maximum.</span>
+          <span>Avoid using special characters, symbols or emojis.</span>
         </div>
         <Button>Update</Button>
       </CardFooter>

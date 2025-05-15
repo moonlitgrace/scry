@@ -27,18 +27,20 @@ export default function OrgIDCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Org ID</CardTitle>
-        <CardDescription>This is your org&apos;s ID within Scry.</CardDescription>
+        <CardTitle>Organization ID</CardTitle>
+        <CardDescription>
+          This is your organization&apos;s ID within Scry.
+        </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="inline-flex items-center gap-5 border p-2">
-          <span className="text-sm">jhxkrtym</span>
+        <div className="inline-flex items-center gap-5 rounded-md border px-3 py-2">
+          <span className="text-sm">org_jhxkrtym</span>
           <button onClick={() => handleCopy('jhxkrtym')} tabIndex={-1}>
             <CopyIcon className="text-muted-foreground animate-in zoom-in size-4" />
           </button>
         </div>
       </CardContent>
-      <CardFooter className="text-muted-foreground border-t text-xs">
+      <CardFooter className="text-muted-foreground border-t text-sm">
         Used when interacting with the Scry API (coming soon).
       </CardFooter>
     </Card>

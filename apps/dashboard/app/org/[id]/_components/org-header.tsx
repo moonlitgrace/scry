@@ -44,7 +44,7 @@ export default function OrgHeader() {
                   size={'sm'}
                   className={cn(
                     isActive
-                      ? 'bg-muted border'
+                      ? 'dark:bg-input/50 bg-accent/50 border'
                       : 'text-muted-foreground border border-transparent',
                     disabled && 'hidden sm:flex',
                   )}

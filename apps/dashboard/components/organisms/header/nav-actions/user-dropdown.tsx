@@ -18,7 +18,7 @@ export default function UserDropdown() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button size="icon-sm" variant="outline">
-          <Avatar className="rounded-none">
+          <Avatar>
             <AvatarFallback className="bg-transparent">M</AvatarFallback>
           </Avatar>
         </Button>

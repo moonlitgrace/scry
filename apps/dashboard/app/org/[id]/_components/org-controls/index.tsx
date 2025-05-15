@@ -12,7 +12,7 @@ import SortBySelect from './sort-by-select';
 
 export default function OrgControls() {
   return (
-    <div className="inline-flex w-full items-center gap-2">
+    <div className="inline-flex w-full items-center gap-5">
       <ProjectsSearch />
       <SortBySelect />
       <LayoutToggle />

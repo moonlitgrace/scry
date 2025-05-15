@@ -26,7 +26,7 @@ export default function SettingsBar() {
   }, [searchQuery]);
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="sticky top-20 flex flex-col gap-5">
       <InputRoot>
         <InputIcon>
           <Search />
