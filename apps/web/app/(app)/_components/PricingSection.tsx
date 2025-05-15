@@ -16,10 +16,7 @@ export default function PricingSection() {
       {Object.entries(plans).map(([key, plan]) => (
         <Card
           key={key}
-          className={cn(
-            !plan.isActive && 'pointer-events-none opacity-50 select-none',
-            'rounded-none',
-          )}
+          className={cn(!plan.isActive && 'pointer-events-none opacity-50 select-none')}
         >
           <CardHeader>
             <CardTitle>{plan.label}</CardTitle>

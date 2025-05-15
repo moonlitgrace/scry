@@ -1,10 +1,10 @@
 import { cn } from '@repo/design-system/lib/utils';
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
-import { Fira_Code } from 'next/font/google';
+import { Geist } from 'next/font/google';
 import './globals.css';
 
-const firacode = Fira_Code({
+const geist = Geist({
   subsets: ['latin'],
   display: 'swap',
 });
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(firacode.className, 'antialiased')}>
+      <body className={cn(geist.className, 'antialiased')}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

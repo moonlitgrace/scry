@@ -26,7 +26,7 @@ export default function SortBySelect() {
 
   return (
     <Select value={value} onValueChange={handleValueChange}>
-      <SelectTrigger className="hidden w-70 sm:flex">
+      <SelectTrigger className="hidden w-50 sm:flex">
         <SelectValue placeholder="Sort by" />
       </SelectTrigger>
       <SelectContent>
