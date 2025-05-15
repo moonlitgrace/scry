@@ -6,25 +6,34 @@ import {
   CardHeader,
   CardTitle,
 } from '@repo/design-system/components/ui/card';
-import { cn } from '@repo/design-system/lib/utils';
+import Link from 'next/link';
 
 export default function LeaveOrgCard() {
   const disabled = true;
 
   return (
     <Card>
-      <CardHeader className={cn(disabled && 'pointer-events-none opacity-50')}>
-        <CardTitle>Leave Org</CardTitle>
+      <CardHeader>
+        <CardTitle>Leave Organization</CardTitle>
         <CardDescription>
-          Revoke your access to the Org. Any resources you&apos;ve added to the Org will
-          remain.
+          Revoke your access to the organization. Any resources you&apos;ve added to the
+          organization will remain.
         </CardDescription>
       </CardHeader>
       <CardFooter className="justify-between border-t">
-        <div className="flex flex-col gap-1">
-          <span className="text-muted-foreground text-xs">Owners: 1, Members: 1</span>
-          <span className="text-muted-foreground text-xs">
-            To leave this Org, ensure at least one more Member has the Owner role.
+        <div className="text-muted-foreground flex flex-col text-sm">
+          <span>
+            To leave this organization, ensure at least one more Member has the Owner
+            role.
+          </span>
+          <span>
+            To add members, visit{' '}
+            <Link
+              href={'./settings/members'}
+              className="text-primary font-medium hover:underline"
+            >
+              Members
+            </Link>
           </span>
         </div>
         <Button variant={'outline'} disabled={disabled}>

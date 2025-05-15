@@ -21,19 +21,18 @@ export default function DeleteOrgCard() {
 
   return (
     <Card>
-      <CardHeader className={cn(disabled && 'pointer-events-none opacity-50')}>
-        <CardTitle>Delete Org</CardTitle>
+      <CardHeader>
+        <CardTitle>Delete Organization</CardTitle>
         <CardDescription>
-          Permanently remove your org and all of its contents from the Scry platform.
+          Permanently remove your organization and all of its contents from the Scry
+          platform.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <Alert>
           <Info className="size-5" />
           <AlertTitle>Heads up!</AlertTitle>
-          <AlertDescription className="text-xs">
-            You cannot delete your last Org.
-          </AlertDescription>
+          <AlertDescription>You cannot delete your last Organization.</AlertDescription>
         </Alert>
       </CardContent>
       <CardFooter className="justify-between border-t">
@@ -49,7 +48,7 @@ export default function DeleteOrgCard() {
           </span>
         </div>
         <Button variant={'destructive'} disabled={disabled}>
-          Delete Org
+          Delete
         </Button>
       </CardFooter>
     </Card>
