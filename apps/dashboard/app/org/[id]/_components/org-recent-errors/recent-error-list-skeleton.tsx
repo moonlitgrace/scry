@@ -6,7 +6,7 @@ export default function RecentErrorListSkeleton() {
       {[...Array(8)].map((_, idx) => (
         <div
           key={idx}
-          className="bg-card/50 flex h-20 items-center justify-between gap-5 border-b p-4"
+          className="bg-card flex h-20 items-center justify-between gap-5 border-b p-4"
         >
           <div className="flex h-full flex-1 flex-col justify-between">
             <Skeleton className="h-5 w-full" />

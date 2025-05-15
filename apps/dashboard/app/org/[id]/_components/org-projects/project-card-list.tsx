@@ -16,7 +16,7 @@ export default async function ProjectCardList({ query, sort }: Props) {
       {projects.map((project) => (
         <div
           key={project.id}
-          className="bg-card/50 hover:bg-card relative flex h-45 flex-col justify-between rounded-lg border p-5 transition-[background]"
+          className="bg-card hover:bg-accent/40 relative flex h-45 flex-col justify-between rounded-lg border p-5 transition-[background]"
         >
           <Link href={`/project/${project.id}`} className="absolute inset-0 z-1" />
           <div className="flex items-center justify-between gap-2">

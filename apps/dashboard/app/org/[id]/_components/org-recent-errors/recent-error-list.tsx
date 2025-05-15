@@ -16,7 +16,7 @@ export default async function RecentErrorList() {
           key={error.id}
           className={cn(
             idx !== orgRecentErrors.length - 1 && 'border-b',
-            'bg-card/50 hover:bg-card relative flex h-20 items-center justify-between gap-2 p-4 transition-[background]',
+            'bg-card hover:bg-accent/40 relative flex h-20 items-center justify-between gap-2 p-4 transition-[background]',
           )}
         >
           <Link

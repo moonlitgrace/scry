@@ -6,7 +6,7 @@ export default function ProjectCardListSkeleton() {
       {[...Array(2)].map((_, idx) => (
         <div
           key={idx}
-          className="bg-card/50 flex h-44 flex-col justify-between border p-4"
+          className="bg-card flex h-45 flex-col justify-between rounded-lg border p-4"
         >
           <div className="flex items-center justify-between gap-2">
             <div className="flex flex-col gap-2">
