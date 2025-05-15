@@ -44,8 +44,8 @@ jobs:
         uses: changesets/action@v1
         with:
           title: "chore(release): version packages"
-          publish: npm run release:publish
-          version: npm run release:version
+          publish: pnpm release:publish
+          version: pnpm release:version
           commit: "chore(release): version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
