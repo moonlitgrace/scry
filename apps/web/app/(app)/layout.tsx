@@ -1,5 +1,5 @@
-import Footer from '@/components/orgamisms/footer';
-import Header from '@/components/orgamisms/header';
+import Footer from '@/components/organisms/footer';
+import Header from '@/components/organisms/header';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
