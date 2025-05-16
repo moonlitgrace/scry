@@ -1,13 +1,21 @@
 {
   "name": "@scryjs/sdk",
   "version": "0.0.1",
-  "description": "Official SDK for Scry - Track JavaScript errors.",
+  "description": "SDK for scryjs - Track JavaScript errors.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch"
+  },
+  "homepage": "https://github.com/moonlitgrace/scryjs/blob/main/packages/sdk#readme",
+  "bugs": {
+    "url": "https://github.com/moonlitgrace/scryjs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moonlitgrace/scryjs"
   },
   "keywords": [
     "error-tracking",
@@ -16,7 +24,7 @@
     "logs",
     "scry"
   ],
-  "author": "Moonlit Grace <moonlitgrace.gaia@gmail.com>",
+  "author": "moonlitgrace <moonlitgrace.gaia@gmail.com>",
   "license": "GPL-3.0-only",
   "publishConfig": {
     "access": "public",
