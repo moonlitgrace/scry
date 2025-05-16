@@ -1,5 +1,5 @@
 {
-  "name": "scry",
+  "name": "scryjs",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -7,15 +7,20 @@
     "lint": "turbo run lint",
     "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
     "format:fix": "pnpm format --write",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "changeset": "changeset",
+    "release": "pnpm release:version && pnpm release:publish",
+    "release:version": "changeset version",
+    "release:publish": "pnpm build --filter=./packages/** && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.4",
     "@repo/prettier-config": "workspace:*",
     "prettier": "^3.5.3",
     "turbo": "^2.5.3",
     "typescript": "5.8.3"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@10.11.0",
   "engines": {
     "node": ">=18"
   }
