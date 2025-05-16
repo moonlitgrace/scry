@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
           <span className="text-muted-foreground text-xs">© 2025 Scry</span>
         </div>
-        <div className="inline-flex items-center gap-2">
+        <div className="hidden items-center gap-2 sm:inline-flex">
           <a
             href="https://github.com/moonlitgrace/scryjs"
             target="_blank"
