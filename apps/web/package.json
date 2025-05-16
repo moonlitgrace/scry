@@ -1,17 +1,6 @@
 {
   "name": "web",
   "version": "0.1.0",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "next lint --max-warnings 0",
-    "typecheck": "tsc --noEmit",
-    "format": "prettier --check . --ignore-path ../../.gitignore"
-  },
-  "prettier": "@repo/prettier-config",
   "dependencies": {
     "@hookform/resolvers": "catalog:",
     "@repo/design-system": "workspace:*",
@@ -36,5 +25,16 @@
     "lucide-react": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
-  }
+  },
+  "prettier": "@repo/prettier-config",
+  "private": true,
+  "scripts": {
+    "build": "next build --turbopack",
+    "dev": "next dev --turbopack",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "next lint --max-warnings 0",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module"
 }

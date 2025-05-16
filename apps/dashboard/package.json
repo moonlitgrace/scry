@@ -1,16 +1,6 @@
 {
   "name": "dashboard",
   "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "next lint --max-warnings 0",
-    "typecheck": "tsc --noEmit",
-    "format": "prettier --check . --ignore-path ../../.gitignore"
-  },
-  "prettier": "@repo/prettier-config",
   "dependencies": {
     "@repo/design-system": "workspace:*",
     "next": "catalog:",
@@ -32,5 +22,15 @@
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
     "use-debounce": "catalog:"
+  },
+  "prettier": "@repo/prettier-config",
+  "private": true,
+  "scripts": {
+    "build": "next build --turbopack",
+    "dev": "next dev --turbopack",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "next lint --max-warnings 0",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   }
 }

@@ -1,13 +1,6 @@
 {
   "name": "@repo/eslint-config",
   "version": "0.0.0",
-  "type": "module",
-  "private": true,
-  "exports": {
-    "./base": "./base.js",
-    "./next-js": "./next.js",
-    "./react-internal": "./react-internal.js"
-  },
   "devDependencies": {
     "@eslint/js": "catalog:",
     "@next/eslint-plugin-next": "catalog:",
@@ -20,5 +13,12 @@
     "globals": "catalog:",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:"
-  }
+  },
+  "exports": {
+    "./base": "./base.js",
+    "./next-js": "./next.js",
+    "./react-internal": "./react-internal.js"
+  },
+  "private": true,
+  "type": "module"
 }

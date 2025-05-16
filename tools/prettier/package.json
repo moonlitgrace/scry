@@ -1,18 +1,18 @@
 {
   "name": "@repo/prettier-config",
   "version": "0.0.0",
-  "private": true,
-  "license": "MIT",
-  "type": "module",
-  "exports": {
-    ".": "./index.js"
-  },
-  "scripts": {
-    "format": "prettier --check . --ignore-path ../../.gitignore"
-  },
-  "prettier": "@repo/prettier-config",
   "dependencies": {
     "prettier": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:"
-  }
+  },
+  "exports": {
+    ".": "./index.js"
+  },
+  "license": "MIT",
+  "prettier": "@repo/prettier-config",
+  "private": true,
+  "scripts": {
+    "format": "prettier --check . --ignore-path ../../.gitignore"
+  },
+  "type": "module"
 }

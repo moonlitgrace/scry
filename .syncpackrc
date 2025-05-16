@@ -1,3 +1,5 @@
 {
-  "dependencyTypes": ["prod", "dev"]
+  "dependencyTypes": ["prod", "dev"],
+  "workspace": true,
+  "includeWorkspaceRoot": true
 }

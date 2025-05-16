@@ -1,37 +1,6 @@
 {
   "name": "@repo/design-system",
   "version": "0.0.0",
-  "private": true,
-  "type": "module",
-  "exports": {
-    "./postcss.config": "./postcss.config.mjs",
-    "./globals.css": "./src/globals.css",
-    "./components/*": "./src/components/*.tsx",
-    "./lib/*": "./src/lib/*.ts",
-    "./hooks/*": [
-      "./src/hooks/*.ts",
-      "./src/hooks/*.tsx"
-    ]
-  },
-  "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "typecheck": "tsc --noEmit",
-    "format": "prettier --check . --ignore-path ../../.gitignore"
-  },
-  "prettier": "@repo/prettier-config",
-  "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "@tailwindcss/postcss": "catalog:",
-    "@types/node": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
-    "eslint": "catalog:",
-    "postcss": "catalog:",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:"
-  },
   "dependencies": {
     "@hookform/resolvers": "catalog:",
     "@radix-ui/react-accordion": "catalog:",
@@ -57,5 +26,36 @@
     "tailwind-merge": "catalog:",
     "tw-animate-css": "catalog:",
     "zod": "catalog:"
-  }
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "eslint": "catalog:",
+    "postcss": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  },
+  "exports": {
+    "./postcss.config": "./postcss.config.mjs",
+    "./globals.css": "./src/globals.css",
+    "./components/*": "./src/components/*.tsx",
+    "./lib/*": "./src/lib/*.ts",
+    "./hooks/*": [
+      "./src/hooks/*.ts",
+      "./src/hooks/*.tsx"
+    ]
+  },
+  "prettier": "@repo/prettier-config",
+  "private": true,
+  "scripts": {
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module"
 }
