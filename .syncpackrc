@@ -1,5 +1,6 @@
 {
   "dependencyTypes": ["prod", "dev"],
+  "semverRange": "^",
   "workspace": true,
   "includeWorkspaceRoot": true
 }
