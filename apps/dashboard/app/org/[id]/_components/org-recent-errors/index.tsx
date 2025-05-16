@@ -21,8 +21,6 @@ export default async function OrgRecentErrors() {
         <ScrollArea className="h-full max-h-125 rounded-lg [&_[data-slot=scroll-area-viewport]]:max-h-125 [&_[data-slot=scroll-area-viewport]]:border">
           <Suspense fallback={<RecentErrorListSkeleton />}>
             <RecentErrorList />
-            <RecentErrorList />
-            <RecentErrorList />
           </Suspense>
         </ScrollArea>
       </CollapsibleContent>
