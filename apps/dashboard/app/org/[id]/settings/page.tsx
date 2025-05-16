@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import OrgNameCard from './_components/cards/OrgNameCard';
-import OrgIDCard from './_components/cards/OrgIDCard';
-import LeaveOrgCard from './_components/cards/LeaveOrgCard';
-import DeleteOrgCard from './_components/cards/DeleteOrgCard';
+import DeleteOrgCard from './_components/cards/delete-org-card';
+import LeaveOrgCard from './_components/cards/leave-org-card';
+import OrgIDCard from './_components/cards/org-id-card';
+import OrgNameCard from './_components/cards/org-name-card';
 
 export const metadata: Metadata = {
   title: 'General – Org Settings – Dashboard – scry',

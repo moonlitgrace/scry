@@ -1,6 +1,6 @@
-import OrgControls from './_components/OrgControls';
-import OrgProjects from './_components/OrgProjects';
-import OrgRecentErrors from './_components/OrgRecentErrors';
+import OrgControls from './_components/org-controls';
+import OrgProjects from './_components/org-projects';
+import OrgRecentErrors from './_components/org-recent-errors';
 
 interface Props {
   searchParams: Promise<{

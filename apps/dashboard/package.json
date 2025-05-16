@@ -28,7 +28,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "lucide-react": "^0.509.0",
+    "lucide-react": "^0.510.0",
     "tailwindcss": "^4",
     "typescript": "^5",
     "use-debounce": "^10.0.4"
