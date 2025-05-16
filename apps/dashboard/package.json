@@ -14,7 +14,7 @@
   "dependencies": {
     "@repo/design-system": "workspace:*",
     "next": "15.3.2",
-    "next-themes": "^0.4.6",
+    "next-themes": "catalog:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -22,15 +22,15 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@svgr/webpack": "^8.1.0",
+    "@svgr/webpack": "catalog:",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "lucide-react": "^0.510.0",
+    "lucide-react": "catalog:",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "use-debounce": "^10.0.4"
+    "use-debounce": "catalog:"
   }
 }

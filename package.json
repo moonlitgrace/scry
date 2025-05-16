@@ -16,12 +16,12 @@
     "pre-commit": "lint-staged"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.4",
+    "@changesets/cli": "catalog:",
     "@repo/prettier-config": "workspace:*",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.0.0",
-    "prettier": "^3.5.3",
-    "turbo": "^2.5.3",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "prettier": "catalog:",
+    "turbo": "catalog:",
     "typescript": "5.8.3"
   },
   "packageManager": "pnpm@10.11.0",
