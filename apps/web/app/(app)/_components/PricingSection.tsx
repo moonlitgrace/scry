@@ -14,10 +14,7 @@ export default function PricingSection() {
   return (
     <div className="grid w-full gap-5 md:grid-cols-2">
       {Object.entries(plans).map(([key, plan]) => (
-        <Card
-          key={key}
-          className={cn(!plan.isActive && 'pointer-events-none opacity-50 select-none')}
-        >
+        <Card key={key}>
           <CardHeader>
             <CardTitle>{plan.label}</CardTitle>
             <CardDescription>
@@ -32,7 +29,7 @@ export default function PricingSection() {
             ))}
           </CardContent>
           <CardFooter>
-            <Button>Get started</Button>
+            <Button disabled={!plan.isActive}>Get started</Button>
           </CardFooter>
         </Card>
       ))}
@@ -44,11 +41,21 @@ const plans = {
   free: {
     label: 'Free',
     isActive: true,
-    features: ['1 Project', 'Basic Error Tracking', 'Email alerts'],
+    features: [
+      '1 Project / Org',
+      '1 Organization',
+      'Basic Error Tracking',
+      'Email alerts',
+    ],
   },
   pro: {
     label: 'Pro',
     isActive: false,
-    features: ['10 Project', 'Advanced Filters', 'Slack/Discord alerts'],
+    features: [
+      '10 Project / Org',
+      '5 Organization',
+      'Advanced Filters',
+      'Slack / Discord alerts',
+    ],
   },
 };

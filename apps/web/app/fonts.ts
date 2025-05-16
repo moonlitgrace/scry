@@ -1,14 +1,14 @@
-import { Fira_Code, Fira_Sans } from 'next/font/google';
+import { Geist, Geist_Mono } from 'next/font/google';
 
-export const firacode = Fira_Code({
+export const geist = Geist({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-firacode',
+  variable: '--font-geist',
 });
 
-export const firasans = Fira_Sans({
+export const geist_mono = Geist_Mono({
   subsets: ['latin'],
   display: 'swap',
   weight: ['900'],
-  variable: '--font-firasans',
+  variable: '--font-geist-mono',
 });

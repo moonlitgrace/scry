@@ -1,6 +1,6 @@
 import './globals.css';
 import { cn } from '@repo/design-system/lib/utils';
-import { firacode, firasans } from './fonts';
+import { geist, geist_mono } from './fonts';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 export default function RootLayout({
@@ -10,7 +10,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={cn(firacode.variable, firasans.variable, 'font-mono antialiased')}>
+      <body className={cn(geist.variable, geist_mono.variable, 'font-sans antialiased')}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

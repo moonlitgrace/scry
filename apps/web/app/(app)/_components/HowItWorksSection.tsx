@@ -8,10 +8,10 @@ export default function HowItWorksSection() {
         {steps.map(({ Icon, text, subText }, idx) => (
           <div
             key={idx}
-            className="bg-card text-card-foreground flex flex-col justify-center gap-2 border p-5 shadow-sm md:aspect-square md:items-center md:text-center"
+            className="bg-card flex flex-col justify-center gap-2 rounded-lg border p-5 md:aspect-square md:items-center md:text-center"
           >
             <div className="flex items-center gap-2 md:flex-col">
-              <Icon className="text-muted-foreground md:size-10" />
+              <Icon className="text-muted-foreground stroke-1 md:size-10" />
               <h5 className="font-bold">{text}</h5>
             </div>
             <p className="text-muted-foreground text-sm">{subText}</p>
@@ -34,7 +34,7 @@ const steps = [
   {
     Icon: Cog,
     text: 'Initialize',
-    subText: 'Configure Scry with your API key to start capturing insights.',
+    subText: 'Configure Scry with your API key to start capturing.',
   },
   {
     Icon: BugPlay,
