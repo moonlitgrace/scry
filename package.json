@@ -1,30 +1,15 @@
 {
   "name": "scryjs",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
-    "format:fix": "pnpm format --write",
-    "typecheck": "turbo run typecheck",
-    "changeset": "changeset",
-    "release": "pnpm release:version && pnpm release:publish",
-    "release:version": "changeset version",
-    "release:publish": "pnpm build --filter=./packages/** && changeset publish",
-    "prepare": "husky",
-    "pre-commit": "lint-staged"
-  },
   "devDependencies": {
-    "@changesets/cli": "^2.29.4",
+    "@changesets/cli": "catalog:",
     "@repo/prettier-config": "workspace:*",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.0.0",
-    "prettier": "^3.5.3",
-    "turbo": "^2.5.3",
-    "typescript": "5.8.3"
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "prettier": "catalog:",
+    "syncpack": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:"
   },
-  "packageManager": "pnpm@10.11.0",
   "engines": {
     "node": ">=18"
   },
@@ -32,5 +17,25 @@
     "*.{js,jsx,ts,tsx,json,md,css}": [
       "pnpm format:fix"
     ]
+  },
+  "packageManager": "pnpm@10.11.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "changeset": "changeset",
+    "deps:check": "syncpack list-mismatches",
+    "deps:fix": "syncpack fix-mismatches",
+    "deps:format": "syncpack format",
+    "deps:lint": "syncpack lint",
+    "dev": "turbo run dev",
+    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
+    "format:fix": "pnpm format --write",
+    "lint": "turbo run lint",
+    "pre-commit": "lint-staged",
+    "prepare": "husky",
+    "release": "pnpm release:version && pnpm release:publish",
+    "release:publish": "pnpm build --filter=./packages/** && changeset publish",
+    "release:version": "changeset version",
+    "typecheck": "turbo run typecheck"
   }
 }

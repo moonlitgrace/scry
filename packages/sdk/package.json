@@ -1,37 +1,37 @@
 {
   "name": "@scryjs/sdk",
-  "version": "0.0.4",
   "description": "Official scryjs SDK for JavaScript apps.",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "version": "0.0.4",
+  "author": "scryjs",
+  "bugs": "https://github.com/moonlitgrace/scryjs/issues",
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  },
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch"
-  },
   "homepage": "https://github.com/moonlitgrace/scryjs/blob/main/packages/sdk#readme",
-  "bugs": "https://github.com/moonlitgrace/scryjs/issues",
-  "repository": "https://github.com/moonlitgrace/scryjs",
   "keywords": [
+    "debugging",
     "error-tracking",
     "javascript",
-    "debugging",
     "logs",
     "scry"
   ],
-  "author": "scryjs",
   "license": "GPL-3.0-only",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "publishConfig": {
     "access": "public",
     "provenance": true
   },
-  "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22.15.17",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.3"
-  }
+  "repository": "https://github.com/moonlitgrace/scryjs",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "types": "./dist/index.d.ts"
 }
