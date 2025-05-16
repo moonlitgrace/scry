@@ -1,5 +1,11 @@
 # @scryjs/sdk
 
+## 0.0.4
+
+### Patch Changes
+
+- b99ca33: chore: update package.json info
+
 ## 0.0.3
 
 ### Patch Changes
