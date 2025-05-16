@@ -11,7 +11,7 @@ import RecentErrorListSkeleton from './recent-error-list-skeleton';
 
 export default async function OrgRecentErrors() {
   return (
-    <Collapsible defaultOpen className="flex flex-col items-start gap-2">
+    <Collapsible defaultOpen className="sticky top-20 flex flex-col items-start gap-2">
       <h5 className="hidden text-sm font-medium lg:inline-block">Recent Errors</h5>
       <CollapsibleTrigger className="inline-flex items-center gap-2 lg:hidden [&[data-state=open]>svg]:rotate-90">
         <ChevronRight className="text-muted-foreground size-4 transition-transform" />

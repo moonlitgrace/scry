@@ -8,7 +8,9 @@ export default async function Layout({ children }: Props) {
   return (
     <>
       <OrgHeader />
-      <main className="mx-auto flex max-w-350 flex-col gap-5 p-5">{children}</main>
+      <main className="mx-auto flex min-h-dvh max-w-350 flex-col gap-5 p-5">
+        {children}
+      </main>
     </>
   );
 }

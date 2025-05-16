@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import './globals.css';
 import { geist, geist_mono } from './fonts';
+import Footer from '@/components/organisms/footer';
 
 export const metadata: Metadata = {
   title: 'Dashboard – scry',
@@ -18,11 +19,12 @@ export default function RootLayout({
       <body className={cn(geist.variable, geist_mono.variable, 'font-sans antialiased')}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

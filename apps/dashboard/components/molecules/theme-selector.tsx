@@ -8,23 +8,28 @@ import {
   SelectValue,
 } from '@repo/design-system/components/ui/select';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 export default function ThemeSelector() {
   const { theme, setTheme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
 
   return (
-    <div className="inline-flex w-full items-center justify-between px-2 text-sm">
-      <span>Theme</span>
-      <Select value={theme} onValueChange={(value) => setTheme(value)}>
-        <SelectTrigger size="sm">
-          <SelectValue placeholder="Theme" />
-        </SelectTrigger>
-        <SelectContent align="end">
-          <SelectItem value="light">Light</SelectItem>
-          <SelectItem value="dark">Dark</SelectItem>
-          <SelectItem value="system">System</SelectItem>
-        </SelectContent>
-      </Select>
-    </div>
+    <Select value={theme} onValueChange={(value) => setTheme(value)}>
+      <SelectTrigger size="sm">
+        <SelectValue placeholder="Theme" />
+      </SelectTrigger>
+      <SelectContent align="end">
+        <SelectItem value="light">Light</SelectItem>
+        <SelectItem value="dark">Dark</SelectItem>
+        <SelectItem value="system">System</SelectItem>
+      </SelectContent>
+    </Select>
   );
 }

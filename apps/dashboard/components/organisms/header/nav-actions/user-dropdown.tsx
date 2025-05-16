@@ -49,7 +49,10 @@ export default function UserDropdown() {
             <span>Create Org</span>
             <CirclePlus />
           </DropdownMenuItem>
-          <ThemeSelector />
+          <div className="inline-flex w-full items-center justify-between px-2 text-sm">
+            <span>Theme</span>
+            <ThemeSelector />
+          </div>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
