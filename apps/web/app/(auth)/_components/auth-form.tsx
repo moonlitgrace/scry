@@ -1,5 +1,5 @@
-import GoogleIcon from '@/components/icons/Google';
-import { Button } from '@repo/design-system/components/ui/button';
+import GoogleIcon from '@/components/atoms/google-icon';
+import { Button, buttonVariants } from '@repo/design-system/components/ui/button';
 import { cn } from '@repo/design-system/lib/utils';
 import Link from 'next/link';
 
@@ -27,7 +27,7 @@ export default function AuthForm({ children, type, className, onSubmit }: Props)
 
   return (
     <form onSubmit={onSubmit} className={cn(className, 'flex flex-col gap-2')} noValidate>
-      <h4 className="font-sans text-4xl md:text-5xl">{text}</h4>
+      <h4 className="font-sans text-4xl font-black md:text-5xl">{text}</h4>
       <p className="text-muted-foreground mb-5 text-xs md:text-sm">
         Scry helps you track and reveal hidden errors and logs in your JavaScript apps.
       </p>
@@ -42,7 +42,7 @@ export default function AuthForm({ children, type, className, onSubmit }: Props)
         <GoogleIcon className="fill-muted-foreground" />
         Continue with Google
       </Button>
-      <Link href={`/${href}`} className="text-muted-foreground text-xs hover:underline">
+      <Link href={`/${href}`} className={buttonVariants({ variant: 'link' })}>
         {href_text}
       </Link>
     </form>

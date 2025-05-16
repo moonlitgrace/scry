@@ -10,7 +10,7 @@ export default function FAQSection() {
     <Accordion
       type="single"
       collapsible
-      className="bg-card w-full border"
+      className="bg-card w-full rounded-lg border"
       defaultValue="qs-0"
     >
       {questions.map((qs, idx) => (

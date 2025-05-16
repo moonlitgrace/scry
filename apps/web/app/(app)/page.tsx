@@ -1,10 +1,9 @@
-import HomeSectionLayout from '@/layouts/HomeSectionLayout';
-import HeroSection from './_components/HeroSection';
-import HowItWorksSection from './_components/HowItWorksSection';
-import PricingSection from './_components/PricingSection';
-import CTASection from './_components/CTASection';
-import FAQSection from './_components/FAQSection';
-import { withAngleBrackets } from '@/lib/with-angle-brackets';
+import HomeSectionLayout from '@/layouts/home-section';
+import HeroSection from './_components/hero-section';
+import HowItWorksSection from './_components/how-it-works-section';
+import PricingSection from './_components/pricing-section';
+import CTASection from './_components/cta-section';
+import FAQSection from './_components/faq-section';
 
 export default function Home() {
   return (
@@ -12,10 +11,10 @@ export default function Home() {
       <HeroSection />
       {sections.map(({ id, title, subText, Component }, idx) => (
         <HomeSectionLayout key={idx} id={id}>
-          <h3 className="font-sans text-2xl font-bold md:text-4xl">{title}</h3>
-          <h2 className="text-muted-foreground text-center text-sm">
-            {withAngleBrackets(subText)}
-          </h2>
+          <h3 className="text-center font-sans text-2xl font-black md:text-4xl">
+            {title}
+          </h3>
+          <h2 className="text-muted-foreground text-center">{subText}</h2>
           <Component />
         </HomeSectionLayout>
       ))}
@@ -27,24 +26,24 @@ const sections = [
   {
     id: 'how-it-works',
     title: 'How It Works',
-    subText: `in 3 I's`,
+    subText: `Set up, configure, and debug effortlessly with Scry’s seamless workflow`,
     Component: HowItWorksSection,
   },
   {
     id: 'pricing',
     title: 'Pricing',
-    subText: 'start free. upgrade when you need more',
+    subText: 'Start free. Upgrade when you need more.',
     Component: PricingSection,
   },
   {
     title: 'Ready To DEBUG Smarter?',
-    subText: 'join developers tracking errors with scry today',
+    subText: 'Join developers tracking errors with Scry today.',
     Component: CTASection,
   },
   {
     id: 'faq',
     title: 'FAQ',
-    subText: 'frequently asked questions',
+    subText: 'Frequently Asked Questions',
     Component: FAQSection,
   },
 ];
