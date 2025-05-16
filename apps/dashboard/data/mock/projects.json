@@ -1,7 +1,7 @@
 [
   {
     "id": "twzbncvo",
-    "name": "Scry Studio",
+    "name": "scry-web",
     "domain": "https://studio.scry.dev",
     "status": "Active",
     "stats": {
@@ -16,58 +16,10 @@
     }
   },
   {
-    "id": "nxlrwdke",
-    "name": "CoreIcons",
-    "domain": "https://icons.coreproject.dev",
-    "status": "Active",
-    "stats": {
-      "errors": 5,
-      "lastError": "2025-05-11T22:10:00.000Z",
-      "errorTrend": "UP"
-    },
-    "latestError": {
-      "errorMsg": "SyntaxError: Unexpected token '<'",
-      "env": "PROD",
-      "timestamp": "2025-05-11T22:10:00.000Z"
-    }
-  },
-  {
-    "id": "zkqfjrla",
-    "name": "AnimeCore",
-    "domain": "https://anime.coreproject.moe",
-    "status": "Active",
-    "stats": {
-      "errors": 2,
-      "lastError": "2025-05-10T16:55:00.000Z",
-      "errorTrend": "DOWN"
-    },
-    "latestError": {
-      "errorMsg": "Error: Missing episode data",
-      "env": "PROD",
-      "timestamp": "2025-05-10T16:55:00.000Z"
-    }
-  },
-  {
-    "id": "ubmeqlsz",
-    "name": "mangacore-cms",
-    "domain": "https://cms.mangacore.moe",
-    "status": "Maintenance",
-    "stats": {
-      "errors": 32,
-      "lastError": "2025-05-12T05:32:00.000Z",
-      "errorTrend": "UP"
-    },
-    "latestError": {
-      "errorMsg": "ReferenceError: window is not defined",
-      "env": "STAGING",
-      "timestamp": "2025-05-12T05:32:00.000Z"
-    }
-  },
-  {
     "id": "gctnxlqy",
     "name": "Quibble API",
     "domain": "https://api.quibble.moonlitgrace.space",
-    "status": "Active",
+    "status": "Paused",
     "stats": {
       "errors": 12,
       "lastError": "2025-05-12T14:05:00.000Z",
@@ -77,22 +29,6 @@
       "errorMsg": "ValidationError: Invalid post data",
       "env": "PROD",
       "timestamp": "2025-05-12T14:05:00.000Z"
-    }
-  },
-  {
-    "id": "vxklptre",
-    "name": "SoundCore",
-    "domain": "https://sound.coreproject.moe",
-    "status": "Paused",
-    "stats": {
-      "errors": 7,
-      "lastError": "2025-05-12T09:20:00.000Z",
-      "errorTrend": "UP"
-    },
-    "latestError": {
-      "errorMsg": "AudioLoadError: Failed to decode stream",
-      "env": "DEV",
-      "timestamp": "2025-05-12T09:20:00.000Z"
     }
   }
 ]
