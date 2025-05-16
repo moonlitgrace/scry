@@ -1,10 +1,10 @@
-import OrgHeader from './_components/OrgHeader';
+import OrgHeader from './_components/org-header';
 
 interface Props {
   children: React.ReactNode;
 }
 
-export default async function OrgLayout({ children }: Props) {
+export default async function Layout({ children }: Props) {
   return (
     <>
       <OrgHeader />
