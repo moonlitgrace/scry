@@ -30,7 +30,7 @@
     "eslint": "^9.26.0",
     "postcss": "catalog:",
     "tailwindcss": "^4.1.6",
-    "typescript": "5.8.3"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "@hookform/resolvers": "catalog:",

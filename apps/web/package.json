@@ -35,6 +35,6 @@
     "eslint": "^9.26.0",
     "lucide-react": "catalog:",
     "tailwindcss": "^4.1.6",
-    "typescript": "5.8.3"
+    "typescript": "^5.8.3"
   }
 }
