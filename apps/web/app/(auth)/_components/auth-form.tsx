@@ -1,4 +1,4 @@
-import GoogleIcon from '@/components/icons/Google';
+import GoogleIcon from '@/components/atoms/google-icon';
 import { Button, buttonVariants } from '@repo/design-system/components/ui/button';
 import { cn } from '@repo/design-system/lib/utils';
 import Link from 'next/link';

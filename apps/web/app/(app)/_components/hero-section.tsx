@@ -1,5 +1,5 @@
-import GithubIcon from '@/components/icons/Github';
-import HomeSectionLayout from '@/layouts/HomeSectionLayout';
+import GithubIcon from '@/components/atoms/github-icon';
+import HomeSectionLayout from '@/layouts/home-section';
 import { buttonVariants } from '@repo/design-system/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';

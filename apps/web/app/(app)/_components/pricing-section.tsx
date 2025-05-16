@@ -7,7 +7,6 @@ import {
   CardContent,
   CardFooter,
 } from '@repo/design-system/components/ui/card';
-import { cn } from '@repo/design-system/lib/utils';
 import { Check } from 'lucide-react';
 
 export default function PricingSection() {

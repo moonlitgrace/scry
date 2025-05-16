@@ -1,9 +1,9 @@
-import HomeSectionLayout from '@/layouts/HomeSectionLayout';
-import HeroSection from './_components/HeroSection';
-import HowItWorksSection from './_components/HowItWorksSection';
-import PricingSection from './_components/PricingSection';
-import CTASection from './_components/CTASection';
-import FAQSection from './_components/FAQSection';
+import HomeSectionLayout from '@/layouts/home-section';
+import HeroSection from './_components/hero-section';
+import HowItWorksSection from './_components/how-it-works-section';
+import PricingSection from './_components/pricing-section';
+import CTASection from './_components/cta-section';
+import FAQSection from './_components/faq-section';
 
 export default function Home() {
   return (

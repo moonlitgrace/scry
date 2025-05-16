@@ -3,11 +3,11 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { AuthFormData, AuthSchema } from '../../_schemas/auth';
 import { zodResolver } from '@hookform/resolvers/zod';
-import AuthForm from '../../_components/AuthForm';
+import AuthForm from '../../_components/auth-form';
 import { Form } from '@repo/design-system/components/ui/form';
-import AuthFormFields, { type AuthFormField } from '../../_components/AuthFormFields';
+import AuthFormFields, { type AuthFormField } from '../../_components/auth-form-fields';
 
-export default function SignUpForm() {
+export default function SignInForm() {
   const form = useForm<AuthFormData>({
     resolver: zodResolver(AuthSchema),
     defaultValues: {
@@ -22,7 +22,7 @@ export default function SignUpForm() {
 
   return (
     <Form {...form}>
-      <AuthForm type="sign-up" onSubmit={form.handleSubmit(onSubmit)}>
+      <AuthForm type="sign-in" onSubmit={form.handleSubmit(onSubmit)}>
         <AuthFormFields<AuthFormData> fields={formFields} control={form.control} />
       </AuthForm>
     </Form>
