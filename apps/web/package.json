@@ -15,10 +15,10 @@
   "dependencies": {
     "@hookform/resolvers": "catalog:",
     "@repo/design-system": "workspace:*",
-    "next": "^15.3.2",
+    "next": "catalog:",
     "next-themes": "catalog:",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "react-hook-form": "catalog:",
     "shiki": "catalog:",
     "zod": "catalog:"
@@ -28,13 +28,13 @@
     "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@svgr/webpack": "catalog:",
-    "@tailwindcss/postcss": "^4.1.6",
-    "@types/node": "^22.15.17",
-    "@types/react": "19.1.4",
-    "@types/react-dom": "19.1.5",
-    "eslint": "^9.26.0",
+    "@tailwindcss/postcss": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "eslint": "catalog:",
     "lucide-react": "catalog:",
-    "tailwindcss": "^4.1.6",
-    "typescript": "^5.8.3"
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
   }
 }

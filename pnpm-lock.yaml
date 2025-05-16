@@ -57,12 +57,27 @@ catalogs:
     '@svgr/webpack':
       specifier: ^8.1.0
       version: 8.1.0
+    '@tailwindcss/postcss':
+      specifier: ^4.1.6
+      version: 4.1.7
+    '@types/node':
+      specifier: ^22.15.17
+      version: 22.15.18
+    '@types/react':
+      specifier: 19.1.4
+      version: 19.1.4
+    '@types/react-dom':
+      specifier: 19.1.5
+      version: 19.1.5
     class-variance-authority:
       specifier: ^0.7.1
       version: 0.7.1
     clsx:
       specifier: ^2.1.1
       version: 2.1.1
+    eslint:
+      specifier: ^9.26.0
+      version: 9.26.0
     eslint-config-prettier:
       specifier: ^10.1.5
       version: 10.1.5
@@ -90,6 +105,9 @@ catalogs:
     lucide-react:
       specifier: ^0.510.0
       version: 0.510.0
+    next:
+      specifier: ^15.3.2
+      version: 15.3.2
     next-themes:
       specifier: ^0.4.6
       version: 0.4.6
@@ -102,15 +120,27 @@ catalogs:
     prettier-plugin-tailwindcss:
       specifier: ^0.6.11
       version: 0.6.11
+    react:
+      specifier: ^19.1.0
+      version: 19.1.0
+    react-dom:
+      specifier: ^19.1.0
+      version: 19.1.0
     react-hook-form:
       specifier: ^7.56.3
       version: 7.56.3
     shiki:
       specifier: ^3.4.1
       version: 3.4.2
+    syncpack:
+      specifier: ^13.0.4
+      version: 13.0.4
     tailwind-merge:
       specifier: ^3.3.0
       version: 3.3.0
+    tailwindcss:
+      specifier: ^4.1.6
+      version: 4.1.7
     tsup:
       specifier: ^8.4.0
       version: 8.4.0
@@ -120,6 +150,9 @@ catalogs:
     tw-animate-css:
       specifier: ^1.2.9
       version: 1.2.9
+    typescript:
+      specifier: ^5.8.3
+      version: 5.8.3
     typescript-eslint:
       specifier: ^8.32.1
       version: 8.32.1
@@ -150,13 +183,13 @@ importers:
         specifier: 'catalog:'
         version: 3.5.3
       syncpack:
-        specifier: ^13.0.4
+        specifier: 'catalog:'
         version: 13.0.4(typescript@5.8.3)
       turbo:
         specifier: 'catalog:'
         version: 2.5.3
       typescript:
-        specifier: 5.8.3
+        specifier: 'catalog:'
         version: 5.8.3
 
   apps/dashboard:
@@ -165,16 +198,16 @@ importers:
         specifier: workspace:*
         version: link:../../packages/design-system
       next:
-        specifier: 15.3.2
+        specifier: 'catalog:'
         version: 15.3.2(@babel/core@7.27.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-themes:
         specifier: 'catalog:'
         version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
-        specifier: ^19.0.0
+        specifier: 'catalog:'
         version: 19.1.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: 'catalog:'
         version: 19.1.0(react@19.1.0)
     devDependencies:
       '@repo/eslint-config':
@@ -190,28 +223,28 @@ importers:
         specifier: 'catalog:'
         version: 8.1.0(typescript@5.8.3)
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: 'catalog:'
         version: 4.1.7
       '@types/node':
-        specifier: ^22
+        specifier: 'catalog:'
         version: 22.15.18
       '@types/react':
-        specifier: ^19
+        specifier: 'catalog:'
         version: 19.1.4
       '@types/react-dom':
-        specifier: ^19
+        specifier: 'catalog:'
         version: 19.1.5(@types/react@19.1.4)
       eslint:
-        specifier: ^9
+        specifier: 'catalog:'
         version: 9.26.0(jiti@2.4.2)
       lucide-react:
         specifier: 'catalog:'
         version: 0.510.0(react@19.1.0)
       tailwindcss:
-        specifier: ^4
+        specifier: 'catalog:'
         version: 4.1.7
       typescript:
-        specifier: ^5
+        specifier: 'catalog:'
         version: 5.8.3
       use-debounce:
         specifier: 'catalog:'
@@ -226,16 +259,16 @@ importers:
         specifier: workspace:*
         version: link:../../packages/design-system
       next:
-        specifier: ^15.3.2
+        specifier: 'catalog:'
         version: 15.3.2(@babel/core@7.27.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-themes:
         specifier: 'catalog:'
         version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.0
       react-dom:
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.0(react@19.1.0)
       react-hook-form:
         specifier: 'catalog:'
@@ -260,28 +293,28 @@ importers:
         specifier: 'catalog:'
         version: 8.1.0(typescript@5.8.3)
       '@tailwindcss/postcss':
-        specifier: ^4.1.6
+        specifier: 'catalog:'
         version: 4.1.7
       '@types/node':
-        specifier: ^22.15.17
+        specifier: 'catalog:'
         version: 22.15.18
       '@types/react':
-        specifier: 19.1.4
+        specifier: 'catalog:'
         version: 19.1.4
       '@types/react-dom':
-        specifier: 19.1.5
+        specifier: 'catalog:'
         version: 19.1.5(@types/react@19.1.4)
       eslint:
-        specifier: ^9.26.0
+        specifier: 'catalog:'
         version: 9.26.0(jiti@2.4.2)
       lucide-react:
         specifier: 'catalog:'
         version: 0.510.0(react@19.1.0)
       tailwindcss:
-        specifier: ^4.1.6
+        specifier: 'catalog:'
         version: 4.1.7
       typescript:
-        specifier: 5.8.3
+        specifier: 'catalog:'
         version: 5.8.3
 
   packages/design-system:
@@ -338,10 +371,10 @@ importers:
         specifier: 'catalog:'
         version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.0
       react-dom:
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.0(react@19.1.0)
       react-hook-form:
         specifier: 'catalog:'
@@ -369,28 +402,28 @@ importers:
         specifier: workspace:*
         version: link:../../tools/typescript
       '@tailwindcss/postcss':
-        specifier: ^4.1.6
+        specifier: 'catalog:'
         version: 4.1.7
       '@types/node':
-        specifier: ^22.15.17
+        specifier: 'catalog:'
         version: 22.15.18
       '@types/react':
-        specifier: 19.1.4
+        specifier: 'catalog:'
         version: 19.1.4
       '@types/react-dom':
-        specifier: 19.1.5
+        specifier: 'catalog:'
         version: 19.1.5(@types/react@19.1.4)
       eslint:
-        specifier: ^9.26.0
+        specifier: 'catalog:'
         version: 9.26.0(jiti@2.4.2)
       postcss:
         specifier: 'catalog:'
         version: 8.5.3
       tailwindcss:
-        specifier: ^4.1.6
+        specifier: 'catalog:'
         version: 4.1.7
       typescript:
-        specifier: 5.8.3
+        specifier: 'catalog:'
         version: 5.8.3
 
   packages/sdk:
@@ -399,13 +432,13 @@ importers:
         specifier: workspace:*
         version: link:../../tools/typescript
       '@types/node':
-        specifier: ^22.15.17
+        specifier: 'catalog:'
         version: 22.15.18
       tsup:
         specifier: 'catalog:'
         version: 8.4.0(jiti@2.4.2)(postcss@8.5.3)(typescript@5.8.3)(yaml@2.8.0)
       typescript:
-        specifier: ^5.8.3
+        specifier: 'catalog:'
         version: 5.8.3
 
   tools/eslint:
@@ -417,7 +450,7 @@ importers:
         specifier: 'catalog:'
         version: 15.3.2
       eslint:
-        specifier: ^9.25.0
+        specifier: 'catalog:'
         version: 9.26.0(jiti@2.4.2)
       eslint-config-prettier:
         specifier: 'catalog:'
@@ -438,7 +471,7 @@ importers:
         specifier: 'catalog:'
         version: 16.1.0
       typescript:
-        specifier: ^5.8.2
+        specifier: 'catalog:'
         version: 5.8.3
       typescript-eslint:
         specifier: 'catalog:'
