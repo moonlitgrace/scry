@@ -13,7 +13,7 @@ export default function Page() {
       <div className="flex flex-col gap-1">
         <h5 className="text-2xl font-bold">Members</h5>
         <span className="text-muted-foreground text-sm">
-          Manage organization members and invitations
+          Manage organization members and invitations.
         </span>
       </div>
       <InviteMembers />
