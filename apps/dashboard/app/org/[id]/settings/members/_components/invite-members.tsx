@@ -13,8 +13,8 @@ import { ExternalLink, Link, PlusCircle } from 'lucide-react';
 export default function InviteMembers() {
   return (
     <Card>
-      <CardContent className="space-y-2">
-        <div className="inline-flex w-full items-center justify-between">
+      <CardContent className="space-y-2 sm:space-y-0">
+        <div className="inline-flex w-full justify-between">
           <span className="text-muted-foreground text-sm">
             Invite new members by email address
           </span>
