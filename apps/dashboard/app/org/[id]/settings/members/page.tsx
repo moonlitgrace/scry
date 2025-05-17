@@ -5,7 +5,7 @@ import {
   TabsTrigger,
 } from '@repo/design-system/components/ui/tabs';
 import InviteMembers from './_components/invite-members';
-import OrgMembers from './_components/org-members';
+import Members from './_components/members';
 
 export default function Page() {
   return (
@@ -31,7 +31,7 @@ export default function Page() {
           ))}
         </TabsList>
         <TabsContent value="members">
-          <OrgMembers />
+          <Members />
         </TabsContent>
       </Tabs>
     </>

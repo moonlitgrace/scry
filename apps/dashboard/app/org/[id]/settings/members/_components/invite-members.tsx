@@ -13,7 +13,7 @@ import { ExternalLink, Link, PlusCircle } from 'lucide-react';
 export default function InviteMembers() {
   return (
     <Card>
-      <CardContent>
+      <CardContent className="space-y-2">
         <div className="inline-flex w-full items-center justify-between">
           <span className="text-muted-foreground text-sm">
             Invite new members by email address
@@ -23,16 +23,16 @@ export default function InviteMembers() {
             Invite Link
           </Button>
         </div>
-        <div className="space-y-3">
-          <div className="grid grid-cols-2 gap-5">
-            <div className="flex flex-col gap-2">
+        <div className="space-y-2">
+          <div className="grid gap-2 sm:grid-cols-3 md:grid-cols-2">
+            <div className="flex flex-col gap-2 sm:col-span-2 md:col-span-1">
               <label className="text-sm">Email Address*</label>
               <Input type="email" placeholder="john@example.com" />
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-sm">Role*</label>
               <Select>
-                <SelectTrigger className="min-w-40">
+                <SelectTrigger className="w-full md:w-40">
                   <SelectValue placeholder="Select Role" />
                 </SelectTrigger>
                 <SelectContent>
@@ -42,7 +42,8 @@ export default function InviteMembers() {
               </Select>
             </div>
           </div>
-          <Button variant={'outline'}>
+          <span className="flex border-b sm:hidden"></span>
+          <Button variant={'outline'} disabled>
             <PlusCircle />
             Add more
           </Button>
