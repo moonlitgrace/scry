@@ -45,7 +45,7 @@ export default function OrgMembers() {
         </Select>
       </div>
       <div className="flex flex-col rounded-lg border">
-        <div className="inline-flex w-full items-center justify-between border-b p-2 pl-3">
+        <div className="inline-flex w-full items-center justify-between border-b px-3 py-2">
           <div className="flex items-center space-x-2">
             <Checkbox id="select-all" />
             <label
@@ -55,7 +55,7 @@ export default function OrgMembers() {
               Select all (1)
             </label>
           </div>
-          <Button size={'icon-sm'} variant={'ghost'}>
+          <Button size={'icon-sm'} variant={'ghost'} disabled>
             <Ellipsis />
           </Button>
         </div>
@@ -74,7 +74,7 @@ export default function OrgMembers() {
             </div>
             <div className="inline-flex items-center gap-2">
               <Badge>Owner</Badge>
-              <Button size={'icon-sm'} variant={'ghost'}>
+              <Button size={'icon-sm'} variant={'ghost'} disabled>
                 <Ellipsis />
               </Button>
             </div>
