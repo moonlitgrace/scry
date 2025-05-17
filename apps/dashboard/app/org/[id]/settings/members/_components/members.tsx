@@ -47,7 +47,7 @@ export default function Members() {
       <div className="flex flex-col rounded-lg border">
         <div className="inline-flex w-full items-center justify-between border-b px-3 py-2">
           <div className="flex items-center space-x-2">
-            <Checkbox id="select-all" />
+            <Checkbox id="select-all" checked />
             <label
               htmlFor="select-all"
               className="text-muted-foreground text-sm select-none"
