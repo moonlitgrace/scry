@@ -11,6 +11,12 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <div className="flex flex-col gap-1">
+        <h5 className="text-2xl font-bold">General</h5>
+        <span className="text-muted-foreground text-sm">
+          Manage your organization&apos;s core identity and security settings.
+        </span>
+      </div>
       <OrgNameCard />
       <OrgIDCard />
       <LeaveOrgCard />

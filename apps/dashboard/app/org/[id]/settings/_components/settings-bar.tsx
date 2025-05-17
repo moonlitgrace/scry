@@ -5,13 +5,14 @@ import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/i
 import { cn } from '@repo/design-system/lib/utils';
 import { Search } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function SettingsBar() {
   const [newLinks, setNewLinks] = useState(links);
   const [searchQuery, setSearchQuery] = useState('');
   const pathname = usePathname();
+  const params = useParams<{ id: string }>();
 
   useEffect(() => {
     const normalizedSearchQuery = searchQuery.toLowerCase();
@@ -41,7 +42,7 @@ export default function SettingsBar() {
         {Object.keys(newLinks).length ? (
           <>
             {Object.entries(newLinks).map(([href, { label, disabled }], idx) => {
-              const newHref = pathname + href;
+              const newHref = `/org/${params.id}/settings${href}`;
               const isActive =
                 href === '/' ? pathname + '/' === newHref : pathname === newHref;
               return (
