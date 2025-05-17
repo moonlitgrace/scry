@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@repo/design-system/components/ui/button';
 import { Card, CardContent, CardFooter } from '@repo/design-system/components/ui/card';
 import { Input } from '@repo/design-system/components/ui/input';
@@ -8,9 +10,28 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@repo/design-system/components/ui/select';
-import { ExternalLink, Link, PlusCircle } from 'lucide-react';
+import { ExternalLink, Link, PlusCircle, X } from 'lucide-react';
+import { useState } from 'react';
+
+function generateInvite() {
+  return { id: Date.now(), email: '', role: '' };
+}
 
 export default function InviteMembers() {
+  const [invites, setInvites] = useState([generateInvite()]);
+
+  function addInvite() {
+    setInvites((prev) => [...prev, generateInvite()]);
+  }
+
+  function removeInvite(id: number) {
+    setInvites((prev) => prev.filter((i) => i.id !== id));
+  }
+
+  function updateInvite(id: number, field: string, value: string) {
+    setInvites((prev) => prev.map((i) => (i.id === id ? { ...i, [field]: value } : i)));
+  }
+
   return (
     <Card>
       <CardContent className="space-y-2 sm:space-y-0">
@@ -24,26 +45,45 @@ export default function InviteMembers() {
           </Button>
         </div>
         <div className="space-y-2">
-          <div className="grid gap-2 sm:grid-cols-3 md:grid-cols-2">
-            <div className="flex flex-col gap-2 sm:col-span-2 md:col-span-1">
-              <label className="text-sm">Email Address*</label>
-              <Input type="email" placeholder="john@example.com" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-sm">Role*</label>
-              <Select>
-                <SelectTrigger className="w-full md:w-40">
-                  <SelectValue placeholder="Select Role" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="member">Member</SelectItem>
-                  <SelectItem value="owner">Owner</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+          <div className="grid grid-cols-4 gap-2">
+            <label className="col-span-3 text-sm">Email Address*</label>
+            <label className="col-span-1 text-sm">Role*</label>
+            {invites.map((invite) => (
+              <div key={invite.id} className="col-span-full grid grid-cols-4 gap-2">
+                <Input
+                  type="email"
+                  placeholder="john@example.com"
+                  className="col-span-3"
+                  value={invite.email}
+                  onChange={(e) => updateInvite(invite.id, 'email', e.target.value)}
+                />
+                <div className="col-span-1 inline-flex items-center gap-2">
+                  <Select
+                    value={invite.role}
+                    onValueChange={(val) => updateInvite(invite.id, 'role', val)}
+                  >
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Select Role" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="member">Member</SelectItem>
+                      <SelectItem value="owner">Owner</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <Button
+                    size={'icon'}
+                    variant={'outline'}
+                    disabled={invites.length <= 1}
+                    onClick={() => removeInvite(invite.id)}
+                  >
+                    <X />
+                  </Button>
+                </div>
+              </div>
+            ))}
           </div>
           <span className="flex border-b sm:hidden"></span>
-          <Button variant={'outline'}>
+          <Button variant={'outline'} onClick={addInvite}>
             <PlusCircle />
             Add more
           </Button>
