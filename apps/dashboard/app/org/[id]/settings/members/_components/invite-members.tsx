@@ -13,23 +13,25 @@ import {
 import { ExternalLink, Link, PlusCircle, X } from 'lucide-react';
 import { useState } from 'react';
 
-function generateInvite() {
+function generateEmptyInvite() {
   return { id: Date.now(), email: '', role: '' };
 }
 
 export default function InviteMembers() {
-  const [invites, setInvites] = useState([generateInvite()]);
+  const [invites, setInvites] = useState([generateEmptyInvite()]);
 
   function addInvite() {
-    setInvites((prev) => [...prev, generateInvite()]);
+    setInvites((prev) => [...prev, generateEmptyInvite()]);
   }
 
   function removeInvite(id: number) {
-    setInvites((prev) => prev.filter((i) => i.id !== id));
+    setInvites((prev) => prev.filter((invite) => invite.id !== id));
   }
 
-  function updateInvite(id: number, field: string, value: string) {
-    setInvites((prev) => prev.map((i) => (i.id === id ? { ...i, [field]: value } : i)));
+  function updateInvite(id: number, field: 'email' | 'role', value: string) {
+    setInvites((prev) =>
+      prev.map((invite) => (invite.id === id ? { ...invite, [field]: value } : invite)),
+    );
   }
 
   return (
@@ -45,24 +47,23 @@ export default function InviteMembers() {
           </Button>
         </div>
         <div className="space-y-2">
-          <div className="grid grid-cols-4 gap-2">
-            <label className="col-span-3 text-sm">Email Address*</label>
-            <label className="col-span-1 text-sm">Role*</label>
+          <div className="grid gap-2 sm:grid-cols-2">
+            <label className="text-sm">Email Address*</label>
+            <label className="hidden text-sm sm:block">Role*</label>
             {invites.map((invite) => (
-              <div key={invite.id} className="col-span-full grid grid-cols-4 gap-2">
+              <div key={invite.id} className="col-span-full grid gap-2 sm:grid-cols-2">
                 <Input
                   type="email"
                   placeholder="john@example.com"
-                  className="col-span-3"
                   value={invite.email}
                   onChange={(e) => updateInvite(invite.id, 'email', e.target.value)}
                 />
-                <div className="col-span-1 inline-flex items-center gap-2">
+                <div className="inline-flex items-center gap-2">
                   <Select
                     value={invite.role}
                     onValueChange={(val) => updateInvite(invite.id, 'role', val)}
                   >
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger className="w-full max-w-40">
                       <SelectValue placeholder="Select Role" />
                     </SelectTrigger>
                     <SelectContent>
@@ -79,10 +80,10 @@ export default function InviteMembers() {
                     <X />
                   </Button>
                 </div>
+                <span className="col-span-full border-b sm:hidden"></span>
               </div>
             ))}
           </div>
-          <span className="flex border-b sm:hidden"></span>
           <Button variant={'outline'} onClick={addInvite}>
             <PlusCircle />
             Add more
