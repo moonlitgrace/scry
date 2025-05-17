@@ -60,14 +60,14 @@ export default function Members() {
           </Button>
         </div>
         <div className="bg-card flex flex-col gap-5 p-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <Avatar>
                 <AvatarFallback>M</AvatarFallback>
               </Avatar>
               <div className="flex flex-col">
                 <span className="text-sm font-medium">moonlitgrace</span>
-                <span className="text-muted-foreground text-xs">
+                <span className="text-muted-foreground line-clamp-1 text-xs break-all">
                   moonlitgrace.gaia@gmail.com
                 </span>
               </div>

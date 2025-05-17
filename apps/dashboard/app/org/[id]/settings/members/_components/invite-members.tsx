@@ -14,7 +14,7 @@ export default function InviteMembers() {
   return (
     <Card>
       <CardContent className="space-y-2 sm:space-y-0">
-        <div className="inline-flex w-full justify-between">
+        <div className="inline-flex w-full justify-between gap-2">
           <span className="text-muted-foreground text-sm">
             Invite new members by email address
           </span>
@@ -43,13 +43,13 @@ export default function InviteMembers() {
             </div>
           </div>
           <span className="flex border-b sm:hidden"></span>
-          <Button variant={'outline'} disabled>
+          <Button variant={'outline'}>
             <PlusCircle />
             Add more
           </Button>
         </div>
       </CardContent>
-      <CardFooter className="justify-between border-t">
+      <CardFooter className="justify-between gap-2 border-t">
         <span className="text-muted-foreground text-sm">
           This feature is available on the{' '}
           <a
