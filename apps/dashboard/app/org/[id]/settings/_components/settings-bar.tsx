@@ -42,9 +42,9 @@ export default function SettingsBar() {
         {Object.keys(newLinks).length ? (
           <>
             {Object.entries(newLinks).map(([href, { label, disabled }], idx) => {
-              const newHref = `/org/${params.id}/settings${href}`;
+              const _href = `/org/${params.id}/settings${href}`;
               const isActive =
-                href === '/' ? pathname + '/' === newHref : pathname === newHref;
+                href === '/' ? pathname + '/' === _href : pathname.includes(href);
               return (
                 <Button
                   key={idx}
@@ -56,7 +56,7 @@ export default function SettingsBar() {
                   )}
                   disabled={disabled}
                 >
-                  <Link href={newHref} className="flex-1 text-start">
+                  <Link href={_href} className="flex-1 text-start">
                     {label}
                   </Link>
                 </Button>
