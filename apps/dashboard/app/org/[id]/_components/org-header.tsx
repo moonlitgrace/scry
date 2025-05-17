@@ -34,9 +34,9 @@ export default function OrgHeader() {
           style={{ transform: `translateX(${offsetX}px)` }}
         >
           {Object.entries(links).map(([href, { label, disabled }], idx) => {
-            const newHref = `/org/${id + href}`;
+            const _href = `/org/${id + href}`;
             const isActive =
-              href === '/' ? pathname + '/' === newHref : pathname === newHref;
+              href === '/' ? pathname + '/' === _href : pathname.includes(href);
             return (
               <div key={idx} className="relative">
                 <Button
@@ -50,7 +50,7 @@ export default function OrgHeader() {
                   )}
                   disabled={disabled}
                 >
-                  <Link href={newHref}>{label}</Link>
+                  <Link href={_href}>{label}</Link>
                 </Button>
                 {isActive && (
                   <span className="bg-primary absolute inset-x-0 -bottom-3 h-0.5"></span>

@@ -12,7 +12,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@repo/design-system/components/ui/card';
-import { cn } from '@repo/design-system/lib/utils';
 import { Info } from 'lucide-react';
 import Link from 'next/link';
 
