@@ -17,14 +17,22 @@ export default function Page() {
         </span>
       </div>
       <InviteMembers />
-      <Tabs defaultValue="members">
-        <TabsList>
-          <TabsTrigger value="members">Org Members</TabsTrigger>
-          <TabsTrigger value="pending" disabled>
-            Pending Invitations
-          </TabsTrigger>
+      <Tabs defaultValue="org-members">
+        <TabsList className="gap-5 border-0 bg-transparent! p-0">
+          {['Org Members', 'Pending Invitations'].map((item) => {
+            const value = item.replaceAll(' ', '-').toLowerCase();
+            return (
+              <TabsTrigger
+                key={value}
+                value={value}
+                className="data-[state=active]:border-primary! rounded-none border-0! border-b-2! border-transparent! bg-transparent! p-0"
+              >
+                {item}
+              </TabsTrigger>
+            );
+          })}
         </TabsList>
-        <TabsContent value="members">
+        <TabsContent value="org-members">
           <OrgMembers />
         </TabsContent>
       </Tabs>
