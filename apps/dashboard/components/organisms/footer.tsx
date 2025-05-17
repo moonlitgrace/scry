@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="mt-auto border-t">
       <div className="mx-auto flex max-w-350 justify-between gap-5 p-5">
         <div className="flex flex-col gap-5">
-          <div className="inline-flex items-center gap-5">
+          <div className="inline-flex flex-wrap items-center gap-5">
             <a href="https://example.com">
               <Logo className="w-5" />
             </a>

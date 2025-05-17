@@ -36,6 +36,7 @@
     "release": "pnpm release:version && pnpm release:publish",
     "release:publish": "pnpm build --filter=./packages/** && changeset publish",
     "release:version": "changeset version",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "ui-add": "turbo run ui-add -F @repo/design-system --"
   }
 }
