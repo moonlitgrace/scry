@@ -8,14 +8,14 @@ import Link from 'next/link';
 
 export default function RecentErrors() {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-3">
       <div className="flex flex-col">
         <h5 className="text-lg font-semibold">Recent Errors</h5>
         <span className="text-muted-foreground text-sm">
           Showing Recent few errors, see /logs for more.
         </span>
       </div>
-      <div className="flex gap-5">
+      <div className="flex gap-3">
         <InputRoot>
           <InputIcon>
             <Search />
