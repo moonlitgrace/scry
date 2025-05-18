@@ -23,15 +23,15 @@ export default function LatestErrorInsights({ id }: { id: string }) {
           </Button>
         </div>
       </div>
-      <div className="flex items-center gap-5">
-        <div className="bg-card text-muted-foreground flex aspect-video w-1/3 flex-col items-center justify-center gap-2 rounded-lg border">
+      <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="bg-card text-muted-foreground flex flex-col items-center justify-center gap-2 rounded-lg border p-5 md:col-span-1">
           <ImageOff className="size-10 stroke-1" />
           <div className="flex flex-col items-center">
             <span className="text-sm">SnapShot not available!</span>
             <span className="text-sm">(coming soon)</span>
           </div>
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 md:col-span-2 lg:col-span-3">
           <div className="flex flex-col gap-1">
             <span className="text-muted-foreground text-sm">Source</span>
             <div className="flex flex-col gap-2">

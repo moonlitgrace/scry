@@ -35,8 +35,8 @@ export default function RecentErrors() {
               className="absolute inset-0 z-1"
             />
             <div className="inline-flex items-center gap-2">
-              <SpellCheck2 className="text-muted-foreground size-5" />
-              <code className="text-sm font-medium transition-colors">
+              <SpellCheck2 className="text-muted-foreground size-5 shrink-0" />
+              <code className="line-clamp-1 text-sm font-medium break-all transition-colors">
                 {error.errorMsg}
               </code>
             </div>
@@ -44,8 +44,12 @@ export default function RecentErrors() {
               <Badge variant={error.env === 'PROD' ? 'destructive' : 'default'}>
                 {error.env}
               </Badge>
-              <Badge variant={'outline'}>{error.status}</Badge>
-              <span className="text-sm">{formatTimeSince(error.timestamp)}</span>
+              <Badge variant={'outline'} className="hidden sm:flex">
+                {error.status}
+              </Badge>
+              <span className="hidden text-sm whitespace-nowrap md:flex">
+                {formatTimeSince(error.timestamp)}
+              </span>
               <Button variant={'ghost'} size={'icon-sm'} disabled>
                 <Ellipsis />
               </Button>

@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
 
   return (
     <>
-      <div className="flex items-center justify-between gap-2">
+      <div className="flex flex-col justify-between gap-2 md:flex-row md:items-center">
         <div className="inline-flex items-center gap-2">
           <h2 className="text-3xl font-bold">scryjs-dashboard</h2>
           <Badge>Active</Badge>
