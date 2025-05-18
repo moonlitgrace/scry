@@ -4,7 +4,7 @@ import { Button } from '@repo/design-system/components/ui/button';
 import { Ellipsis, ExternalLink, GitBranch, Globe, ImageOff } from 'lucide-react';
 import Link from 'next/link';
 
-export default function LatestDeployment({ id }: { id: string }) {
+export default function LatestErrorInsights({ id }: { id: string }) {
   return (
     <>
       <div className="flex items-center justify-between gap-2">

@@ -2,7 +2,7 @@ import { Button } from '@repo/design-system/components/ui/button';
 import { ExternalLink } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import LatestDeployment from './_components/latest-deployment';
+import LatestErrorInsights from './_components/latest-error-insights';
 import { Badge } from '@repo/design-system/components/ui/badge';
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         </div>
       </div>
       <div className="space-y-5 rounded-lg border p-5">
-        <LatestDeployment id={id} />
+        <LatestErrorInsights id={id} />
       </div>
     </>
   );
