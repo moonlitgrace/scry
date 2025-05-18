@@ -5,7 +5,7 @@ import OrgIDCard from './_components/cards/org-id-card';
 import OrgNameCard from './_components/cards/org-name-card';
 
 export const metadata: Metadata = {
-  title: 'General – Org Settings – Dashboard – scry',
+  title: 'General - Org Settings – scry',
 };
 
 export default function Page() {
