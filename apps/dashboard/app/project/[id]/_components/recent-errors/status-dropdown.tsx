@@ -52,7 +52,7 @@ export default function StatusDropdown() {
             ))}
           </div>
           Status
-          <ChevronDown />
+          <ChevronDown className="text-muted-foreground" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

@@ -1,5 +1,5 @@
 import { Button } from '@repo/design-system/components/ui/button';
-import { ExternalLink } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import LatestErrorInsights from './_components/latest-error-insights';
@@ -27,7 +27,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
           </Link>
           <a href="https://example.com" target="_blank" rel="noreferrer noopener">
             <Button>
-              View Site <ExternalLink />
+              View Site <Globe />
             </Button>
           </a>
         </div>
