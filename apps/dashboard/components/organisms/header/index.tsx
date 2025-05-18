@@ -7,12 +7,13 @@ import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
 import { Button } from '@repo/design-system/components/ui/button';
 import { cn } from '@repo/design-system/lib/utils';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface Props {
   links: Record<
     string,
     {
+      root: boolean;
       label: string;
       disabled: boolean;
     }
@@ -20,23 +21,29 @@ interface Props {
 }
 
 export default function Header({ links }: Props) {
-  const [offsetX, setOffsetX] = useState(0);
   const { id } = useParams<{ id: string }>();
   const pathname = usePathname();
+  const navRef = useRef<HTMLDivElement>(null);
+
+  // mock
+  const orgId = 'twzbncvo';
 
   useEffect(() => {
     function handleScroll() {
-      setOffsetX(Math.min(window.scrollY, 40));
+      if (!navRef.current) return;
+      navRef.current.style.transform = `translateX(${Math.min(window.scrollY, 40)}px)`;
     }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  console.log('rendered');
 
   return (
     <>
       <header className="bg-background/95 z-1 inline-flex w-full items-center justify-between px-5 pt-3 pl-14">
-        <Link href={`/org/${id}`} className="fixed top-5 left-5 z-3">
+        <Link href={`/org/${orgId}`} className="fixed top-5 left-5 z-3">
           <Logo className="w-5" />
         </Link>
         <div className="inline-flex items-center gap-4">
@@ -46,14 +53,10 @@ export default function Header({ links }: Props) {
         <NavActions />
       </header>
       <nav className="bg-background/95 sticky top-0 z-2 border-b px-5 py-3">
-        <div
-          className="inline-flex items-center gap-2"
-          style={{ transform: `translateX(${offsetX}px)` }}
-        >
-          {Object.entries(links).map(([href, { label, disabled }], idx) => {
-            const _href = `/org/${id + href}`;
-            const isActive =
-              href === '/' ? pathname + '/' === _href : pathname.includes(href);
+        <div ref={navRef} className="inline-flex items-center gap-2">
+          {Object.entries(links).map(([href, { root, label, disabled }], idx) => {
+            const _href = href.replace('[id]', id);
+            const isActive = root ? pathname === _href : pathname.includes(_href);
             return (
               <div key={idx} className="relative">
                 <Button
