@@ -5,6 +5,7 @@ import Link from 'next/link';
 import LatestErrorInsights from './_components/latest-error-insights';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import KeyMetrics from './_components/key-metrics';
+import RecentErrors from './_components/recent-errors';
 
 export const metadata: Metadata = {
   title: 'scryjs-dashboard - Overview – scry',
@@ -35,6 +36,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       <div className="space-y-5 rounded-lg border p-5">
         <LatestErrorInsights id={id} />
       </div>
+      <RecentErrors />
     </>
   );
 }
