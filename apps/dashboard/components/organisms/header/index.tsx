@@ -38,8 +38,6 @@ export default function Header({ links }: Props) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  console.log('rendered');
-
   return (
     <>
       <header className="bg-background/95 z-1 inline-flex w-full items-center justify-between px-5 pt-3 pl-14">

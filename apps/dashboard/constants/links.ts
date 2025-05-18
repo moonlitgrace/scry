@@ -19,7 +19,7 @@ export const ORG_HEADER_LINKS = Object.freeze({
 export const PROJECT_HEADER_LINKS = Object.freeze({
   '/project/[id]': {
     root: true,
-    label: 'Project',
+    label: 'Overview',
     disabled: false,
   },
   '/project/[id]/logs': {
