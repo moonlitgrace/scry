@@ -1,7 +1,7 @@
 [
   {
     "id": "ljrtxwem",
-    "project": { "id": "twzbncvo", "name": "scry-web" },
+    "project": { "id": "twzbncvo", "name": "scryjs-dashboard" },
     "errorMsg": "TypeError: Cannot convert undefined to object",
     "env": "DEV",
     "status": "Resolved",
@@ -17,7 +17,7 @@
   },
   {
     "id": "ptxkgqnv",
-    "project": { "id": "twzbncvo", "name": "scry-web" },
+    "project": { "id": "twzbncvo", "name": "scryjs-dashboard" },
     "errorMsg": "AuthError: Invalid token signature",
     "env": "PROD",
     "status": "Resolved",

@@ -1,8 +1,8 @@
 [
   {
     "id": "twzbncvo",
-    "name": "scry-web",
-    "domain": "https://studio.scry.dev",
+    "name": "scryjs-dashboard",
+    "domain": "https://scryjs.space",
     "status": "Active",
     "stats": {
       "errors": 41,
