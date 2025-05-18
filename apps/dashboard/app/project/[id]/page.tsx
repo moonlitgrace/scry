@@ -21,7 +21,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
           <h2 className="text-3xl font-bold">scryjs-dashboard</h2>
           <Badge>Active</Badge>
         </div>
-        <div className="inline-flex items-center gap-2">
+        <div className="inline-flex items-center gap-3">
           <Link href={`/project/${id}/settings/domains`}>
             <Button variant={'outline'}>Domains</Button>
           </Link>
