@@ -21,28 +21,32 @@ export default function Page() {
           {logs.map((log) => (
             <div
               key={log.id}
-              className="bg-card hover:bg-accent/40 relative grid grid-cols-6 items-center gap-3 p-3 transition-colors"
+              className="bg-card hover:bg-accent/40 relative grid items-center gap-3 p-3 transition-colors sm:grid-cols-6"
             >
               <Link
                 href={`/project/${log.project.id}/err/${log.id}`}
                 className="absolute inset-0 z-1"
               />
-              <div className="col-span-3 inline-flex items-center gap-2">
+              <div className="col-span-full inline-flex items-center gap-2 sm:col-span-3">
                 <SpellCheck2 className="text-muted-foreground size-5 shrink-0" />
-                <code className="text-sm">{log.errorMsg}</code>
+                <code className="line-clamp-2 text-sm break-all">{log.errorMsg}</code>
               </div>
               <div className="inline-flex items-center gap-2">
-                <span className="text-muted-foreground text-sm">Status</span>
+                <span className="text-muted-foreground text-sm sm:hidden md:flex">
+                  Status
+                </span>
                 <Badge variant={'outline'}>{log.status}</Badge>
               </div>
               <div className="inline-flex items-center gap-2">
-                <span className="text-muted-foreground text-sm">Env.</span>
+                <span className="text-muted-foreground text-sm sm:hidden md:flex">
+                  Env.
+                </span>
                 <Badge variant={log.env === 'PROD' ? 'destructive' : 'default'}>
                   {log.env}
                 </Badge>
               </div>
-              <div className="flex items-center gap-2 justify-self-end">
-                <span className="text-muted-foreground text-sm">
+              <div className="flex items-center justify-between gap-2 sm:justify-normal">
+                <span className="text-muted-foreground text-sm sm:ml-auto">
                   {formatTimeSince(log.timestamp)}
                 </span>
                 <Button variant={'ghost'} size={'icon-sm'} disabled>

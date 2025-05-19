@@ -12,8 +12,8 @@ import StatusDropdown from '../../_components/status-dropdown';
 
 export default function LogsControls() {
   return (
-    <div className="grid grid-cols-6 gap-3">
-      <InputRoot className="col-span-3">
+    <div className="grid gap-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-6">
+      <InputRoot className="sm:col-span-3 md:col-span-4 lg:col-span-3">
         <InputIcon>
           <Search />
         </InputIcon>
@@ -21,11 +21,11 @@ export default function LogsControls() {
       </InputRoot>
       <Button className="justify-start" variant={'outline'} disabled>
         <Calendar className="text-muted-foreground" />
-        Select Date Range
+        Date Range
         <ChevronDown className="text-muted-foreground ml-auto" />
       </Button>
       <Select defaultValue="all">
-        <SelectTrigger className="w-full">
+        <SelectTrigger className="w-full sm:col-span-2 md:col-span-1">
           <SelectValue placeholder="Environment" />
         </SelectTrigger>
         <SelectContent>
@@ -34,7 +34,7 @@ export default function LogsControls() {
           <SelectItem value="development">Development</SelectItem>
         </SelectContent>
       </Select>
-      <StatusDropdown />
+      <StatusDropdown className="sm:col-span-2 md:col-span-1" />
     </div>
   );
 }
