@@ -1,14 +1,8 @@
 import { Button } from '@repo/design-system/components/ui/button';
 import { Calendar, ChevronDown } from 'lucide-react';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@repo/design-system/components/ui/select';
 import StatusDropdown from '../../../_components/status-dropdown';
 import SearchInput from './search-input';
+import SelectEnv from './select-env';
 
 export default function LogsControls() {
   console.log('rendered');
@@ -20,16 +14,7 @@ export default function LogsControls() {
         Date Range
         <ChevronDown className="text-muted-foreground ml-auto" />
       </Button>
-      <Select defaultValue="all">
-        <SelectTrigger className="w-full sm:col-span-2 md:col-span-1">
-          <SelectValue placeholder="Environment" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="all">All Environments</SelectItem>
-          <SelectItem value="production">Production</SelectItem>
-          <SelectItem value="development">Development</SelectItem>
-        </SelectContent>
-      </Select>
+      <SelectEnv />
       <div className="sm:col-span-2 md:col-span-1">
         <StatusDropdown />
       </div>
