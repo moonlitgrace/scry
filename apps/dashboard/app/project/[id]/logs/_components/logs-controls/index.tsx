@@ -1,6 +1,5 @@
 import { Button } from '@repo/design-system/components/ui/button';
-import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/input';
-import { Calendar, ChevronDown, Search } from 'lucide-react';
+import { Calendar, ChevronDown } from 'lucide-react';
 import {
   Select,
   SelectContent,
@@ -8,17 +7,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@repo/design-system/components/ui/select';
-import StatusDropdown from '../../_components/status-dropdown';
+import StatusDropdown from '../../../_components/status-dropdown';
+import SearchInput from './search-input';
 
 export default function LogsControls() {
+  console.log('rendered');
   return (
     <div className="grid gap-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-6">
-      <InputRoot className="sm:col-span-3 md:col-span-4 lg:col-span-3">
-        <InputIcon>
-          <Search />
-        </InputIcon>
-        <Input placeholder="Search..." />
-      </InputRoot>
+      <SearchInput />
       <Button className="justify-start" variant={'outline'} disabled>
         <Calendar className="text-muted-foreground" />
         Date Range
@@ -34,7 +30,9 @@ export default function LogsControls() {
           <SelectItem value="development">Development</SelectItem>
         </SelectContent>
       </Select>
-      <StatusDropdown className="sm:col-span-2 md:col-span-1" />
+      <div className="sm:col-span-2 md:col-span-1">
+        <StatusDropdown />
+      </div>
     </div>
   );
 }

@@ -12,10 +12,6 @@ import { useState } from 'react';
 import { cn } from '@repo/design-system/lib/utils';
 import { Badge } from '@repo/design-system/components/ui/badge';
 
-interface Props {
-  className?: string;
-}
-
 interface IStatusItem {
   checked: boolean;
   label: string;
@@ -30,7 +26,7 @@ const initialStatus: StatusState = {
   resolved: { checked: true, label: 'Resolved', color: 'bg-primary' },
 };
 
-export default function StatusDropdown({ className }: Props) {
+export default function StatusDropdown() {
   const [status, setStatus] = useState(initialStatus);
 
   function toggleStatus(key: StatusKey) {
@@ -42,7 +38,7 @@ export default function StatusDropdown({ className }: Props) {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className={cn(className)} asChild>
+      <DropdownMenuTrigger className="w-full" asChild>
         <Button variant={'outline'}>
           <div className="inline-flex items-center">
             {Object.values(status).map(({ checked, color }, idx) => (

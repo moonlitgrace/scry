@@ -1,9 +1,9 @@
-import { Ellipsis, RefreshCcw, SpellCheck2 } from 'lucide-react';
-import LogsControls from './_components/logs-controls';
-import { Badge } from '@repo/design-system/components/ui/badge';
 import { formatTimeSince } from '@/utils/datetime';
+import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
+import { Ellipsis, RefreshCcw, SpellCheck2 } from 'lucide-react';
 import Link from 'next/link';
+import LogsControls from './_components/logs-controls';
 
 export default function Page() {
   return (
