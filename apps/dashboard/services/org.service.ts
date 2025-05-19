@@ -1,7 +1,6 @@
-import { IOrgRecentError } from '@/app/org/[id]/_types/org-recent-errors';
-import { IOrgProject } from '@/app/org/[id]/_types/org-project';
 import rawProjectsData from '@/data/mock/projects.json';
 import recentErrorsData from '@/data/mock/recent_errors.json';
+import { IOrgProject, IOrgRecentError } from '@/types/org';
 
 export function getOrgRecentErrors(): Promise<IOrgRecentError[]> {
   return new Promise((resolve) => {

@@ -3,32 +3,32 @@
     "id": "ljrtxwem",
     "project": { "id": "twzbncvo", "name": "scryjs-dashboard" },
     "errorMsg": "TypeError: Cannot convert undefined to object",
-    "env": "DEV",
-    "status": "Resolved",
+    "env": "development",
+    "status": "resolved",
     "timestamp": "2025-05-13T09:20:00.000Z"
   },
   {
     "id": "xdmrkqva",
     "project": { "id": "vmqfkdsl", "name": "Quibble API" },
     "errorMsg": "UnhandledPromiseRejectionWarning: Database connection timeout",
-    "env": "DEV",
-    "status": "Pending",
+    "env": "development",
+    "status": "pending",
     "timestamp": "2025-05-13T06:00:00.000Z"
   },
   {
     "id": "ptxkgqnv",
     "project": { "id": "twzbncvo", "name": "scryjs-dashboard" },
     "errorMsg": "AuthError: Invalid token signature",
-    "env": "PROD",
-    "status": "Resolved",
+    "env": "production",
+    "status": "resolved",
     "timestamp": "2025-05-12T17:25:00.000Z"
   },
   {
     "id": "mjwyqazp",
     "project": { "id": "vmqfkdsl", "name": "Quibble API" },
     "errorMsg": "Error: Request failed with status code 500",
-    "env": "PROD",
-    "status": "Resolved",
+    "env": "production",
+    "status": "resolved",
     "timestamp": "2025-05-12T12:55:00.000Z"
   }
 ]
