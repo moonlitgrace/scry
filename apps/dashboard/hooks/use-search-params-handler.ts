@@ -24,7 +24,7 @@ export function useSearchParamsHandler() {
     }
 
     setLoading(true);
-    router.replace(`${pathname}?${params.toString()}`);
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   const debouncedUpdateParam = useDebouncedCallback(
