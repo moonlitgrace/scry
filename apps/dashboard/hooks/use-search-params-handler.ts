@@ -6,7 +6,10 @@ export function useSearchParamsHandler() {
   const pathname = usePathname();
   const router = useRouter();
 
+  const getParam = (key: string) => searchParams.get(key);
+
   const updateParam = (key: string, value: string | null) => {
+    if (value === getParam(key)) return;
     const params = new URLSearchParams(searchParams);
     if (value) {
       params.set(key, value);
@@ -22,5 +25,5 @@ export function useSearchParamsHandler() {
     500,
   );
 
-  return { updateParam, debouncedUpdateParam };
+  return { getParam, updateParam, debouncedUpdateParam };
 }

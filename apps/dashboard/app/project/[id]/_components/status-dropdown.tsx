@@ -8,9 +8,10 @@ import {
   DropdownMenuTrigger,
 } from '@repo/design-system/components/ui/dropdown-menu';
 import { Button } from '@repo/design-system/components/ui/button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { cn } from '@repo/design-system/lib/utils';
 import { Badge } from '@repo/design-system/components/ui/badge';
+import { useSearchParamsHandler } from '@/hooks/use-search-params-handler';
 
 interface IStatusItem {
   checked: boolean;
@@ -27,7 +28,32 @@ const initialStatus: StatusState = {
 };
 
 export default function StatusDropdown() {
-  const [status, setStatus] = useState(initialStatus);
+  const { getParam, updateParam } = useSearchParamsHandler();
+  const [status, setStatus] = useState(() => {
+    const paramValue = getParam('status');
+    if (!paramValue) return initialStatus;
+
+    const activeStatus = paramValue.split('&');
+    return Object.fromEntries(
+      Object.entries(initialStatus).map(([key, value]) => [
+        key,
+        { ...value, checked: activeStatus.includes(key) },
+      ]),
+    );
+  });
+
+  useEffect(() => {
+    const checkedKeys = Object.entries(status)
+      .filter(([, { checked }]) => checked)
+      .map(([key]) => key);
+
+    updateParam(
+      'status',
+      checkedKeys.length === 0 || checkedKeys.length === Object.keys(status).length
+        ? null
+        : checkedKeys.join('&'),
+    );
+  }, [status, updateParam]);
 
   function toggleStatus(key: StatusKey) {
     setStatus((prev) => ({
