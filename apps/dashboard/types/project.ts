@@ -1,4 +1,4 @@
-export interface IOrgRecentError {
+export interface IProjectRecentLog {
   id: string;
   project: {
     id: string;
