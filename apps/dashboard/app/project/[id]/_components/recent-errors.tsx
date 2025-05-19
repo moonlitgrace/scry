@@ -15,14 +15,16 @@ export default function RecentErrors() {
           Showing Recent few errors, see /logs for more.
         </span>
       </div>
-      <div className="flex gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row">
         <InputRoot>
           <InputIcon>
             <Search />
           </InputIcon>
           <Input placeholder="Search..." />
         </InputRoot>
-        <StatusDropdown />
+        <div className="sm:w-50">
+          <StatusDropdown />
+        </div>
       </div>
       <div className="divide-y rounded-lg border">
         {recentErrors.map((error) => (
