@@ -24,7 +24,7 @@ export default function LatestErrorInsights({ id }: { id: string }) {
         </div>
       </div>
       <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div className="bg-card text-muted-foreground flex flex-col items-center justify-center gap-2 rounded-lg border p-5 md:col-span-1">
+        <div className="bg-muted text-muted-foreground flex flex-col items-center justify-center gap-2 rounded-lg border p-5 md:col-span-1">
           <ImageOff className="size-10 stroke-1" />
           <div className="flex flex-col items-center">
             <span className="text-sm">SnapShot not available!</span>

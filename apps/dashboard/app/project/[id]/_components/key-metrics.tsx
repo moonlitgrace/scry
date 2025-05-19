@@ -14,7 +14,7 @@ export default function KeyMetrics() {
               {title} {subTitle && <span className="opacity-75">{subTitle}</span>}
             </div>
             <div className="inline-flex items-center justify-between">
-              <div className="text-foreground text-2xl font-bold">{value}</div>
+              <div className="text-foreground text-2xl font-bold">≈{value}</div>
               {isCritical && <Badge variant={'destructive'}>Critical!</Badge>}
             </div>
           </div>

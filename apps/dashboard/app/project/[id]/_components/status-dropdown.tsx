@@ -11,6 +11,10 @@ import { Button } from '@repo/design-system/components/ui/button';
 import { useState } from 'react';
 import { cn } from '@repo/design-system/lib/utils';
 
+interface Props {
+  className?: string;
+}
+
 interface IStatusItem {
   checked: boolean;
   label: string;
@@ -25,7 +29,7 @@ const initialStatus: StatusState = {
   resolved: { checked: true, label: 'Resolved', color: 'bg-primary' },
 };
 
-export default function StatusDropdown() {
+export default function StatusDropdown({ className }: Props) {
   const [status, setStatus] = useState(initialStatus);
 
   function toggleStatus(key: StatusKey) {
@@ -37,7 +41,7 @@ export default function StatusDropdown() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger className={cn(className)} asChild>
         <Button variant={'outline'}>
           <div className="inline-flex items-center">
             {Object.values(status).map(({ checked, color }, idx) => (
@@ -52,7 +56,7 @@ export default function StatusDropdown() {
             ))}
           </div>
           Status
-          <ChevronDown className="text-muted-foreground" />
+          <ChevronDown className="text-muted-foreground ml-auto" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

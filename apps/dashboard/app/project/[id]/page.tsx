@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         </div>
       </div>
       <KeyMetrics />
-      <div className="space-y-5 rounded-lg border p-5">
+      <div className="bg-card space-y-5 rounded-lg border p-5">
         <LatestErrorInsights id={id} />
       </div>
       <RecentErrors />
