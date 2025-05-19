@@ -10,6 +10,11 @@ import {
 import { Button } from '@repo/design-system/components/ui/button';
 import { useState } from 'react';
 import { cn } from '@repo/design-system/lib/utils';
+import { Badge } from '@repo/design-system/components/ui/badge';
+
+interface Props {
+  className?: string;
+}
 
 interface IStatusItem {
   checked: boolean;
@@ -25,7 +30,7 @@ const initialStatus: StatusState = {
   resolved: { checked: true, label: 'Resolved', color: 'bg-primary' },
 };
 
-export default function StatusDropdown() {
+export default function StatusDropdown({ className }: Props) {
   const [status, setStatus] = useState(initialStatus);
 
   function toggleStatus(key: StatusKey) {
@@ -37,7 +42,7 @@ export default function StatusDropdown() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger className={cn(className)} asChild>
         <Button variant={'outline'}>
           <div className="inline-flex items-center">
             {Object.values(status).map(({ checked, color }, idx) => (
@@ -52,10 +57,14 @@ export default function StatusDropdown() {
             ))}
           </div>
           Status
-          <ChevronDown className="text-muted-foreground" />
+          <Badge variant={'secondary'}>
+            {Object.values(status).filter((s) => s.checked).length}/
+            {Object.keys(status).length}
+          </Badge>
+          <ChevronDown className="text-muted-foreground ml-auto" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent className="dropdown-content-width-full">
         {Object.entries(status).map(([key, { checked, label, color }]) => (
           <DropdownMenuItem key={key} onClick={() => toggleStatus(key as StatusKey)}>
             <div className={cn(color, 'size-3 rounded-full border')}></div>

@@ -24,11 +24,11 @@ export default function RecentErrors() {
         </InputRoot>
         <StatusDropdown />
       </div>
-      <div className="bg-card divide-y rounded-lg border">
+      <div className="divide-y rounded-lg border">
         {recentErrors.map((error) => (
           <div
             key={error.id}
-            className="hover:bg-accent/40 relative flex items-center justify-between gap-2 p-3 transition-colors"
+            className="bg-card hover:bg-accent/40 relative flex items-center justify-between gap-2 p-3 transition-colors"
           >
             <Link
               href={`/project/${error.project.id}/err/${error.id}`}
