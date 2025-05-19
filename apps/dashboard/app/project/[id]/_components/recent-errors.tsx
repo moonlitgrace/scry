@@ -1,10 +1,10 @@
 import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/input';
 import { Ellipsis, Search, SpellCheck2 } from 'lucide-react';
-import StatusDropdown from './status-dropdown';
 import { Button } from '@repo/design-system/components/ui/button';
 import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import Link from 'next/link';
+import StatusDropdown from './status-dropdown';
 
 export default function RecentErrors() {
   return (
