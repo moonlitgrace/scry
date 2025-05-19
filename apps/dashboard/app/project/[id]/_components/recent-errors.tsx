@@ -1,10 +1,10 @@
 import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/input';
 import { Ellipsis, Search, SpellCheck2 } from 'lucide-react';
-import StatusDropdown from './status-dropdown';
 import { Button } from '@repo/design-system/components/ui/button';
 import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import Link from 'next/link';
+import StatusDropdown from './status-dropdown';
 
 export default function RecentErrors() {
   return (
@@ -15,14 +15,16 @@ export default function RecentErrors() {
           Showing Recent few errors, see /logs for more.
         </span>
       </div>
-      <div className="flex gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row">
         <InputRoot>
           <InputIcon>
             <Search />
           </InputIcon>
           <Input placeholder="Search..." />
         </InputRoot>
-        <StatusDropdown />
+        <div className="sm:w-50">
+          <StatusDropdown />
+        </div>
       </div>
       <div className="divide-y rounded-lg border">
         {recentErrors.map((error) => (
