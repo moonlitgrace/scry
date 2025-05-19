@@ -114,6 +114,12 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* https://www.bengubler.com/microblog/2024-07-02-radix-shadcn-dropdown-trigger-width */
+@utility dropdown-content-width-full {
+  width: var(--radix-dropdown-menu-trigger-width);
+  max-height: var(--radix-dropdown-menu-content-available-height);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

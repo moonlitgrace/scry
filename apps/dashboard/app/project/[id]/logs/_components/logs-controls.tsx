@@ -19,13 +19,13 @@ export default function LogsControls() {
         </InputIcon>
         <Input placeholder="Search..." />
       </InputRoot>
-      <Button className="col-span-1 justify-start" variant={'outline'} disabled>
+      <Button className="justify-start" variant={'outline'} disabled>
         <Calendar className="text-muted-foreground" />
         Select Date Range
         <ChevronDown className="text-muted-foreground ml-auto" />
       </Button>
       <Select defaultValue="all">
-        <SelectTrigger className="col-span-1 w-full">
+        <SelectTrigger className="w-full">
           <SelectValue placeholder="Environment" />
         </SelectTrigger>
         <SelectContent>
@@ -34,7 +34,7 @@ export default function LogsControls() {
           <SelectItem value="development">Development</SelectItem>
         </SelectContent>
       </Select>
-      <StatusDropdown className="col-span-1" />
+      <StatusDropdown />
     </div>
   );
 }

@@ -10,6 +10,7 @@ import {
 import { Button } from '@repo/design-system/components/ui/button';
 import { useState } from 'react';
 import { cn } from '@repo/design-system/lib/utils';
+import { Badge } from '@repo/design-system/components/ui/badge';
 
 interface Props {
   className?: string;
@@ -56,10 +57,14 @@ export default function StatusDropdown({ className }: Props) {
             ))}
           </div>
           Status
+          <Badge variant={'secondary'}>
+            {Object.values(status).filter((s) => s.checked).length}/
+            {Object.keys(status).length}
+          </Badge>
           <ChevronDown className="text-muted-foreground ml-auto" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent className="dropdown-content-width-full">
         {Object.entries(status).map(([key, { checked, label, color }]) => (
           <DropdownMenuItem key={key} onClick={() => toggleStatus(key as StatusKey)}>
             <div className={cn(color, 'size-3 rounded-full border')}></div>
