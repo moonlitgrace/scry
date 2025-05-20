@@ -1,4 +1,4 @@
-export interface IProjectRecentLog {
+export interface ProjectLog {
   id: string;
   project: {
     id: string;

@@ -1,6 +1,6 @@
 import {
-  getProjectRecentLogs,
-  type IProjectRecentLogsProps as Props,
+  ProjectLogService,
+  type ProjectLogsOptions as Props,
 } from '@/services/project.service';
 import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
@@ -9,7 +9,8 @@ import { Ellipsis, SpellCheck2 } from 'lucide-react';
 import Link from 'next/link';
 
 export default async function LogsList({ id, query, env, status }: Props) {
-  const logs = await getProjectRecentLogs({ id, query, env, status });
+  const service = new ProjectLogService(id);
+  const logs = await service.getLogs({ query, env, status });
 
   return (
     <div className="divide-y rounded-lg border">
