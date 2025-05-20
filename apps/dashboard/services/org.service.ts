@@ -1,6 +1,7 @@
 import rawProjectsData from '@/data/mock/projects.json';
 import recentErrorsData from '@/data/mock/recent_errors.json';
 import { OrgProject, OrgRecentError } from '@/types/org';
+import { waitFor } from '@/utils/promise';
 
 interface OrgGetProjects {
   query: string;
@@ -11,6 +12,9 @@ export class OrgService {
   constructor(private readonly orgId: string) {}
 
   async getProjects({ query, sort }: OrgGetProjects): Promise<OrgProject[]> {
+    // simulate API request
+    await waitFor(1000);
+
     let resData: OrgProject[] = [];
     const normalizedQuery = query.toLowerCase();
 
@@ -32,6 +36,9 @@ export class OrgService {
   }
 
   async getRecentErrors(): Promise<OrgRecentError[]> {
+    // simulate API request
+    await waitFor(1000);
+
     return recentErrorsData;
   }
 }
