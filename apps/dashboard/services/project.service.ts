@@ -15,11 +15,13 @@ export class ProjectLogService {
   constructor(private readonly projectId: string) {}
 
   async getLogs(filters: ProjectLogsFilters = {}): Promise<ProjectLog[]> {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     const { query = '', env = 'all', status = 'resolved&pending' } = filters;
 
     const normalizedQuery = query.toLowerCase();
     const statuses = status.split('&');
 
+    // TODO: call external API
     return recentlogs
       .filter((log) => log.project.id === this.projectId)
       .filter((log) => log.errorMsg.toLowerCase().includes(normalizedQuery))

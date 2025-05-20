@@ -2,6 +2,7 @@ import { RefreshCcw } from 'lucide-react';
 import LogsControls from './_components/logs-controls';
 import { Suspense } from 'react';
 import LogsList from './_components/logs-list';
+import LogsListSkeleton from './_components/logs-list-skeleton';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -27,9 +28,11 @@ export default async function Page({ params, searchParams }: Props) {
       </div>
       <div className="flex flex-col gap-3">
         <LogsControls />
-        <Suspense key={query + env + status}>
-          <LogsList id={id} query={query} env={env} status={status} />
-        </Suspense>
+        <div className="divide-y rounded-lg border">
+          <Suspense key={query + env + status} fallback={<LogsListSkeleton />}>
+            <LogsList id={id} query={query} env={env} status={status} />
+          </Suspense>
+        </div>
       </div>
     </>
   );
