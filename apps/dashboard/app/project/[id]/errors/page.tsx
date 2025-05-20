@@ -20,7 +20,7 @@ export default async function Page({ params, searchParams }: Props) {
   return (
     <>
       <div className="flex flex-col gap-2">
-        <h2 className="text-3xl font-bold">Logs</h2>
+        <h2 className="text-3xl font-bold">Errors</h2>
         <div className="text-muted-foreground inline-flex items-center gap-2">
           <RefreshCcw className="size-4" />
           <span className="text-sm">Continously generated from SDK requests</span>
