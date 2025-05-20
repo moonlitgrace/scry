@@ -5,13 +5,13 @@ import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/i
 import { Loader, Search } from 'lucide-react';
 
 export default function ProjectSearch() {
-  const { loading, getParam, debouncedUpdateParam } = useSearchParamsHandler();
+  const { isPending, getParam, debouncedUpdateParam } = useSearchParamsHandler();
 
   return (
     <>
       <InputRoot>
         <InputIcon>
-          {loading ? <Loader className="animate-spin" /> : <Search />}
+          {isPending ? <Loader className="animate-spin" /> : <Search />}
         </InputIcon>
         <Input
           placeholder="Search projects..."
