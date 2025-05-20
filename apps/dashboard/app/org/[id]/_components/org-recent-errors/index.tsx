@@ -9,7 +9,7 @@ import { Suspense } from 'react';
 import RecentErrorList from './recent-error-list';
 import RecentErrorListSkeleton from './recent-error-list-skeleton';
 
-export default async function OrgRecentErrors() {
+export default async function OrgRecentErrors({ id }: { id: string }) {
   return (
     <Collapsible defaultOpen className="sticky top-20 flex flex-col items-start gap-2">
       <h5 className="hidden text-sm font-medium lg:inline-block">Recent Errors</h5>
@@ -20,7 +20,7 @@ export default async function OrgRecentErrors() {
       <CollapsibleContent className="w-full">
         <ScrollArea className="h-full max-h-125 rounded-lg [&_[data-slot=scroll-area-viewport]]:max-h-125 [&_[data-slot=scroll-area-viewport]]:border">
           <Suspense fallback={<RecentErrorListSkeleton />}>
-            <RecentErrorList />
+            <RecentErrorList id={id} />
           </Suspense>
         </ScrollArea>
       </CollapsibleContent>

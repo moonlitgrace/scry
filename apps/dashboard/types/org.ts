@@ -1,4 +1,4 @@
-export interface IOrgProject {
+export interface OrgProject {
   id: string;
   name: string;
   domain: string;
@@ -15,7 +15,7 @@ export interface IOrgProject {
   };
 }
 
-export interface IOrgRecentError {
+export interface OrgRecentError {
   id: string;
   project: {
     id: string;

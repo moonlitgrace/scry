@@ -1,5 +1,6 @@
 import recentlogs from '@/data/mock/recent_errors.json';
 import { ProjectLog } from '@/types/project';
+import { waitFor } from '@/utils/promise';
 
 export interface ProjectLogsFilters {
   query?: string;
@@ -11,11 +12,13 @@ export interface ProjectLogsOptions extends ProjectLogsFilters {
   id: string;
 }
 
-export class ProjectLogService {
+export class ProjectService {
   constructor(private readonly projectId: string) {}
 
   async getLogs(filters: ProjectLogsFilters = {}): Promise<ProjectLog[]> {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // simulate API request
+    await waitFor(1000);
+
     const { query = '', env = 'all', status = 'resolved&pending' } = filters;
 
     const normalizedQuery = query.toLowerCase();

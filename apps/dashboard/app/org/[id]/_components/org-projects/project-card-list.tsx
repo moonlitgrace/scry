@@ -1,4 +1,3 @@
-import { getOrgProjects } from '@/services/org.service';
 import { formatTimeSince } from '@/utils/datetime';
 import { getInitials } from '@/utils/string';
 import { Avatar, AvatarFallback } from '@repo/design-system/components/ui/avatar';
@@ -8,9 +7,11 @@ import { ArrowRight, Ellipsis, FolderOpen, GitBranch, SearchX } from 'lucide-rea
 import Link from 'next/link';
 import { Props } from '.';
 import { getAbbr } from '@/constants/abbr';
+import { OrgService } from '@/services/org.service';
 
-export default async function ProjectCardList({ query, sort }: Props) {
-  const projects = await getOrgProjects(query, sort);
+export default async function ProjectCardList({ id, query, sort }: Props) {
+  const service = new OrgService(id);
+  const projects = await service.getProjects({ query, sort });
 
   if (projects.length === 0) {
     const title = query ? 'No Results Found!' : 'No Project Yet!';
