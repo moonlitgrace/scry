@@ -1,5 +1,6 @@
 import GoogleIcon from '@/components/atoms/google-icon';
 import { Button, buttonVariants } from '@repo/design-system/components/ui/button';
+import { Separator } from '@repo/design-system/components/ui/separator';
 import { cn } from '@repo/design-system/lib/utils';
 import Link from 'next/link';
 
@@ -34,9 +35,7 @@ export default function AuthForm({ children, type, className, onSubmit }: Props)
       {children}
       <Button type="submit">{formatTypeText(type)}</Button>
       <div className="inline-flex items-center gap-2">
-        <span className="my-5 w-full border-b"></span>
-        <span className="text-muted-foreground text-xs">OR</span>
-        <span className="my-5 w-full border-b"></span>
+        <Separator className="my-5">OR</Separator>
       </div>
       <Button type="button" variant="outline">
         <GoogleIcon className="fill-muted-foreground" />

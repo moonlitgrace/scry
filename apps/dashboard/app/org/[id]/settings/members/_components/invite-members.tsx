@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@repo/design-system/components/ui/select';
+import { Separator } from '@repo/design-system/components/ui/separator';
 import { ExternalLink, Link, PlusCircle, X } from 'lucide-react';
 import { useState } from 'react';
 
@@ -80,7 +81,7 @@ export default function InviteMembers() {
                     <X />
                   </Button>
                 </div>
-                <span className="col-span-full border-b sm:hidden"></span>
+                <Separator className="sm:hidden" />
               </div>
             ))}
           </div>
