@@ -1,21 +1,17 @@
-import recentlogs from '@/data/mock/recent_errors.json';
-import { ProjectLog } from '@/types/project';
+import recentErrors from '@/data/mock/recent_errors.json';
+import { ProjectError } from '@/types/project';
 import { waitFor } from '@/utils/promise';
 
-export interface ProjectLogsFilters {
+export interface ProjectErrorsFilters {
   query?: string;
   env?: string;
   status?: string;
 }
 
-export interface ProjectLogsOptions extends ProjectLogsFilters {
-  id: string;
-}
-
 export class ProjectService {
   constructor(private readonly projectId: string) {}
 
-  async getLogs(filters: ProjectLogsFilters = {}): Promise<ProjectLog[]> {
+  async getErrors(filters: ProjectErrorsFilters = {}): Promise<ProjectError[]> {
     // simulate API request
     await waitFor(1000);
 
@@ -25,10 +21,10 @@ export class ProjectService {
     const statuses = status.split('&');
 
     // TODO: call external API
-    return recentlogs
-      .filter((log) => log.project.id === this.projectId)
-      .filter((log) => log.errorMsg.toLowerCase().includes(normalizedQuery))
-      .filter((log) => (env === 'all' ? log : log.env === env))
-      .filter((log) => statuses.includes(log.status));
+    return recentErrors
+      .filter((error) => error.project.id === this.projectId)
+      .filter((error) => error.errorMsg.toLowerCase().includes(normalizedQuery))
+      .filter((error) => (env === 'all' ? error : error.env === env))
+      .filter((error) => statuses.includes(error.status));
   }
 }

@@ -39,7 +39,7 @@ export default async function RecentErrorList({ id }: { id: string }) {
           )}
         >
           <Link
-            href={`/project/${error.project.id}/err/${error.id}`}
+            href={`/project/${error.project.id}/errors/${error.id}`}
             className="absolute inset-0 z-1"
           />
           <div className="bg-primary absolute left-0 h-11 w-2 -translate-x-2 transform rounded-r-md transition-transform group-hover:translate-x-0"></div>

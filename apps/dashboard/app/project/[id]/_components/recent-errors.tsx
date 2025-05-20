@@ -7,13 +7,20 @@ import Link from 'next/link';
 import StatusDropdown from './status-dropdown';
 import { getAbbr } from '@/constants/abbr';
 
-export default function RecentErrors() {
+export default function RecentErrors({ id }: { id: string }) {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex flex-col">
         <h5 className="text-lg font-semibold">Recent Errors</h5>
         <span className="text-muted-foreground text-sm">
-          Showing Recent few errors, see /logs for more.
+          Showing Recent few errors, see{' '}
+          <Link
+            href={`/project/${id}/errors`}
+            className="text-primary font-medium hover:underline"
+          >
+            Errors
+          </Link>{' '}
+          for more.
         </span>
       </div>
       <div className="flex flex-col gap-3 sm:flex-row">
@@ -34,7 +41,7 @@ export default function RecentErrors() {
             className="bg-card hover:bg-accent/40 relative flex items-center justify-between gap-2 p-3 transition-colors"
           >
             <Link
-              href={`/project/${error.project.id}/err/${error.id}`}
+              href={`/project/${error.project.id}/errors/${error.id}`}
               className="absolute inset-0 z-1"
             />
             <div className="inline-flex items-center gap-2">
