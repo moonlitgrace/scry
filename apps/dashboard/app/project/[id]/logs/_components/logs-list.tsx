@@ -1,5 +1,5 @@
 import {
-  ProjectLogService,
+  ProjectService,
   type ProjectLogsOptions as Props,
 } from '@/services/project.service';
 import { formatTimeSince } from '@/utils/datetime';
@@ -9,7 +9,7 @@ import { Ellipsis, SpellCheck2 } from 'lucide-react';
 import Link from 'next/link';
 
 export default async function LogsList({ id, query, env, status }: Props) {
-  const service = new ProjectLogService(id);
+  const service = new ProjectService(id);
   const logs = await service.getLogs({ query, env, status });
 
   return logs.map((log) => (

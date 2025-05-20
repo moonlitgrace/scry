@@ -11,7 +11,7 @@ export interface ProjectLogsOptions extends ProjectLogsFilters {
   id: string;
 }
 
-export class ProjectLogService {
+export class ProjectService {
   constructor(private readonly projectId: string) {}
 
   async getLogs(filters: ProjectLogsFilters = {}): Promise<ProjectLog[]> {

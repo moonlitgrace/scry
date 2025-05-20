@@ -1,5 +1,5 @@
 import { getAbbr } from '@/constants/abbr';
-import { getOrgRecentErrors } from '@/services/org.service';
+import { OrgService } from '@/services/org.service';
 import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
@@ -7,10 +7,11 @@ import { cn } from '@repo/design-system/lib/utils';
 import { Ellipsis, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
-export default async function RecentErrorList() {
-  const orgRecentErrors = await getOrgRecentErrors();
+export default async function RecentErrorList({ id }: { id: string }) {
+  const service = new OrgService(id);
+  const recentErrors = await service.getRecentErrors();
 
-  if (orgRecentErrors.length === 0) {
+  if (recentErrors.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center gap-2 py-5">
         <span className="text-sm font-medium">No Recent Errors!</span>
@@ -29,11 +30,11 @@ export default async function RecentErrorList() {
 
   return (
     <>
-      {orgRecentErrors.map((error, idx) => (
+      {recentErrors.map((error, idx) => (
         <div
           key={error.id}
           className={cn(
-            idx !== orgRecentErrors.length - 1 && 'border-b',
+            idx !== recentErrors.length - 1 && 'border-b',
             'bg-card group relative flex h-20 items-center justify-between gap-2 p-4 transition-[background]',
           )}
         >
