@@ -1,3 +1,4 @@
+import { getAbbr } from '@/constants/abbr';
 import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
@@ -37,7 +38,7 @@ export default function LatestErrorInsights({ id }: { id: string }) {
             <div className="flex flex-col gap-2">
               <div className="inline-flex items-center gap-2">
                 <GitBranch className="text-muted-foreground size-4" />
-                <Badge variant={'destructive'}>PROD</Badge>
+                <Badge variant={'destructive'}>{getAbbr('production')}</Badge>
               </div>
               <div className="inline-flex items-center gap-2">
                 <Globe className="text-muted-foreground size-4" />

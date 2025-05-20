@@ -1,3 +1,4 @@
+import { getAbbr } from '@/constants/abbr';
 import { getOrgRecentErrors } from '@/services/org.service';
 import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
@@ -51,10 +52,15 @@ export default async function RecentErrorList() {
               </span>
             </div>
             <div className="inline-flex items-center gap-2">
-              <Badge variant={error.env === 'PROD' ? 'destructive' : 'default'}>
-                {error.env}
+              <Badge
+                variant={error.env === 'production' ? 'destructive' : 'default'}
+                className="capitalize"
+              >
+                {getAbbr(error.env)}
               </Badge>
-              <Badge variant={'outline'}>{error.status}</Badge>
+              <Badge variant={'outline'} className="capitalize">
+                {error.status}
+              </Badge>
               <span className="text-muted-foreground text-xs">
                 {formatTimeSince(error.timestamp)}
               </span>

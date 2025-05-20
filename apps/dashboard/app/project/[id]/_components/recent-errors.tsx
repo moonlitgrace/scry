@@ -5,6 +5,7 @@ import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import Link from 'next/link';
 import StatusDropdown from './status-dropdown';
+import { getAbbr } from '@/constants/abbr';
 
 export default function RecentErrors() {
   return (
@@ -43,8 +44,8 @@ export default function RecentErrors() {
               </code>
             </div>
             <div className="text-muted-foreground flex items-center gap-3">
-              <Badge variant={error.env === 'PROD' ? 'destructive' : 'default'}>
-                {error.env}
+              <Badge variant={error.env === 'production' ? 'destructive' : 'default'}>
+                {getAbbr(error.env)}
               </Badge>
               <Badge variant={'outline'} className="hidden sm:flex">
                 {error.status}
@@ -68,7 +69,7 @@ const recentErrors = [
     id: 'ljrtxwem',
     project: { id: 'twzbncvo' },
     errorMsg: 'TypeError: Cannot convert undefined to object',
-    env: 'DEV',
+    env: 'development',
     status: 'Resolved',
     timestamp: '2025-05-13T09:20:00.000Z',
   },
@@ -76,7 +77,7 @@ const recentErrors = [
     id: 'xdmrkqva',
     project: { id: 'twzbncvo' },
     errorMsg: 'UnhandledPromiseRejectionWarning: Database connection timeout',
-    env: 'PROD',
+    env: 'production',
     status: 'Pending',
     timestamp: '2025-05-13T06:00:00.000Z',
   },

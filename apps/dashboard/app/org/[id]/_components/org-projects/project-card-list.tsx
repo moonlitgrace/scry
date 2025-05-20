@@ -7,6 +7,7 @@ import { Button } from '@repo/design-system/components/ui/button';
 import { ArrowRight, Ellipsis, FolderOpen, GitBranch, SearchX } from 'lucide-react';
 import Link from 'next/link';
 import { Props } from '.';
+import { getAbbr } from '@/constants/abbr';
 
 export default async function ProjectCardList({ query, sort }: Props) {
   const projects = await getOrgProjects(query, sort);
@@ -77,8 +78,8 @@ export default async function ProjectCardList({ query, sort }: Props) {
               <span>{formatTimeSince(project.latestError.timestamp)}</span>
               <span>on</span>
               <GitBranch className="size-4" />
-              <span className="text-foreground text-xs font-medium">
-                {project.latestError.env}
+              <span className="text-foreground text-xs font-medium uppercase">
+                {getAbbr(project.latestError.env)}
               </span>
             </div>
           </div>
