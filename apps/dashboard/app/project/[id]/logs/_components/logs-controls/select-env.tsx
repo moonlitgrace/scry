@@ -9,23 +9,20 @@ import {
   SelectValue,
 } from '@repo/design-system/components/ui/select';
 
-const DEFAULT_ENV_VALUE = 'all';
-
 export default function SelectEnv() {
-  const { updateParam } = useSearchParamsHandler();
+  const { updateParam, getParam } = useSearchParamsHandler();
+  const defaultEnv = getParam('env') ?? 'all';
 
   return (
     <Select
-      defaultValue={DEFAULT_ENV_VALUE}
-      onValueChange={(value) =>
-        updateParam('env', value === DEFAULT_ENV_VALUE ? null : value)
-      }
+      defaultValue={defaultEnv}
+      onValueChange={(value) => updateParam('env', value === 'all' ? null : value)}
     >
       <SelectTrigger className="w-full sm:col-span-2 md:col-span-1">
         <SelectValue placeholder="Environment" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value={DEFAULT_ENV_VALUE}>All Environments</SelectItem>
+        <SelectItem value="all">All Environments</SelectItem>
         <SelectItem value="production">Production</SelectItem>
         <SelectItem value="development">Development</SelectItem>
       </SelectContent>

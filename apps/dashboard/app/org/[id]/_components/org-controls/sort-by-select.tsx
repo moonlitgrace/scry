@@ -10,10 +10,13 @@ import {
 } from '@repo/design-system/components/ui/select';
 
 export default function SortBySelect() {
-  const { updateParam } = useSearchParamsHandler();
+  const { updateParam, getParam } = useSearchParamsHandler();
 
   return (
-    <Select defaultValue="recent" onValueChange={(val) => updateParam('sort', val)}>
+    <Select
+      defaultValue={getParam('sort') ?? 'recent'}
+      onValueChange={(val) => updateParam('sort', val)}
+    >
       <SelectTrigger className="hidden w-50 sm:flex">
         <SelectValue placeholder="Sort by" />
       </SelectTrigger>
