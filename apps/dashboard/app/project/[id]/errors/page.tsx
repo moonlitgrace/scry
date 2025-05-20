@@ -1,8 +1,8 @@
 import { RefreshCcw } from 'lucide-react';
-import LogsControls from './_components/logs-controls';
+import ErrorControls from './_components/error-controls';
 import { Suspense } from 'react';
-import LogsList from './_components/logs-list';
-import LogsListSkeleton from './_components/logs-list-skeleton';
+import ErrorList from './_components/error-list';
+import ErrorListSkeleton from './_components/error-list-skeleton';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -20,17 +20,17 @@ export default async function Page({ params, searchParams }: Props) {
   return (
     <>
       <div className="flex flex-col gap-2">
-        <h2 className="text-3xl font-bold">Logs</h2>
+        <h2 className="text-3xl font-bold">Errors</h2>
         <div className="text-muted-foreground inline-flex items-center gap-2">
           <RefreshCcw className="size-4" />
           <span className="text-sm">Continously generated from SDK requests</span>
         </div>
       </div>
       <div className="flex flex-col gap-3">
-        <LogsControls />
+        <ErrorControls />
         <div className="divide-y rounded-lg border">
-          <Suspense key={query + env + status} fallback={<LogsListSkeleton />}>
-            <LogsList id={id} query={query} env={env} status={status} />
+          <Suspense key={query + env + status} fallback={<ErrorListSkeleton />}>
+            <ErrorList id={id} query={query} env={env} status={status} />
           </Suspense>
         </div>
       </div>

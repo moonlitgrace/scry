@@ -1,4 +1,4 @@
-export interface ProjectLog {
+export interface ProjectError {
   id: string;
   project: {
     id: string;

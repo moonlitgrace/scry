@@ -22,9 +22,9 @@ export const PROJECT_HEADER_LINKS = Object.freeze({
     label: 'Project',
     disabled: false,
   },
-  '/project/[id]/logs': {
+  '/project/[id]/errors': {
     root: false,
-    label: 'Logs',
+    label: 'Errors',
     disabled: false,
   },
   '/project/[id]/analytics': {

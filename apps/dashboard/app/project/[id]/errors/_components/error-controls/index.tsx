@@ -4,7 +4,7 @@ import StatusDropdown from '../../../_components/status-dropdown';
 import SearchInput from './search-input';
 import SelectEnv from './select-env';
 
-export default function LogsControls() {
+export default function ErrorControls() {
   return (
     <div className="grid gap-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-6">
       <SearchInput />

@@ -16,8 +16,8 @@ export default function LatestErrorInsights({ id }: { id: string }) {
           </span>
         </div>
         <div className="inline-flex items-center gap-2">
-          <Link href={`/project/${id}/logs?domain=https://example.com`}>
-            <Button variant={'outline'}>View Logs</Button>
+          <Link href={`/project/${id}/errors?domain=https://example.com`}>
+            <Button variant={'outline'}>View Errors</Button>
           </Link>
           <Button size={'icon'} variant={'ghost'} disabled>
             <Ellipsis />
