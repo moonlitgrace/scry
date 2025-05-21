@@ -24,7 +24,7 @@ export default function LatestErrorInsights({ id }: { id: string }) {
         </div>
       </div>
       <Suspense fallback={'loading...'}>
-        <LatestError id={id} />
+        <LatestError />
       </Suspense>
     </div>
   );

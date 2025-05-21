@@ -11,9 +11,13 @@ export default async function Layout({ params, children }: Props) {
 
   const service = new ProjectService(id);
   const metricsPromise = service.getMetrics();
+  const latestErrorPromise = service.getLatestError();
 
   return (
-    <ProjectContextProvider metricsPromise={metricsPromise}>
+    <ProjectContextProvider
+      metricsPromise={metricsPromise}
+      latestErrorPromise={latestErrorPromise}
+    >
       {children}
     </ProjectContextProvider>
   );

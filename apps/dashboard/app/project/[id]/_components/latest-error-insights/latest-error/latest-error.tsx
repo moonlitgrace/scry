@@ -1,12 +1,15 @@
+'use client';
+
 import { getAbbr } from '@/constants/abbr';
-import { ProjectService } from '@/services/project.service';
+import { useProjectContext } from '@/context/project-context';
 import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { ExternalLink, GitBranch, Globe, ImageOff } from 'lucide-react';
+import { use } from 'react';
 
-export default async function LatestError({ id }: { id: string }) {
-  const service = new ProjectService(id);
-  const latestError = await service.getLatestError();
+export default function LatestError() {
+  const { latestErrorPromise } = useProjectContext();
+  const latestError = use(latestErrorPromise);
 
   return (
     <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
