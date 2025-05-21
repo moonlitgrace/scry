@@ -1,24 +1,20 @@
 'use client';
 
-import { ProjectService } from '@/services/project.service';
+import { ProjectMetrics } from '@/types/project';
 import { createContext, useContext } from 'react';
 
 interface ProjectContextValue {
-  metricsPromise: ReturnType<ProjectService['getMetrics']>;
+  metricsPromise: Promise<ProjectMetrics>;
 }
 
 export const ProjectContext = createContext<ProjectContextValue | null>(null);
 
 export const ProjectContextProvider = ({
-  id,
   children,
-}: {
-  id: string;
+  metricsPromise,
+}: ProjectContextValue & {
   children: React.ReactNode;
 }) => {
-  const service = new ProjectService(id);
-  const metricsPromise = service.getMetrics();
-
   return (
     <ProjectContext.Provider value={{ metricsPromise }}>
       {children}
