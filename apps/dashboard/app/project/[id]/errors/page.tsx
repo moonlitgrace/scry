@@ -1,8 +1,8 @@
 import { RefreshCcw } from 'lucide-react';
-import ErrorControls from './_components/error-controls';
 import { Suspense } from 'react';
-import ErrorList from './_components/error-list';
-import ErrorListSkeleton from './_components/error-list-skeleton';
+import Controls from './_components/controls/controls';
+import ErrorList from './_components/error-list/error-list';
+import ErrorListSkeleton from './_components/error-list/error-list-skeleton';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -27,7 +27,7 @@ export default async function Page({ params, searchParams }: Props) {
         </div>
       </div>
       <div className="flex flex-col gap-3">
-        <ErrorControls />
+        <Controls />
         <div className="divide-y rounded-lg border">
           <Suspense key={query + env + status} fallback={<ErrorListSkeleton />}>
             <ErrorList id={id} query={query} env={env} status={status} />

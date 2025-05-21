@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import DeleteOrgCard from './_components/cards/delete-org-card';
-import LeaveOrgCard from './_components/cards/leave-org-card';
-import OrgIDCard from './_components/cards/org-id-card';
-import OrgNameCard from './_components/cards/org-name-card';
+import OrgName from './_components/action-cards/org-name';
+import OrgID from './_components/action-cards/org-id';
+import LeaveOrg from './_components/action-cards/leave-org';
+import DeleteOrg from './_components/action-cards/delete-org';
 
 export const metadata: Metadata = {
   title: 'General - Org Settings – scry',
@@ -17,10 +17,10 @@ export default function Page() {
           Manage your organization&apos;s core identity and security settings.
         </span>
       </div>
-      <OrgNameCard />
-      <OrgIDCard />
-      <LeaveOrgCard />
-      <DeleteOrgCard />
+      <OrgName />
+      <OrgID />
+      <LeaveOrg />
+      <DeleteOrg />
     </>
   );
 }

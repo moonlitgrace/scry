@@ -10,7 +10,7 @@ import LayoutToggle from './layout-toggle';
 import ProjectsSearch from './project-search';
 import SortBySelect from './sort-by-select';
 
-export default function OrgControls() {
+export default function Controls() {
   return (
     <div className="inline-flex w-full items-center gap-5">
       <ProjectsSearch />

@@ -5,11 +5,11 @@ import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
 import { ArrowRight, Ellipsis, FolderOpen, GitBranch, SearchX } from 'lucide-react';
 import Link from 'next/link';
-import { Props } from '.';
+import { Props } from '../projects';
 import { getAbbr } from '@/constants/abbr';
 import { OrgService } from '@/services/org.service';
 
-export default async function ProjectCardList({ id, query, sort }: Props) {
+export default async function ProjectList({ id, query, sort }: Props) {
   const service = new OrgService(id);
   const projects = await service.getProjects({ query, sort });
 

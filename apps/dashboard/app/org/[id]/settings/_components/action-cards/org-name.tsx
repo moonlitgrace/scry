@@ -9,7 +9,7 @@ import {
 } from '@repo/design-system/components/ui/card';
 import { Input } from '@repo/design-system/components/ui/input';
 
-export default function OrgNameCard() {
+export default function OrgName() {
   return (
     <Card>
       <CardHeader>

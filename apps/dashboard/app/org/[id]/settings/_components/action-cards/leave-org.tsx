@@ -8,7 +8,7 @@ import {
 } from '@repo/design-system/components/ui/card';
 import Link from 'next/link';
 
-export default function LeaveOrgCard() {
+export default function LeaveOrg() {
   const disabled = true;
 
   return (

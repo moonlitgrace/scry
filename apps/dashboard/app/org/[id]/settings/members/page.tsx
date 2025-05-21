@@ -5,7 +5,7 @@ import {
   TabsTrigger,
 } from '@repo/design-system/components/ui/tabs';
 import InviteMembers from './_components/invite-members';
-import Members from './_components/members';
+import Members from './_components/tab-contents/members/members';
 
 export default function Page() {
   return (
