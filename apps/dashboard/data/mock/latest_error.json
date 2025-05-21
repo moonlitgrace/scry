@@ -1,0 +1,10 @@
+{
+  "source": {
+    "env": "production",
+    "href": "https://example.com/route?q=err"
+  },
+  "status": "resolved",
+  "timestamp": "2025-05-13T09:20:00.000Z",
+  "userAgent": "Linux",
+  "domain": "https://example.com"
+}
