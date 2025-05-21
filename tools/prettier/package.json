@@ -6,10 +6,10 @@
     "prettier-plugin-organize-imports": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:"
   },
-  "main": "./index.js",
   "exports": {
     ".": "./index.js"
   },
+  "main": "./index.js",
   "prettier": "@repo/prettier-config",
   "private": true,
   "scripts": {
