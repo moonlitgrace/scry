@@ -3,8 +3,8 @@ import { Button } from '@repo/design-system/components/ui/button';
 import { Globe } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import KeyMetrics from './_components/key-metrics';
-import LatestErrorInsights from './_components/latest-error-insights';
+import KeyMetrics from './_components/key-metrics/key-metrics';
+import LatestErrorInsights from './_components/latest-error-insights/latest-error-insights';
 import RecentErrors from './_components/recent-errors';
 
 export const metadata: Metadata = {
@@ -33,9 +33,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         </div>
       </div>
       <KeyMetrics />
-      <div className="bg-card space-y-5 rounded-lg border p-5">
-        <LatestErrorInsights id={id} />
-      </div>
+      <LatestErrorInsights id={id} />
       <RecentErrors id={id} />
     </>
   );

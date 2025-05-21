@@ -1,5 +1,7 @@
+import latestError from '@/data/mock/latest_error.json';
+import metrics from '@/data/mock/metrics.json';
 import recentErrors from '@/data/mock/recent_errors.json';
-import { ProjectError } from '@/types/project';
+import { ProjectError, ProjectLatestError, ProjectMetrics } from '@/types/project';
 import { waitFor } from '@/utils/promise';
 
 export interface ProjectErrorsFilters {
@@ -26,5 +28,21 @@ export class ProjectService {
       .filter((error) => error.errorMsg.toLowerCase().includes(normalizedQuery))
       .filter((error) => (env === 'all' ? error : error.env === env))
       .filter((error) => statuses.includes(error.status));
+  }
+
+  async getMetrics(): Promise<ProjectMetrics> {
+    // simulate API request
+    await waitFor(1000);
+
+    // TODO: call external API
+    return metrics;
+  }
+
+  async getLatestError(): Promise<ProjectLatestError> {
+    // simulate API request
+    await waitFor(1000);
+
+    // TODO: call external API
+    return latestError;
   }
 }
