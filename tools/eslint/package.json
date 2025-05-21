@@ -15,8 +15,8 @@
   },
   "exports": {
     "./base": "./base.js",
-    "./nestjs": "./nest.js",
-    "./nextjs": "./next.js",
+    "./nestjs": "./nestjs.js",
+    "./nextjs": "./nextjs.js",
     "./react-internal": "./react-internal.js"
   },
   "private": true,
