@@ -1,9 +1,9 @@
+import Footer from '@/components/organisms/footer';
 import { cn } from '@repo/design-system/lib/utils';
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
-import './globals.css';
 import { geist, geist_mono } from './fonts';
-import Footer from '@/components/organisms/footer';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Dashboard – scry',

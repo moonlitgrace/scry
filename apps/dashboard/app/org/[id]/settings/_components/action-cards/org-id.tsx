@@ -12,7 +12,7 @@ import { Check, Copy } from 'lucide-react';
 import { useState } from 'react';
 import { useThrottledCallback } from 'use-debounce';
 
-export default function OrgIDCard() {
+export default function OrgID() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = useThrottledCallback((val: string) => {

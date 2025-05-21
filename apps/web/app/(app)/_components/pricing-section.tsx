@@ -1,11 +1,11 @@
 import { Button } from '@repo/design-system/components/ui/button';
 import {
   Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
 } from '@repo/design-system/components/ui/card';
 import { Check } from 'lucide-react';
 

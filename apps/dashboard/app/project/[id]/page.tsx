@@ -1,10 +1,10 @@
+import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
 import { Globe } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import LatestErrorInsights from './_components/latest-error-insights';
-import { Badge } from '@repo/design-system/components/ui/badge';
 import KeyMetrics from './_components/key-metrics';
+import LatestErrorInsights from './_components/latest-error-insights';
 import RecentErrors from './_components/recent-errors';
 
 export const metadata: Metadata = {

@@ -6,10 +6,10 @@ import {
 import { ScrollArea } from '@repo/design-system/components/ui/scroll-area';
 import { ChevronRight } from 'lucide-react';
 import { Suspense } from 'react';
-import RecentErrorList from './recent-error-list';
-import RecentErrorListSkeleton from './recent-error-list-skeleton';
+import RecentErrorList from './recent-error-list/recent-error-list';
+import RecentErrorListSkeleton from './recent-error-list/recent-error-list-skeleton';
 
-export default async function OrgRecentErrors({ id }: { id: string }) {
+export default async function RecentErrors({ id }: { id: string }) {
   return (
     <Collapsible defaultOpen className="sticky top-20 flex flex-col items-start gap-2">
       <h5 className="hidden text-sm font-medium lg:inline-block">Recent Errors</h5>

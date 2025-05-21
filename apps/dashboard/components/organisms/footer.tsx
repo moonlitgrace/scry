@@ -1,7 +1,7 @@
 import Logo from '@/assets/svg/logo.svg';
-import ThemeSelector from '../molecules/theme-selector';
-import GithubIcon from '../atoms/github-icon';
 import { buttonVariants } from '@repo/design-system/components/ui/button';
+import GithubIcon from '../atoms/github-icon';
+import ThemeSelector from '../molecules/theme-selector';
 
 export default function Footer() {
   return (

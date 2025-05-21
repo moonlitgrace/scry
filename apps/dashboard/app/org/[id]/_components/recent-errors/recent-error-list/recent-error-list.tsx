@@ -9,9 +9,9 @@ import Link from 'next/link';
 
 export default async function RecentErrorList({ id }: { id: string }) {
   const service = new OrgService(id);
-  const recentErrors = await service.getRecentErrors();
+  const errors = await service.getRecentErrors();
 
-  if (recentErrors.length === 0) {
+  if (errors.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center gap-2 py-5">
         <span className="text-sm font-medium">No Recent Errors!</span>
@@ -30,11 +30,11 @@ export default async function RecentErrorList({ id }: { id: string }) {
 
   return (
     <>
-      {recentErrors.map((error, idx) => (
+      {errors.map((error, idx) => (
         <div
           key={error.id}
           className={cn(
-            idx !== recentErrors.length - 1 && 'border-b',
+            idx !== errors.length - 1 && 'border-b',
             'bg-card group relative flex h-20 items-center justify-between gap-2 p-4 transition-[background]',
           )}
         >

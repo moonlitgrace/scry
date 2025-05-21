@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import LogoText from '@/assets/svg/logo-text.svg';
+import Link from 'next/link';
 
 export default function AuthLayout({
   children,

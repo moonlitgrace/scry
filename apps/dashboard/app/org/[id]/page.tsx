@@ -1,6 +1,6 @@
-import OrgControls from './_components/org-controls';
-import OrgProjects from './_components/org-projects';
-import OrgRecentErrors from './_components/org-recent-errors';
+import Controls from './_components/controls/controls';
+import Projects from './_components/projects/projects';
+import RecentErrors from './_components/recent-errors/recent-errors';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -18,12 +18,12 @@ export default async function Page(props: Props) {
 
   return (
     <>
-      <OrgControls />
+      <Controls />
       <section className="grid gap-5 lg:flex-1 lg:grid-cols-3">
         <div className="flex-1">
-          <OrgRecentErrors id={id} />
+          <RecentErrors id={id} />
         </div>
-        <OrgProjects id={id} query={query} sort={sort} />
+        <Projects id={id} query={query} sort={sort} />
       </section>
     </>
   );

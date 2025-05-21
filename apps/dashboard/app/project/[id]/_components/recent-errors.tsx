@@ -1,11 +1,11 @@
-import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/input';
-import { Ellipsis, Search, SpellCheck2 } from 'lucide-react';
-import { Button } from '@repo/design-system/components/ui/button';
+import { getAbbr } from '@/constants/abbr';
 import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
+import { Button } from '@repo/design-system/components/ui/button';
+import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/input';
+import { Ellipsis, Search, SpellCheck2 } from 'lucide-react';
 import Link from 'next/link';
-import StatusDropdown from './status-dropdown';
-import { getAbbr } from '@/constants/abbr';
+import StatusDropdown from './controls/status-dropdown';
 
 export default function RecentErrors({ id }: { id: string }) {
   return (

@@ -1,6 +1,6 @@
 import { Skeleton } from '@repo/design-system/components/ui/skeleton';
 
-export default function ProjectCardListSkeleton() {
+export default function ProjectListSkeleton() {
   return (
     <>
       {[...Array(2)].map((_, idx) => (

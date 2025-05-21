@@ -15,7 +15,7 @@ import {
 import { Info } from 'lucide-react';
 import Link from 'next/link';
 
-export default function DeleteOrgCard() {
+export default function DeleteOrg() {
   const disabled = true;
 
   return (

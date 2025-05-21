@@ -2,7 +2,7 @@
 
 /** @type { PrettierConfig } */
 const config = {
-  plugins: ['prettier-plugin-tailwindcss'],
+  plugins: ['prettier-plugin-tailwindcss', 'prettier-plugin-organize-imports'],
   printWidth: 90,
   singleQuote: true,
 };

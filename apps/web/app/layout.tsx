@@ -1,7 +1,7 @@
-import './globals.css';
+import { ThemeProvider } from '@/components/molecules/theme-provider';
 import { cn } from '@repo/design-system/lib/utils';
 import { geist, geist_mono } from './fonts';
-import { ThemeProvider } from '@/components/molecules/theme-provider';
+import './globals.css';
 
 export default function RootLayout({
   children,

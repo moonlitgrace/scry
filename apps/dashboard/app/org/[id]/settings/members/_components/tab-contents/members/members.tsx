@@ -1,5 +1,6 @@
+import { Button } from '@repo/design-system/components/ui/button';
+import { Checkbox } from '@repo/design-system/components/ui/checkbox';
 import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/input';
-import { ArrowDownNarrowWide, Ellipsis, Search } from 'lucide-react';
 import {
   Select,
   SelectContent,
@@ -7,10 +8,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@repo/design-system/components/ui/select';
-import { Checkbox } from '@repo/design-system/components/ui/checkbox';
-import { Button } from '@repo/design-system/components/ui/button';
-import { Avatar, AvatarFallback } from '@repo/design-system/components/ui/avatar';
-import { Badge } from '@repo/design-system/components/ui/badge';
+import { ArrowDownNarrowWide, Ellipsis, Search } from 'lucide-react';
+import MemberList from './member-list';
 
 export default function Members() {
   return (
@@ -60,25 +59,7 @@ export default function Members() {
           </Button>
         </div>
         <div className="bg-card flex flex-col gap-5 p-3">
-          <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <Avatar>
-                <AvatarFallback>M</AvatarFallback>
-              </Avatar>
-              <div className="flex flex-col">
-                <span className="text-sm font-medium">moonlitgrace</span>
-                <span className="text-muted-foreground line-clamp-1 text-xs break-all">
-                  moonlitgrace.gaia@gmail.com
-                </span>
-              </div>
-            </div>
-            <div className="inline-flex items-center gap-2">
-              <Badge>Owner</Badge>
-              <Button size={'icon-sm'} variant={'ghost'} disabled>
-                <Ellipsis />
-              </Button>
-            </div>
-          </div>
+          <MemberList />
         </div>
       </div>
     </div>
