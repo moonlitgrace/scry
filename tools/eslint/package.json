@@ -5,7 +5,6 @@
     "@eslint/js": "catalog:",
     "@next/eslint-plugin-next": "catalog:",
     "eslint": "catalog:",
-    "eslint-config-prettier": "catalog:",
     "eslint-plugin-only-warn": "catalog:",
     "eslint-plugin-react": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
@@ -16,7 +15,8 @@
   },
   "exports": {
     "./base": "./base.js",
-    "./next-js": "./next.js",
+    "./nestjs": "./nest.js",
+    "./nextjs": "./next.js",
     "./react-internal": "./react-internal.js"
   },
   "private": true,

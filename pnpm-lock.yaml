@@ -6,84 +6,15 @@ settings:
 
 catalogs:
   default:
-    '@changesets/cli':
-      specifier: ^2.29.4
-      version: 2.29.4
     '@eslint/js':
       specifier: ^9.25.0
       version: 9.27.0
-    '@hookform/resolvers':
-      specifier: ^5.0.1
-      version: 5.0.1
     '@next/eslint-plugin-next':
       specifier: ^15.3.2
       version: 15.3.2
-    '@radix-ui/react-accordion':
-      specifier: ^1.2.10
-      version: 1.2.10
-    '@radix-ui/react-avatar':
-      specifier: ^1.1.9
-      version: 1.1.9
-    '@radix-ui/react-checkbox':
-      specifier: ^1.3.1
-      version: 1.3.1
-    '@radix-ui/react-collapsible':
-      specifier: ^1.1.10
-      version: 1.1.10
-    '@radix-ui/react-dropdown-menu':
-      specifier: ^2.1.14
-      version: 2.1.14
-    '@radix-ui/react-label':
-      specifier: ^2.1.6
-      version: 2.1.6
-    '@radix-ui/react-scroll-area':
-      specifier: ^1.2.8
-      version: 1.2.8
-    '@radix-ui/react-select':
-      specifier: ^2.2.4
-      version: 2.2.4
-    '@radix-ui/react-separator':
-      specifier: ^1.1.6
-      version: 1.1.6
-    '@radix-ui/react-slot':
-      specifier: ^1.2.2
-      version: 1.2.2
-    '@radix-ui/react-tabs':
-      specifier: ^1.1.11
-      version: 1.1.11
-    '@radix-ui/react-toggle':
-      specifier: ^1.1.8
-      version: 1.1.8
-    '@radix-ui/react-toggle-group':
-      specifier: ^1.1.9
-      version: 1.1.9
-    '@svgr/webpack':
-      specifier: ^8.1.0
-      version: 8.1.0
-    '@tailwindcss/postcss':
-      specifier: ^4.1.6
-      version: 4.1.7
-    '@types/node':
-      specifier: ^22.15.17
-      version: 22.15.19
-    '@types/react':
-      specifier: 19.1.4
-      version: 19.1.4
-    '@types/react-dom':
-      specifier: 19.1.5
-      version: 19.1.5
-    class-variance-authority:
-      specifier: ^0.7.1
-      version: 0.7.1
-    clsx:
-      specifier: ^2.1.1
-      version: 2.1.1
     eslint:
       specifier: ^9.26.0
       version: 9.27.0
-    eslint-config-prettier:
-      specifier: ^10.1.5
-      version: 10.1.5
     eslint-plugin-only-warn:
       specifier: ^1.1.0
       version: 1.1.0
@@ -99,75 +30,12 @@ catalogs:
     globals:
       specifier: ^16.1.0
       version: 16.1.0
-    husky:
-      specifier: ^9.1.7
-      version: 9.1.7
-    lint-staged:
-      specifier: ^16.0.0
-      version: 16.0.0
-    lucide-react:
-      specifier: ^0.510.0
-      version: 0.510.0
-    next:
-      specifier: ^15.3.2
-      version: 15.3.2
-    next-themes:
-      specifier: ^0.4.6
-      version: 0.4.6
-    postcss:
-      specifier: ^8.5.3
-      version: 8.5.3
-    prettier:
-      specifier: ^3.5.3
-      version: 3.5.3
-    prettier-plugin-organize-imports:
-      specifier: ^4.1.0
-      version: 4.1.0
-    prettier-plugin-tailwindcss:
-      specifier: ^0.6.11
-      version: 0.6.11
-    react:
-      specifier: ^19.1.0
-      version: 19.1.0
-    react-dom:
-      specifier: ^19.1.0
-      version: 19.1.0
-    react-hook-form:
-      specifier: ^7.56.3
-      version: 7.56.3
-    shiki:
-      specifier: ^3.4.1
-      version: 3.4.2
-    syncpack:
-      specifier: ^13.0.4
-      version: 13.0.4
-    tailwind-merge:
-      specifier: ^3.3.0
-      version: 3.3.0
-    tailwindcss:
-      specifier: ^4.1.6
-      version: 4.1.7
-    tsup:
-      specifier: ^8.4.0
-      version: 8.5.0
-    turbo:
-      specifier: ^2.5.3
-      version: 2.5.3
-    tw-animate-css:
-      specifier: ^1.2.9
-      version: 1.3.0
     typescript:
       specifier: ^5.8.3
       version: 5.8.3
     typescript-eslint:
       specifier: ^8.32.1
       version: 8.32.1
-    use-debounce:
-      specifier: ^10.0.4
-      version: 10.0.4
-    zod:
-      specifier: ^3.24.4
-      version: 3.24.4
 
 importers:
 
@@ -225,6 +93,12 @@ importers:
       '@nestjs/testing':
         specifier: ^11.0.1
         version: 11.1.1(@nestjs/common@11.1.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.1)(@nestjs/platform-express@11.1.1)
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../tools/eslint
+      '@repo/prettier-config':
+        specifier: workspace:*
+        version: link:../../tools/prettier
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../tools/typescript
@@ -246,6 +120,9 @@ importers:
       '@types/supertest':
         specifier: ^6.0.2
         version: 6.0.3
+      eslint:
+        specifier: 'catalog:'
+        version: 9.27.0(jiti@2.4.2)
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.15.19)(ts-node@10.9.2(@swc/core@1.11.24)(@types/node@22.15.19)(typescript@5.8.3))
@@ -534,9 +411,6 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 9.27.0(jiti@2.4.2)
-      eslint-config-prettier:
-        specifier: 'catalog:'
-        version: 10.1.5(eslint@9.27.0(jiti@2.4.2))
       eslint-plugin-only-warn:
         specifier: 'catalog:'
         version: 1.1.0
@@ -4081,12 +3955,6 @@ packages:
   escape-string-regexp@4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
-
-  eslint-config-prettier@10.1.5:
-    resolution: {integrity: sha512-zc1UmCpNltmVY34vuLRV61r1K27sWuX39E+uyUnY8xS2Bex88VV9cugG+UZbRSRGtGyFboj+D8JODyme1plMpw==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
 
   eslint-plugin-only-warn@1.1.0:
     resolution: {integrity: sha512-2tktqUAT+Q3hCAU0iSf4xAN1k9zOpjK5WO8104mB0rT/dGhOa09582HN5HlbxNbPRZ0THV7nLGvzugcNOSjzfA==}
@@ -10757,10 +10625,6 @@ snapshots:
   escape-string-regexp@2.0.0: {}
 
   escape-string-regexp@4.0.0: {}
-
-  eslint-config-prettier@10.1.5(eslint@9.27.0(jiti@2.4.2)):
-    dependencies:
-      eslint: 9.27.0(jiti@2.4.2)
 
   eslint-plugin-only-warn@1.1.0: {}
 
