@@ -43,9 +43,11 @@ export default function LatestError() {
           </div>
         </div>
         <div className="flex gap-5">
-          <div className="flex flex-col gap-1">
+          <div className="flex w-20 flex-col gap-1">
             <span className="text-muted-foreground text-sm">Status</span>
-            <Badge variant={'secondary'}>{latestError.status}</Badge>
+            <Badge variant={'secondary'} className="capitalize">
+              {latestError.status}
+            </Badge>
           </div>
           <div className="flex flex-col gap-1">
             <span className="text-muted-foreground text-sm">Triggered</span>

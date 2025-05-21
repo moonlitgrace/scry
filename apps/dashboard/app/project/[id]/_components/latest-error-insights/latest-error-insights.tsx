@@ -3,6 +3,7 @@ import { Ellipsis } from 'lucide-react';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import LatestError from './latest-error/latest-error';
+import LatestErrorSkeleton from './latest-error/latest-error-skeleton';
 
 export default function LatestErrorInsights({ id }: { id: string }) {
   return (
@@ -23,7 +24,7 @@ export default function LatestErrorInsights({ id }: { id: string }) {
           </Button>
         </div>
       </div>
-      <Suspense fallback={'loading...'}>
+      <Suspense fallback={<LatestErrorSkeleton />}>
         <LatestError />
       </Suspense>
     </div>
