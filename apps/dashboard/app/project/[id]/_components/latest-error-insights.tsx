@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function LatestErrorInsights({ id }: { id: string }) {
   return (
-    <>
+    <div className="bg-card space-y-5 rounded-lg border p-5">
       <div className="flex items-center justify-between gap-2">
         <div className="flex flex-col">
           <h5 className="text-lg font-semibold">Latest Error</h5>
@@ -81,6 +81,6 @@ export default function LatestErrorInsights({ id }: { id: string }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

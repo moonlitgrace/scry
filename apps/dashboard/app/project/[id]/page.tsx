@@ -3,7 +3,6 @@ import { Button } from '@repo/design-system/components/ui/button';
 import { Globe } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Suspense } from 'react';
 import KeyMetrics from './_components/key-metrics/key-metrics';
 import LatestErrorInsights from './_components/latest-error-insights';
 import RecentErrors from './_components/recent-errors';
@@ -33,12 +32,8 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
           </a>
         </div>
       </div>
-      <Suspense fallback={'loading...'}>
-        <KeyMetrics id={id} />
-      </Suspense>
-      <div className="bg-card space-y-5 rounded-lg border p-5">
-        <LatestErrorInsights id={id} />
-      </div>
+      <KeyMetrics id={id} />
+      <LatestErrorInsights id={id} />
       <RecentErrors id={id} />
     </>
   );

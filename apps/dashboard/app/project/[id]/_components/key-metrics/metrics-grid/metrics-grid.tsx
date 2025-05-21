@@ -9,7 +9,7 @@ const metricsIcons = {
   errors_unhandled: AlertTriangle,
 };
 
-export default async function Metrics({ id }: { id: string }) {
+export default async function MetricsGrid({ id }: { id: string }) {
   const service = new ProjectService(id);
   const metrics = await service.getMetrics();
 
