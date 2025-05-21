@@ -9,3 +9,12 @@ export interface ProjectError {
   status: string;
   timestamp: string;
 }
+
+export interface ProjectKeyMetrics {
+  [key: string]: {
+    title: string;
+    subTitle?: string;
+    value: number;
+    isCritical: boolean;
+  };
+}
