@@ -1,6 +1,9 @@
-import { ProjectService } from '@/services/project.service';
+'use client';
+
+import { useProjectContext } from '@/context/project-context';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { AlertTriangle, Bug, RailSymbol, ShieldUser } from 'lucide-react';
+import { use } from 'react';
 
 const metricsIcons = {
   errors: Bug,
@@ -9,9 +12,9 @@ const metricsIcons = {
   errors_unhandled: AlertTriangle,
 };
 
-export default async function MetricsGrid({ id }: { id: string }) {
-  const service = new ProjectService(id);
-  const metrics = await service.getMetrics();
+export default function MetricsGrid() {
+  const { metricsPromise } = useProjectContext();
+  const metrics = use(metricsPromise);
 
   return Object.entries(metrics).map(
     ([key, { title, subTitle, value, isCritical }], idx) => {
