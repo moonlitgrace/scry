@@ -4,8 +4,8 @@ import { Button } from '@repo/design-system/components/ui/button';
 import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import Link from 'next/link';
-import StatusDropdown from './status-dropdown';
 import { getAbbr } from '@/constants/abbr';
+import StatusDropdown from './controls/status-dropdown';
 
 export default function RecentErrors({ id }: { id: string }) {
   return (
