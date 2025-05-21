@@ -10,6 +10,9 @@
     "tsup": "catalog:",
     "typescript": "catalog:"
   },
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "files": [
     "dist"
   ],
@@ -21,7 +24,7 @@
     "logs",
     "scry"
   ],
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "publishConfig": {
