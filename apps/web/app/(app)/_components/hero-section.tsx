@@ -1,8 +1,8 @@
 import GithubIcon from '@/components/atoms/github-icon';
 import HomeSectionLayout from '@/layouts/home-section';
 import { buttonVariants } from '@repo/design-system/components/ui/button';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (

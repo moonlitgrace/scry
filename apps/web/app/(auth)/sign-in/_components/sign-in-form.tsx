@@ -1,11 +1,11 @@
 'use client';
 
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { AuthFormData, AuthSchema } from '../../_schemas/auth';
 import { zodResolver } from '@hookform/resolvers/zod';
-import AuthForm from '../../_components/auth-form';
 import { Form } from '@repo/design-system/components/ui/form';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import AuthForm from '../../_components/auth-form';
 import AuthFormFields, { type AuthFormField } from '../../_components/auth-form-fields';
+import { AuthFormData, AuthSchema } from '../../_schemas/auth';
 
 export default function SignInForm() {
   const form = useForm<AuthFormData>({

@@ -1,3 +1,5 @@
+import { getAbbr } from '@/constants/abbr';
+import { OrgService } from '@/services/org.service';
 import { formatTimeSince } from '@/utils/datetime';
 import { getInitials } from '@/utils/string';
 import { Avatar, AvatarFallback } from '@repo/design-system/components/ui/avatar';
@@ -6,8 +8,6 @@ import { Button } from '@repo/design-system/components/ui/button';
 import { ArrowRight, Ellipsis, FolderOpen, GitBranch, SearchX } from 'lucide-react';
 import Link from 'next/link';
 import { Props } from '../projects';
-import { getAbbr } from '@/constants/abbr';
-import { OrgService } from '@/services/org.service';
 
 export default async function ProjectList({ id, query, sort }: Props) {
   const service = new OrgService(id);

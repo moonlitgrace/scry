@@ -1,5 +1,5 @@
 import { Button } from '@repo/design-system/components/ui/button';
-import { PackagePlus, Cog, BugPlay, ExternalLink } from 'lucide-react';
+import { BugPlay, Cog, ExternalLink, PackagePlus } from 'lucide-react';
 
 export default function HowItWorksSection() {
   return (

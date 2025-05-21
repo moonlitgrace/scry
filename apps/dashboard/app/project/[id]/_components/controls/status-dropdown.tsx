@@ -1,17 +1,17 @@
 'use client';
 
-import { Check, ChevronDown } from 'lucide-react';
+import { useSearchParamsHandler } from '@/hooks/use-search-params-handler';
+import { Badge } from '@repo/design-system/components/ui/badge';
+import { Button } from '@repo/design-system/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@repo/design-system/components/ui/dropdown-menu';
-import { Button } from '@repo/design-system/components/ui/button';
-import { useEffect, useState } from 'react';
 import { cn } from '@repo/design-system/lib/utils';
-import { Badge } from '@repo/design-system/components/ui/badge';
-import { useSearchParamsHandler } from '@/hooks/use-search-params-handler';
+import { Check, ChevronDown } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface IStatusItem {
   checked: boolean;

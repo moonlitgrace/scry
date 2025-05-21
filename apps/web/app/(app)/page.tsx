@@ -1,9 +1,9 @@
 import HomeSectionLayout from '@/layouts/home-section';
+import CTASection from './_components/cta-section';
+import FAQSection from './_components/faq-section';
 import HeroSection from './_components/hero-section';
 import HowItWorksSection from './_components/how-it-works-section';
 import PricingSection from './_components/pricing-section';
-import CTASection from './_components/cta-section';
-import FAQSection from './_components/faq-section';
 
 export default function Home() {
   return (

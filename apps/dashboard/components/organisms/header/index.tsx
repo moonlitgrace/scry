@@ -1,13 +1,13 @@
 'use client';
 
 import Logo from '@/assets/svg/logo.svg';
-import NavActions from './nav-actions';
-import OrgDropdown from './org-dropdown';
-import Link from 'next/link';
-import { useParams, usePathname } from 'next/navigation';
 import { Button } from '@repo/design-system/components/ui/button';
 import { cn } from '@repo/design-system/lib/utils';
+import Link from 'next/link';
+import { useParams, usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
+import NavActions from './nav-actions';
+import OrgDropdown from './org-dropdown';
 
 interface Props {
   links: Record<

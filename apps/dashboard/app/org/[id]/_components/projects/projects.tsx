@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import ProjectListSkeleton from './project-list/project-list-skeleton';
 import ProjectList from './project-list/project-list';
+import ProjectListSkeleton from './project-list/project-list-skeleton';
 
 export interface Props {
   id: string;

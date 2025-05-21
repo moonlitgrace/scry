@@ -23,6 +23,7 @@
   "scripts": {
     "build": "turbo run build",
     "changeset": "changeset",
+    "deps:catalog": "pnpm dlx codemod pnpm/catalog",
     "deps:check": "syncpack list-mismatches",
     "deps:fix": "syncpack fix-mismatches",
     "deps:format": "syncpack format",

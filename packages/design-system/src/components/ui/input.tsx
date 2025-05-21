@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { cn } from '@repo/design-system/lib/utils';
 import { Slot } from '@radix-ui/react-slot';
+import { cn } from '@repo/design-system/lib/utils';
+import * as React from 'react';
 
 function InputRoot({ children, className, ...props }: React.ComponentProps<'div'>) {
   return (
@@ -46,4 +46,4 @@ function Input({ className, type, ...props }: React.ComponentProps<'input'>) {
   );
 }
 
-export { Input, InputRoot, InputIcon };
+export { Input, InputIcon, InputRoot };
