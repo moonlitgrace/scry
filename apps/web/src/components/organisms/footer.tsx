@@ -1,4 +1,4 @@
-import Logo from '@/assets/svg/logo.svg';
+import Logo from '@/assets/svgs/logo.svg';
 import { Button } from '@repo/design-system/components/ui/button';
 import { Input } from '@repo/design-system/components/ui/input';
 
