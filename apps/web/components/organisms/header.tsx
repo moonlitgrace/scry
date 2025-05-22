@@ -1,4 +1,4 @@
-import LogoText from '@/assets/svg/logo-text.svg';
+import LogoText from '@/assets/svgs/logo-text.svg';
 import { buttonVariants } from '@repo/design-system/components/ui/button';
 import { ModeToggle } from '@repo/design-system/components/ui/mode-toggle';
 import Link from 'next/link';

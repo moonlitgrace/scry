@@ -1,4 +1,4 @@
-import Logo from '@/assets/svg/logo.svg';
+import Logo from '@/assets/svgs/logo.svg';
 import { buttonVariants } from '@repo/design-system/components/ui/button';
 import GithubIcon from '../atoms/github-icon';
 import ThemeSelector from '../molecules/theme-selector';
