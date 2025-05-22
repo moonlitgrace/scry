@@ -1,8 +1,8 @@
 import latestError from '@/data/mock/latest_error.json';
 import metrics from '@/data/mock/metrics.json';
 import recentErrors from '@/data/mock/recent_errors.json';
+import { waitFor } from '@/lib/utils';
 import { ProjectError, ProjectLatestError, ProjectMetrics } from '@/types/project';
-import { waitFor } from '@/utils/promise';
 
 export interface ProjectErrorsFilters {
   query?: string;

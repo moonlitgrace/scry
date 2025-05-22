@@ -1,5 +1,5 @@
 import { getAbbr } from '@/constants/abbr';
-import { formatTimeSince } from '@/utils/datetime';
+import { formatTimeSince } from '@/lib/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
 import { Input, InputIcon, InputRoot } from '@repo/design-system/components/ui/input';

@@ -6,3 +6,7 @@ export function getInitials(name: string): string {
 
   return (firstPart + secondPart).toUpperCase();
 }
+
+export async function waitFor(ms: number) {
+  await new Promise((resolve) => setTimeout(resolve, ms));
+}

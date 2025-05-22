@@ -2,7 +2,7 @@
 
 import { getAbbr } from '@/constants/abbr';
 import { useProject } from '@/hooks/use-project';
-import { formatTimeSince } from '@/utils/datetime';
+import { formatTimeSince } from '@/lib/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { ExternalLink, GitBranch, Globe, ImageOff } from 'lucide-react';
 import { use } from 'react';
