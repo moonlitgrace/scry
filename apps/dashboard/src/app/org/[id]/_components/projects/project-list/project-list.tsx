@@ -1,7 +1,7 @@
 import { getAbbr } from '@/constants/abbr';
+import { formatTimeSince } from '@/lib/datetime';
+import { getInitials } from '@/lib/utils';
 import { OrgService } from '@/services/org.service';
-import { formatTimeSince } from '@/utils/datetime';
-import { getInitials } from '@/utils/string';
 import { Avatar, AvatarFallback } from '@repo/design-system/components/ui/avatar';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';

@@ -1,7 +1,7 @@
 import rawProjectsData from '@/data/mock/projects.json';
 import recentErrorsData from '@/data/mock/recent_errors.json';
+import { waitFor } from '@/lib/utils';
 import { OrgProject, OrgRecentError } from '@/types/org';
-import { waitFor } from '@/utils/promise';
 
 interface OrgGetProjects {
   query: string;

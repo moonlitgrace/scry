@@ -1,5 +1,5 @@
+import { formatTimeSince } from '@/lib/datetime';
 import { type ProjectErrorsFilters, ProjectService } from '@/services/project.service';
-import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
 import { Ellipsis, SpellCheck2 } from 'lucide-react';

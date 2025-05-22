@@ -1,6 +1,6 @@
 'use client';
 
-import { useProjectContext } from '@/context/project-context';
+import { useProject } from '@/hooks/use-project';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { AlertTriangle, Bug, RailSymbol, ShieldUser } from 'lucide-react';
 import { use } from 'react';
@@ -13,7 +13,7 @@ const metricsIcons = {
 };
 
 export default function MetricsGrid() {
-  const { metricsPromise } = useProjectContext();
+  const { metricsPromise } = useProject();
   const metrics = use(metricsPromise);
 
   return Object.entries(metrics).map(

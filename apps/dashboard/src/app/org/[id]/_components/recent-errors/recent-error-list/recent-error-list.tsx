@@ -1,6 +1,6 @@
 import { getAbbr } from '@/constants/abbr';
+import { formatTimeSince } from '@/lib/datetime';
 import { OrgService } from '@/services/org.service';
-import { formatTimeSince } from '@/utils/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { Button } from '@repo/design-system/components/ui/button';
 import { cn } from '@repo/design-system/lib/utils';

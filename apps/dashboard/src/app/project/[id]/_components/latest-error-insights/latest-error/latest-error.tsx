@@ -1,14 +1,14 @@
 'use client';
 
 import { getAbbr } from '@/constants/abbr';
-import { useProjectContext } from '@/context/project-context';
-import { formatTimeSince } from '@/utils/datetime';
+import { useProject } from '@/hooks/use-project';
+import { formatTimeSince } from '@/lib/datetime';
 import { Badge } from '@repo/design-system/components/ui/badge';
 import { ExternalLink, GitBranch, Globe, ImageOff } from 'lucide-react';
 import { use } from 'react';
 
 export default function LatestError() {
-  const { latestErrorPromise } = useProjectContext();
+  const { latestErrorPromise } = useProject();
   const latestError = use(latestErrorPromise);
 
   return (
