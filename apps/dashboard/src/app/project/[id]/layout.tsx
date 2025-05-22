@@ -1,4 +1,4 @@
-import { ProjectContextProvider } from '@/context/project-context';
+import { ProjectProvider } from '@/providers/project-provider';
 import { ProjectService } from '@/services/project.service';
 
 interface Props {
@@ -10,15 +10,16 @@ export default async function Layout({ params, children }: Props) {
   const { id } = await params;
 
   const service = new ProjectService(id);
+  // initialize network call but doesn't wait
   const metricsPromise = service.getMetrics();
   const latestErrorPromise = service.getLatestError();
 
   return (
-    <ProjectContextProvider
+    <ProjectProvider
       metricsPromise={metricsPromise}
       latestErrorPromise={latestErrorPromise}
     >
       {children}
-    </ProjectContextProvider>
+    </ProjectProvider>
   );
 }
